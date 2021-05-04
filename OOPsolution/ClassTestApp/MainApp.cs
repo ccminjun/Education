@@ -28,7 +28,7 @@ namespace ClassTestApp
             Cat coco = new Cat("코코", "얼룩이");
             coco.Age = 2;
             coco.Meow();
-
+            
             Cat noname = new Cat("야옹이", "은색", 10);
             // noname.Name = "야옹이";
             noname.Meow();
