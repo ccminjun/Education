@@ -15,7 +15,7 @@ namespace FileReadingTestApp
                 Console.WriteLine(sr.ReadLine());
             }
 
-            sr.Close(); //필수
+            sr.Close(); //필수.
                         //텍스트파일 읽어오는 부분
             Console.WriteLine("텍스트 파일 읽기 완료");
 
