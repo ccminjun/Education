@@ -11,10 +11,8 @@
 
         public int Age
         {
-            get
-            {
-                return this.age;
-            }
+            get => this.age; // 람다식으로 바꿈
+            
             set
             {
                 if (value < 0)
