@@ -17,7 +17,7 @@ namespace GenericTestApp
             {
                 Console.Write($"{item}\t");
             }
-            Console.WriteLine();
+            Console.WriteLine(); //안녕
 
             CopyArray(sourceInt, targetInt);
             Console.WriteLine("복사후 targetInt 값 =======>");
