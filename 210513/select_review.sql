@@ -34,6 +34,9 @@ SELECT * INTO userTbl_NEW From userTbl;
 
 SELECT * FROM userTbl_NEW;
 
-SELECT userID, name, addr INTO userTbl_Backup From userTbl; -- 원하는 필드만 복사
+SELECT userID, name, addr INTO userTbl_Backup2 From userTbl -- 원하는 필드만 복사
+ WHERE addr = '서울'
 
 SELECT * FROM userTbl_Backup;
+
+SELECT * FROM userTbl_Backup2;
