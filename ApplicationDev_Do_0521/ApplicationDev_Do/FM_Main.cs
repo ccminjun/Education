@@ -128,6 +128,11 @@ namespace ApplicationDev_Do
                 case "DELETE": Child.Delete(); break;
             }
         }
+
+        private void M_SYSTEM_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public partial class MDIForm : TabPage

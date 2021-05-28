@@ -37,6 +37,7 @@ namespace ApplicationDev_Do
             this.FM_ITEM = new System.Windows.Forms.ToolStripMenuItem();
             this.FM_CUST = new System.Windows.Forms.ToolStripMenuItem();
             this.Fm_Cust_ = new System.Windows.Forms.ToolStripMenuItem();
+            this.FM_USER = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.stbSearch = new System.Windows.Forms.ToolStripButton();
             this.stbInsert = new System.Windows.Forms.ToolStripButton();
@@ -51,7 +52,6 @@ namespace ApplicationDev_Do
             this.tssNowDate = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.myTabControl1 = new ApplicationDev_Do.MyTabControl();
-            this.FM_USER = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -80,6 +80,7 @@ namespace ApplicationDev_Do
             this.M_SYSTEM.Name = "M_SYSTEM";
             this.M_SYSTEM.Size = new System.Drawing.Size(103, 24);
             this.M_SYSTEM.Text = "시스템 관리";
+            this.M_SYSTEM.Click += new System.EventHandler(this.M_SYSTEM_Click);
             // 
             // MDI_TEST
             // 
@@ -110,6 +111,12 @@ namespace ApplicationDev_Do
             this.Fm_Cust_.Name = "Fm_Cust_";
             this.Fm_Cust_.Size = new System.Drawing.Size(224, 26);
             this.Fm_Cust_.Text = "거래처 정보2";
+            // 
+            // FM_USER
+            // 
+            this.FM_USER.Name = "FM_USER";
+            this.FM_USER.Size = new System.Drawing.Size(224, 26);
+            this.FM_USER.Text = "사용자 관리";
             // 
             // toolStrip
             // 
@@ -249,12 +256,6 @@ namespace ApplicationDev_Do
             this.myTabControl1.SelectedIndex = 0;
             this.myTabControl1.Size = new System.Drawing.Size(1029, 437);
             this.myTabControl1.TabIndex = 4;
-            // 
-            // FM_USER
-            // 
-            this.FM_USER.Name = "FM_USER";
-            this.FM_USER.Size = new System.Drawing.Size(224, 26);
-            this.FM_USER.Text = "사용자 관리";
             // 
             // FM_Main
             // 
