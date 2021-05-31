@@ -29,8 +29,8 @@ namespace DEV_Form
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnImgSave = new System.Windows.Forms.Button();
+            this.btnImgDelete = new System.Windows.Forms.Button();
             this.btnContract = new System.Windows.Forms.Button();
             this.dgvContract = new System.Windows.Forms.DataGridView();
             this.dtpRentEnd = new System.Windows.Forms.DateTimePicker();
@@ -45,7 +45,8 @@ namespace DEV_Form
             this.txtClientID = new System.Windows.Forms.TextBox();
             this.btnCar = new System.Windows.Forms.Button();
             this.btnClient = new System.Windows.Forms.Button();
-            this.btnSaveAll = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContract)).BeginInit();
@@ -68,8 +69,8 @@ namespace DEV_Form
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnSave);
-            this.groupBox2.Controls.Add(this.btnDelete);
+            this.groupBox2.Controls.Add(this.btnImgSave);
+            this.groupBox2.Controls.Add(this.btnImgDelete);
             this.groupBox2.Controls.Add(this.btnContract);
             this.groupBox2.Controls.Add(this.dgvContract);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.None;
@@ -77,24 +78,23 @@ namespace DEV_Form
             this.groupBox2.Size = new System.Drawing.Size(561, 314);
             this.groupBox2.Text = "계약서이미지등록";
             // 
-            // btnSave
+            // btnImgSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(363, 246);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(89, 29);
-            this.btnSave.TabIndex = 8;
-            this.btnSave.Text = "저장";
-            this.btnSave.UseVisualStyleBackColor = true;
-
+            this.btnImgSave.Location = new System.Drawing.Point(363, 246);
+            this.btnImgSave.Name = "btnImgSave";
+            this.btnImgSave.Size = new System.Drawing.Size(89, 29);
+            this.btnImgSave.TabIndex = 8;
+            this.btnImgSave.Text = "저장";
+            this.btnImgSave.UseVisualStyleBackColor = true;
             // 
-            // btnDelete
+            // btnImgDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(458, 246);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(90, 29);
-            this.btnDelete.TabIndex = 7;
-            this.btnDelete.Text = "삭제";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnImgDelete.Location = new System.Drawing.Point(458, 246);
+            this.btnImgDelete.Name = "btnImgDelete";
+            this.btnImgDelete.Size = new System.Drawing.Size(90, 29);
+            this.btnImgDelete.TabIndex = 7;
+            this.btnImgDelete.Text = "삭제";
+            this.btnImgDelete.UseVisualStyleBackColor = true;
             // 
             // btnContract
             // 
@@ -214,21 +214,31 @@ namespace DEV_Form
             this.btnClient.Text = "고객조회";
             this.btnClient.UseVisualStyleBackColor = true;
             // 
-            // btnSaveAll
+            // btnSave
             // 
-            this.btnSaveAll.Location = new System.Drawing.Point(401, 660);
-            this.btnSaveAll.Name = "btnSaveAll";
-            this.btnSaveAll.Size = new System.Drawing.Size(176, 29);
-            this.btnSaveAll.TabIndex = 8;
-            this.btnSaveAll.Text = "모두 저장";
-            this.btnSaveAll.UseVisualStyleBackColor = true;
+            this.btnSave.Location = new System.Drawing.Point(392, 660);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(95, 29);
+            this.btnSave.TabIndex = 8;
+            this.btnSave.Text = "저장";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(500, 660);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(90, 29);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "닫기";
+            this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // FM_RENT_ADD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(646, 718);
-            this.Controls.Add(this.btnSaveAll);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtCarID);
             this.Controls.Add(this.txtClientID);
             this.Controls.Add(this.btnCar);
@@ -243,7 +253,8 @@ namespace DEV_Form
             this.Controls.SetChildIndex(this.btnCar, 0);
             this.Controls.SetChildIndex(this.txtClientID, 0);
             this.Controls.SetChildIndex(this.txtCarID, 0);
-            this.Controls.SetChildIndex(this.btnSaveAll, 0);
+            this.Controls.SetChildIndex(this.btnSave, 0);
+            this.Controls.SetChildIndex(this.btnCancel, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -255,8 +266,8 @@ namespace DEV_Form
 
         #endregion
 
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnImgSave;
+        private System.Windows.Forms.Button btnImgDelete;
         private System.Windows.Forms.Button btnContract;
         private System.Windows.Forms.DataGridView dgvContract;
         private System.Windows.Forms.DateTimePicker dtpRentEnd;
@@ -271,6 +282,7 @@ namespace DEV_Form
         private System.Windows.Forms.TextBox txtClientID;
         private System.Windows.Forms.Button btnCar;
         private System.Windows.Forms.Button btnClient;
-        private System.Windows.Forms.Button btnSaveAll;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
