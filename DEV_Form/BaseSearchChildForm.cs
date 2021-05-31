@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace DEV_Form
 {
-    public partial class FM_RENT_ADD : BaseMDIChildForm
+    public partial class BaseSearchChildForm : Form
     {
-        public FM_RENT_ADD()
+        public BaseSearchChildForm()
         {
             InitializeComponent();
-        }
-
-        private void btnCar_Click(object sender, EventArgs e)
-        {
-            FM_SearchCar formCar = new FM_SearchCar();
-            formCar.ShowDialog();
         }
     }
 }

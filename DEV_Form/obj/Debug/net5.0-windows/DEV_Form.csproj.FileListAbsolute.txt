@@ -87,3 +87,7 @@ C:\Users\admin\workspace\RentcarProject\DEV_Form\obj\Debug\net5.0-windows\DEV_Fo
 C:\Users\admin\workspace\RentcarProject\DEV_Form\obj\Debug\net5.0-windows\DEV_Form.dll
 C:\Users\admin\workspace\RentcarProject\DEV_Form\obj\Debug\net5.0-windows\ref\DEV_Form.dll
 C:\Users\admin\workspace\RentcarProject\DEV_Form\obj\Debug\net5.0-windows\DEV_Form.pdb
+C:\Users\admin\workspace\RentcarProject\DEV_Form\obj\Debug\net5.0-windows\DEV_Form.BaseSearchChildForm.resources
+C:\Users\admin\workspace\RentcarProject\DEV_Form\obj\Debug\net5.0-windows\DEV_Form.FM_SearchCar.resources
+C:\Users\admin\workspace\RentcarProject\DEV_Form\obj\Debug\net5.0-windows\DEV_Form.FM_SearchClient.resources
+C:\Users\admin\workspace\RentcarProject\DEV_Form\obj\Debug\net5.0-windows\DEV_Form.FM_Car.resources

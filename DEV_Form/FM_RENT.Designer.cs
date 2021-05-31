@@ -47,9 +47,6 @@ namespace DEV_Form
             this.txtRentCode = new System.Windows.Forms.TextBox();
             this.dtpStart = new System.Windows.Forms.DateTimePicker();
             this.txtClientName = new System.Windows.Forms.TextBox();
-            this.btnPicDelete = new System.Windows.Forms.Button();
-            this.btnPicSave = new System.Windows.Forms.Button();
-            this.btnLoadPic = new System.Windows.Forms.Button();
             this.picCtrImg = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -84,9 +81,6 @@ namespace DEV_Form
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnPicDelete);
-            this.groupBox2.Controls.Add(this.btnPicSave);
-            this.groupBox2.Controls.Add(this.btnLoadPic);
             this.groupBox2.Controls.Add(this.picCtrImg);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox2.Location = new System.Drawing.Point(0, 484);
@@ -259,33 +253,6 @@ namespace DEV_Form
             this.txtClientName.Size = new System.Drawing.Size(177, 27);
             this.txtClientName.TabIndex = 19;
             // 
-            // btnPicDelete
-            // 
-            this.btnPicDelete.Location = new System.Drawing.Point(518, 231);
-            this.btnPicDelete.Name = "btnPicDelete";
-            this.btnPicDelete.Size = new System.Drawing.Size(94, 29);
-            this.btnPicDelete.TabIndex = 3;
-            this.btnPicDelete.Text = "삭제";
-            this.btnPicDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnPicSave
-            // 
-            this.btnPicSave.Location = new System.Drawing.Point(418, 231);
-            this.btnPicSave.Name = "btnPicSave";
-            this.btnPicSave.Size = new System.Drawing.Size(94, 29);
-            this.btnPicSave.TabIndex = 4;
-            this.btnPicSave.Text = "저장";
-            this.btnPicSave.UseVisualStyleBackColor = true;
-            // 
-            // btnLoadPic
-            // 
-            this.btnLoadPic.Location = new System.Drawing.Point(58, 231);
-            this.btnLoadPic.Name = "btnLoadPic";
-            this.btnLoadPic.Size = new System.Drawing.Size(221, 29);
-            this.btnLoadPic.TabIndex = 5;
-            this.btnLoadPic.Text = "이미지 불러오기";
-            this.btnLoadPic.UseVisualStyleBackColor = true;
-            // 
             // picCtrImg
             // 
             this.picCtrImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -362,9 +329,6 @@ namespace DEV_Form
         private System.Windows.Forms.TextBox txtRentCode;
         private System.Windows.Forms.DateTimePicker dtpStart;
         private System.Windows.Forms.TextBox txtClientName;
-        private System.Windows.Forms.Button btnPicDelete;
-        private System.Windows.Forms.Button btnPicSave;
-        private System.Windows.Forms.Button btnLoadPic;
         private System.Windows.Forms.PictureBox picCtrImg;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dataGridView1;

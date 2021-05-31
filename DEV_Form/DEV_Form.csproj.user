@@ -4,6 +4,12 @@
     <Compile Update="BaseMDIChildForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="BaseSearchChildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FM_Car.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FM_RENT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -11,6 +17,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FM_RENT_ADD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FM_SearchCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FM_SearchClient.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

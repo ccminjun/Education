@@ -204,6 +204,7 @@ namespace DEV_Form
             this.btnCar.TabIndex = 5;
             this.btnCar.Text = "차량조회";
             this.btnCar.UseVisualStyleBackColor = true;
+            this.btnCar.Click += new System.EventHandler(this.btnCar_Click);
             // 
             // btnClient
             // 
@@ -243,6 +244,7 @@ namespace DEV_Form
             this.Controls.Add(this.txtClientID);
             this.Controls.Add(this.btnCar);
             this.Controls.Add(this.btnClient);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "FM_RENT_ADD";
             this.Text = "FM_RENT_ADD2";

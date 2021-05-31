@@ -48,6 +48,7 @@ namespace ApplicationDev_Do
             this.tssNowDate = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.myTabControl1 = new ApplicationDev_Do.MyTabControl();
+            this.FM_Car = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -68,7 +69,8 @@ namespace ApplicationDev_Do
             // 
             this.M_SYSTEM.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FM_RentClient,
-            this.FM_RENT});
+            this.FM_RENT,
+            this.FM_Car});
             this.M_SYSTEM.Name = "M_SYSTEM";
             this.M_SYSTEM.Size = new System.Drawing.Size(103, 24);
             this.M_SYSTEM.Text = "시스템 관리";
@@ -229,6 +231,12 @@ namespace ApplicationDev_Do
             this.myTabControl1.Size = new System.Drawing.Size(1029, 435);
             this.myTabControl1.TabIndex = 4;
             // 
+            // FM_Car
+            // 
+            this.FM_Car.Name = "FM_Car";
+            this.FM_Car.Size = new System.Drawing.Size(32, 19);
+            this.FM_Car.Text = "toolStripMenuItem1";
+            // 
             // FM_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -275,5 +283,6 @@ namespace ApplicationDev_Do
         private MyTabControl myTabControl1;
         private System.Windows.Forms.ToolStripMenuItem FM_RentClient;
         private System.Windows.Forms.ToolStripMenuItem FM_RENT;
+        private System.Windows.Forms.ToolStripMenuItem FM_Car;
     }
 }
