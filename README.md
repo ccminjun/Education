@@ -1,2 +1,0 @@
-# RentcarProject
-rentcar management system

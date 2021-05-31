@@ -32,10 +32,8 @@ namespace ApplicationDev_Do
             this.components = new System.ComponentModel.Container();
             this.MenuStip = new System.Windows.Forms.MenuStrip();
             this.M_SYSTEM = new System.Windows.Forms.ToolStripMenuItem();
-            this.FM_USER = new System.Windows.Forms.ToolStripMenuItem();
-            this.FM_RENTUSER = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.FM_RentClient = new System.Windows.Forms.ToolStripMenuItem();
+            this.FM_RENT = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.stbSearch = new System.Windows.Forms.ToolStripButton();
             this.stbInsert = new System.Windows.Forms.ToolStripButton();
@@ -69,37 +67,23 @@ namespace ApplicationDev_Do
             // M_SYSTEM
             // 
             this.M_SYSTEM.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FM_USER,
-            this.FM_RENTUSER,
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2});
+            this.FM_RentClient,
+            this.FM_RENT});
             this.M_SYSTEM.Name = "M_SYSTEM";
             this.M_SYSTEM.Size = new System.Drawing.Size(103, 24);
             this.M_SYSTEM.Text = "시스템 관리";
             // 
-            // FM_USER
+            // FM_RentClient
             // 
-            this.FM_USER.Name = "FM_USER";
-            this.FM_USER.Size = new System.Drawing.Size(172, 26);
-            this.FM_USER.Text = "사용자 관리";
+            this.FM_RentClient.Name = "FM_RentClient";
+            this.FM_RentClient.Size = new System.Drawing.Size(157, 26);
+            this.FM_RentClient.Text = "고객 조회";
             // 
-            // FM_RENTUSER
+            // FM_RENT
             // 
-            this.FM_RENTUSER.Name = "FM_RENTUSER";
-            this.FM_RENTUSER.Size = new System.Drawing.Size(172, 26);
-            this.FM_RENTUSER.Text = "고객 관리";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(172, 26);
-            this.toolStripMenuItem1.Text = "차량 관리";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(172, 26);
-            this.toolStripMenuItem2.Text = "렌트 관리";
+            this.FM_RENT.Name = "FM_RENT";
+            this.FM_RENT.Size = new System.Drawing.Size(157, 26);
+            this.FM_RENT.Text = "렌트 관리";
             // 
             // toolStrip
             // 
@@ -254,7 +238,6 @@ namespace ApplicationDev_Do
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.MenuStip);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.MenuStip;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -290,9 +273,7 @@ namespace ApplicationDev_Do
         private System.Windows.Forms.ToolStripStatusLabel tssNowDate;
         private System.Windows.Forms.Timer timer1;
         private MyTabControl myTabControl1;
-        private System.Windows.Forms.ToolStripMenuItem FM_USER;
-        private System.Windows.Forms.ToolStripMenuItem FM_RENTUSER;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem FM_RentClient;
+        private System.Windows.Forms.ToolStripMenuItem FM_RENT;
     }
 }
