@@ -21,8 +21,8 @@ namespace DEV_Form
         {
             FM_SearchCar formCar = new FM_SearchCar();
             formCar.ShowDialog();
+            if (formCar.Tag.ToString() != "") txtCarID.Text = formCar.Tag.ToString();
 
-            
         }
 
         private void btnClient_Click(object sender, EventArgs e)

@@ -61,6 +61,10 @@ namespace DEV_Form
             this.groupBox2.Location = new System.Drawing.Point(51, 323);
             this.groupBox2.Size = new System.Drawing.Size(494, 273);
             // 
+            // btnSelect
+            // 
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.chbBRV);

@@ -84,5 +84,13 @@ namespace DEV_Form
                 helper.Close();
             }
         }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            if (this.dgvGrid.Rows.Count == 0) return;
+
+            this.Tag = dgvGrid.CurrentRow.Cells["CARCODE"].Value.ToString();
+            this.Close();
+        }
     }
 }
