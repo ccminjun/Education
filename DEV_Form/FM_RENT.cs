@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DEV_Form
+namespace DEV_FORM
 {
     public partial class FM_RENT : BaseMDIChildForm
     {
@@ -40,8 +40,8 @@ namespace DEV_Form
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            FM_RENT_ADD Login = new FM_RENT_ADD();
-            Login.ShowDialog();
+            FM_RENT_ADD fm_rent_add = new FM_RENT_ADD();
+            fm_rent_add.ShowDialog();
         }
     }
 }

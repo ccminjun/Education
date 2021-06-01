@@ -1,5 +1,5 @@
 ﻿
-namespace DEV_Form
+namespace DEV_FORM
 {
     partial class FM_RENT
     {
@@ -75,7 +75,7 @@ namespace DEV_Form
             this.groupBox1.Controls.Add(this.txtRentCode);
             this.groupBox1.Controls.Add(this.dtpStart);
             this.groupBox1.Controls.Add(this.txtClientName);
-            this.groupBox1.Size = new System.Drawing.Size(1451, 165);
+            this.groupBox1.Size = new System.Drawing.Size(1290, 124);
             this.groupBox1.Text = "조회";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
@@ -83,15 +83,16 @@ namespace DEV_Form
             // 
             this.groupBox2.Controls.Add(this.picCtrImg);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox2.Location = new System.Drawing.Point(0, 484);
-            this.groupBox2.Size = new System.Drawing.Size(1451, 291);
+            this.groupBox2.Location = new System.Drawing.Point(0, 363);
+            this.groupBox2.Size = new System.Drawing.Size(1290, 218);
             this.groupBox2.Text = "계약서 이미지 관리";
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(912, 101);
+            this.btnAdd.Location = new System.Drawing.Point(811, 76);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(90, 29);
+            this.btnAdd.Size = new System.Drawing.Size(80, 30);
             this.btnAdd.TabIndex = 28;
             this.btnAdd.Text = "추가";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -99,9 +100,10 @@ namespace DEV_Form
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(1028, 101);
+            this.btnReturn.Location = new System.Drawing.Point(914, 76);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(90, 29);
+            this.btnReturn.Size = new System.Drawing.Size(80, 30);
             this.btnReturn.TabIndex = 27;
             this.btnReturn.Text = "반납";
             this.btnReturn.UseVisualStyleBackColor = true;
@@ -109,17 +111,18 @@ namespace DEV_Form
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(611, 32);
+            this.label6.Location = new System.Drawing.Point(535, 26);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 20);
+            this.label6.Size = new System.Drawing.Size(55, 15);
             this.label6.TabIndex = 25;
             this.label6.Text = "차량 ID";
             // 
             // txtCarID
             // 
-            this.txtCarID.Location = new System.Drawing.Point(671, 30);
+            this.txtCarID.Location = new System.Drawing.Point(596, 22);
+            this.txtCarID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCarID.Name = "txtCarID";
-            this.txtCarID.Size = new System.Drawing.Size(177, 27);
+            this.txtCarID.Size = new System.Drawing.Size(158, 25);
             this.txtCarID.TabIndex = 26;
             // 
             // groupBox3
@@ -127,9 +130,11 @@ namespace DEV_Form
             this.groupBox3.Controls.Add(this.rdoTotal);
             this.groupBox3.Controls.Add(this.rdoInsur1);
             this.groupBox3.Controls.Add(this.rdoInsur2);
-            this.groupBox3.Location = new System.Drawing.Point(148, 77);
+            this.groupBox3.Location = new System.Drawing.Point(152, 56);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(257, 67);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(228, 50);
             this.groupBox3.TabIndex = 24;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "보험종류";
@@ -137,9 +142,10 @@ namespace DEV_Form
             // rdoTotal
             // 
             this.rdoTotal.AutoSize = true;
-            this.rdoTotal.Location = new System.Drawing.Point(21, 27);
+            this.rdoTotal.Location = new System.Drawing.Point(19, 20);
+            this.rdoTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoTotal.Name = "rdoTotal";
-            this.rdoTotal.Size = new System.Drawing.Size(60, 24);
+            this.rdoTotal.Size = new System.Drawing.Size(58, 19);
             this.rdoTotal.TabIndex = 6;
             this.rdoTotal.Text = "전체";
             this.rdoTotal.UseVisualStyleBackColor = true;
@@ -148,9 +154,10 @@ namespace DEV_Form
             // 
             this.rdoInsur1.AutoSize = true;
             this.rdoInsur1.Checked = true;
-            this.rdoInsur1.Location = new System.Drawing.Point(87, 27);
+            this.rdoInsur1.Location = new System.Drawing.Point(77, 20);
+            this.rdoInsur1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoInsur1.Name = "rdoInsur1";
-            this.rdoInsur1.Size = new System.Drawing.Size(60, 24);
+            this.rdoInsur1.Size = new System.Drawing.Size(58, 19);
             this.rdoInsur1.TabIndex = 5;
             this.rdoInsur1.TabStop = true;
             this.rdoInsur1.Text = "일반";
@@ -159,9 +166,10 @@ namespace DEV_Form
             // rdoInsur2
             // 
             this.rdoInsur2.AutoSize = true;
-            this.rdoInsur2.Location = new System.Drawing.Point(153, 26);
+            this.rdoInsur2.Location = new System.Drawing.Point(136, 20);
+            this.rdoInsur2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoInsur2.Name = "rdoInsur2";
-            this.rdoInsur2.Size = new System.Drawing.Size(60, 24);
+            this.rdoInsur2.Size = new System.Drawing.Size(58, 19);
             this.rdoInsur2.TabIndex = 5;
             this.rdoInsur2.Text = "완전";
             this.rdoInsur2.UseVisualStyleBackColor = true;
@@ -169,17 +177,18 @@ namespace DEV_Form
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 32);
+            this.label1.Location = new System.Drawing.Point(30, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 20);
+            this.label1.Size = new System.Drawing.Size(67, 15);
             this.label1.TabIndex = 14;
             this.label1.Text = "렌트코드";
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(1143, 101);
+            this.btnSearch.Location = new System.Drawing.Point(1013, 76);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(90, 29);
+            this.btnSearch.Size = new System.Drawing.Size(80, 30);
             this.btnSearch.TabIndex = 23;
             this.btnSearch.Text = "조회";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -187,27 +196,28 @@ namespace DEV_Form
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(346, 30);
+            this.label2.Location = new System.Drawing.Point(300, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 20);
+            this.label2.Size = new System.Drawing.Size(55, 15);
             this.label2.TabIndex = 15;
             this.label2.Text = "고객 ID";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1086, 35);
+            this.label3.Location = new System.Drawing.Point(965, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(20, 20);
+            this.label3.Size = new System.Drawing.Size(18, 15);
             this.label3.TabIndex = 16;
             this.label3.Text = "~";
             // 
             // chkNreturn
             // 
             this.chkNreturn.AutoSize = true;
-            this.chkNreturn.Location = new System.Drawing.Point(528, 106);
+            this.chkNreturn.Location = new System.Drawing.Point(434, 76);
+            this.chkNreturn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkNreturn.Name = "chkNreturn";
-            this.chkNreturn.Size = new System.Drawing.Size(141, 24);
+            this.chkNreturn.Size = new System.Drawing.Size(139, 19);
             this.chkNreturn.TabIndex = 22;
             this.chkNreturn.Text = "미반납 차량조회";
             this.chkNreturn.UseVisualStyleBackColor = true;
@@ -215,50 +225,55 @@ namespace DEV_Form
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(879, 33);
+            this.label4.Location = new System.Drawing.Point(779, 30);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 20);
+            this.label4.Size = new System.Drawing.Size(67, 15);
             this.label4.TabIndex = 17;
             this.label4.Text = "동록일자";
             // 
             // dtpEnd
             // 
             this.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpEnd.Location = new System.Drawing.Point(1112, 32);
+            this.dtpEnd.Location = new System.Drawing.Point(988, 26);
+            this.dtpEnd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpEnd.Name = "dtpEnd";
-            this.dtpEnd.Size = new System.Drawing.Size(121, 27);
+            this.dtpEnd.Size = new System.Drawing.Size(108, 25);
             this.dtpEnd.TabIndex = 21;
             this.dtpEnd.Value = new System.DateTime(2021, 5, 25, 0, 0, 0, 0);
             // 
             // txtRentCode
             // 
-            this.txtRentCode.Location = new System.Drawing.Point(116, 29);
+            this.txtRentCode.Location = new System.Drawing.Point(103, 22);
+            this.txtRentCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRentCode.Name = "txtRentCode";
-            this.txtRentCode.Size = new System.Drawing.Size(177, 27);
+            this.txtRentCode.Size = new System.Drawing.Size(158, 25);
             this.txtRentCode.TabIndex = 18;
             // 
             // dtpStart
             // 
             this.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpStart.Location = new System.Drawing.Point(959, 31);
+            this.dtpStart.Location = new System.Drawing.Point(851, 26);
+            this.dtpStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpStart.Name = "dtpStart";
-            this.dtpStart.Size = new System.Drawing.Size(121, 27);
+            this.dtpStart.Size = new System.Drawing.Size(108, 25);
             this.dtpStart.TabIndex = 20;
             this.dtpStart.Value = new System.DateTime(2020, 5, 1, 0, 0, 0, 0);
             // 
             // txtClientName
             // 
-            this.txtClientName.Location = new System.Drawing.Point(406, 28);
+            this.txtClientName.Location = new System.Drawing.Point(361, 21);
+            this.txtClientName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtClientName.Name = "txtClientName";
-            this.txtClientName.Size = new System.Drawing.Size(177, 27);
+            this.txtClientName.Size = new System.Drawing.Size(158, 25);
             this.txtClientName.TabIndex = 19;
             // 
             // picCtrImg
             // 
             this.picCtrImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picCtrImg.Location = new System.Drawing.Point(58, 26);
+            this.picCtrImg.Location = new System.Drawing.Point(53, 41);
+            this.picCtrImg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picCtrImg.Name = "picCtrImg";
-            this.picCtrImg.Size = new System.Drawing.Size(554, 199);
+            this.picCtrImg.Size = new System.Drawing.Size(493, 150);
             this.picCtrImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCtrImg.TabIndex = 2;
             this.picCtrImg.TabStop = false;
@@ -267,9 +282,11 @@ namespace DEV_Form
             // 
             this.groupBox4.Controls.Add(this.dataGridView1);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Location = new System.Drawing.Point(0, 165);
+            this.groupBox4.Location = new System.Drawing.Point(0, 124);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1451, 319);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Size = new System.Drawing.Size(1290, 239);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "렌트카 정보";
@@ -278,18 +295,19 @@ namespace DEV_Form
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 23);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 20);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(1445, 293);
+            this.dataGridView1.Size = new System.Drawing.Size(1284, 217);
             this.dataGridView1.TabIndex = 0;
             // 
             // FM_RENT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1451, 775);
+            this.ClientSize = new System.Drawing.Size(1290, 581);
             this.Controls.Add(this.groupBox4);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "FM_RENT";

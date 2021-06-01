@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DEV_Form
+namespace DEV_FORM
 {
     public partial class FM_SearchCar : BaseSearchChildForm
     {
@@ -85,11 +85,17 @@ namespace DEV_Form
             }
         }
 
-        private void btnSelect_Click(object sender, EventArgs e)
+        private void BtnSelect_Click(object sender, EventArgs e)
         {
             if (this.dgvGrid.Rows.Count == 0) return;
 
             this.Tag = dgvGrid.CurrentRow.Cells["CARCODE"].Value.ToString();
+            this.Close();
+        }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            this.Tag = "";
             this.Close();
         }
     }

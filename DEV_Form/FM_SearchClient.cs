@@ -10,14 +10,14 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Security.Cryptography.X509Certificates;
 
-namespace DEV_Form
+namespace DEV_FORM
 {
     public partial class FM_SearchClient : BaseSearchChildForm
     {
 
         private SqlConnection Connect = null; // 접속 정보 객체 명명
         // 접속 주소 
-        private string strConn = "Data Source=222.235.141.8; Initial Catalog=AppDev;User ID=kfqs1;Password=1234";
+        private string strConn = Commoncs.DbPath;
 
         public FM_SearchClient()
         {
@@ -144,12 +144,8 @@ namespace DEV_Form
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
 
-        private void btnSelect_Click(object sender, EventArgs e)
+        private  void BtnSelect_Click(object sender, EventArgs e)
         {
             if (this.dgvGrid.Rows.Count == 0) return;
 
@@ -172,6 +168,10 @@ namespace DEV_Form
             this.Close();
         }
 
-       
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            this.Tag = "";
+            this.Close();
+        }
     }
 }

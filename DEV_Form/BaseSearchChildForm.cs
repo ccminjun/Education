@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DEV_Form
+namespace DEV_FORM
 {
     public partial class BaseSearchChildForm : Form
     {
@@ -16,5 +16,6 @@ namespace DEV_Form
         {
             InitializeComponent();
         }
+
     }
 }

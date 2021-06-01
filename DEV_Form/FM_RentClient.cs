@@ -5,13 +5,13 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
-namespace DEV_Form
+namespace DEV_FORM
 {
     public partial class FM_RentClient : BaseMDIChildForm
     {
 
         private SqlConnection Connect = null;
-        private string strConn = "Data Source=222.235.141.8; Initial Catalog=AppDev;User ID=kfqs1;Password=1234";
+        private string strConn = Commoncs.DbPath;
 
         public FM_RentClient()
         {
@@ -160,7 +160,7 @@ namespace DEV_Form
                                                     , helper.CreateParameter("ADDRESS", sAddress)
                                                     , helper.CreateParameter("PHONENUMBER", sPhoneNumber)
                                                     , helper.CreateParameter("USERCLASS", sUserClass)
-                                                    , helper.CreateParameter("MAKER", Common.LogInID));
+                                                    , helper.CreateParameter("MAKER", Commoncs.LoginUserID));
                             break;
                         case DataRowState.Modified:
                             ClientId = drRow["CLIENTID"].ToString();

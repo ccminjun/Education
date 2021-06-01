@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DEV_Form
+namespace DEV_FORM
 {
-    public partial class BaseMDIChildForm : Form, ChildInterface
+    public partial class BaseMDIChildForm : Form, IChildCommands
     {
         public BaseMDIChildForm()
         {
@@ -18,9 +18,9 @@ namespace DEV_Form
         }
         public virtual void Inquire()
         {
-
+            //MessageBox.Show("조회 버튼 클릭");
         }
-        public virtual void DoNew()
+        public virtual void DoNew() //  메서드, 속성, 인덱서 또는 이벤트 선언을 수정하고 파생 클래스에서 재정의하도록 허용하는 데 사용
         {
 
         }
@@ -32,5 +32,6 @@ namespace DEV_Form
         {
 
         }
+
     }
 }
