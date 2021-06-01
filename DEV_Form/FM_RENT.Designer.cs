@@ -32,7 +32,7 @@ namespace DEV_FORM
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtCarID = new System.Windows.Forms.TextBox();
+            this.txtCarCode = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.rdoTotal = new System.Windows.Forms.RadioButton();
             this.rdoInsur1 = new System.Windows.Forms.RadioButton();
@@ -44,18 +44,18 @@ namespace DEV_FORM
             this.chkNreturn = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dtpEnd = new System.Windows.Forms.DateTimePicker();
-            this.txtRentCode = new System.Windows.Forms.TextBox();
+            this.txtRentID = new System.Windows.Forms.TextBox();
             this.dtpStart = new System.Windows.Forms.DateTimePicker();
-            this.txtClientName = new System.Windows.Forms.TextBox();
+            this.txtClientID = new System.Windows.Forms.TextBox();
             this.picCtrImg = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvGrid = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCtrImg)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -63,7 +63,7 @@ namespace DEV_FORM
             this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Controls.Add(this.btnReturn);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtCarID);
+            this.groupBox1.Controls.Add(this.txtCarCode);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnSearch);
@@ -72,12 +72,11 @@ namespace DEV_FORM
             this.groupBox1.Controls.Add(this.chkNreturn);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.dtpEnd);
-            this.groupBox1.Controls.Add(this.txtRentCode);
+            this.groupBox1.Controls.Add(this.txtRentID);
             this.groupBox1.Controls.Add(this.dtpStart);
-            this.groupBox1.Controls.Add(this.txtClientName);
+            this.groupBox1.Controls.Add(this.txtClientID);
             this.groupBox1.Size = new System.Drawing.Size(1290, 124);
             this.groupBox1.Text = "조회";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox2
             // 
@@ -107,6 +106,7 @@ namespace DEV_FORM
             this.btnReturn.TabIndex = 27;
             this.btnReturn.Text = "반납";
             this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // label6
             // 
@@ -117,13 +117,13 @@ namespace DEV_FORM
             this.label6.TabIndex = 25;
             this.label6.Text = "차량 ID";
             // 
-            // txtCarID
+            // txtCarCode
             // 
-            this.txtCarID.Location = new System.Drawing.Point(596, 22);
-            this.txtCarID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCarID.Name = "txtCarID";
-            this.txtCarID.Size = new System.Drawing.Size(158, 25);
-            this.txtCarID.TabIndex = 26;
+            this.txtCarCode.Location = new System.Drawing.Point(596, 22);
+            this.txtCarCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCarCode.Name = "txtCarCode";
+            this.txtCarCode.Size = new System.Drawing.Size(158, 25);
+            this.txtCarCode.TabIndex = 26;
             // 
             // groupBox3
             // 
@@ -142,24 +142,24 @@ namespace DEV_FORM
             // rdoTotal
             // 
             this.rdoTotal.AutoSize = true;
+            this.rdoTotal.Checked = true;
             this.rdoTotal.Location = new System.Drawing.Point(19, 20);
             this.rdoTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoTotal.Name = "rdoTotal";
             this.rdoTotal.Size = new System.Drawing.Size(58, 19);
             this.rdoTotal.TabIndex = 6;
+            this.rdoTotal.TabStop = true;
             this.rdoTotal.Text = "전체";
             this.rdoTotal.UseVisualStyleBackColor = true;
             // 
             // rdoInsur1
             // 
             this.rdoInsur1.AutoSize = true;
-            this.rdoInsur1.Checked = true;
             this.rdoInsur1.Location = new System.Drawing.Point(77, 20);
             this.rdoInsur1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoInsur1.Name = "rdoInsur1";
             this.rdoInsur1.Size = new System.Drawing.Size(58, 19);
             this.rdoInsur1.TabIndex = 5;
-            this.rdoInsur1.TabStop = true;
             this.rdoInsur1.Text = "일반";
             this.rdoInsur1.UseVisualStyleBackColor = true;
             // 
@@ -241,13 +241,13 @@ namespace DEV_FORM
             this.dtpEnd.TabIndex = 21;
             this.dtpEnd.Value = new System.DateTime(2021, 5, 25, 0, 0, 0, 0);
             // 
-            // txtRentCode
+            // txtRentID
             // 
-            this.txtRentCode.Location = new System.Drawing.Point(103, 22);
-            this.txtRentCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtRentCode.Name = "txtRentCode";
-            this.txtRentCode.Size = new System.Drawing.Size(158, 25);
-            this.txtRentCode.TabIndex = 18;
+            this.txtRentID.Location = new System.Drawing.Point(103, 22);
+            this.txtRentID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtRentID.Name = "txtRentID";
+            this.txtRentID.Size = new System.Drawing.Size(158, 25);
+            this.txtRentID.TabIndex = 18;
             // 
             // dtpStart
             // 
@@ -257,15 +257,15 @@ namespace DEV_FORM
             this.dtpStart.Name = "dtpStart";
             this.dtpStart.Size = new System.Drawing.Size(108, 25);
             this.dtpStart.TabIndex = 20;
-            this.dtpStart.Value = new System.DateTime(2020, 5, 1, 0, 0, 0, 0);
+            this.dtpStart.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             // 
-            // txtClientName
+            // txtClientID
             // 
-            this.txtClientName.Location = new System.Drawing.Point(361, 21);
-            this.txtClientName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtClientName.Name = "txtClientName";
-            this.txtClientName.Size = new System.Drawing.Size(158, 25);
-            this.txtClientName.TabIndex = 19;
+            this.txtClientID.Location = new System.Drawing.Point(361, 21);
+            this.txtClientID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtClientID.Name = "txtClientID";
+            this.txtClientID.Size = new System.Drawing.Size(158, 25);
+            this.txtClientID.TabIndex = 19;
             // 
             // picCtrImg
             // 
@@ -280,7 +280,7 @@ namespace DEV_FORM
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.dataGridView1);
+            this.groupBox4.Controls.Add(this.dgvGrid);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(0, 124);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -291,17 +291,17 @@ namespace DEV_FORM
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "렌트카 정보";
             // 
-            // dataGridView1
+            // dgvGrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 20);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(1284, 217);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvGrid.Location = new System.Drawing.Point(3, 20);
+            this.dgvGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvGrid.Name = "dgvGrid";
+            this.dgvGrid.RowHeadersWidth = 51;
+            this.dgvGrid.RowTemplate.Height = 29;
+            this.dgvGrid.Size = new System.Drawing.Size(1284, 217);
+            this.dgvGrid.TabIndex = 0;
             // 
             // FM_RENT
             // 
@@ -312,7 +312,7 @@ namespace DEV_FORM
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "FM_RENT";
             this.Text = "FM_RENT";
-            this.Load += new System.EventHandler(this.FM_RENT2_Load);
+            this.Load += new System.EventHandler(this.FM_RENT_Load);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.groupBox2, 0);
             this.Controls.SetChildIndex(this.groupBox4, 0);
@@ -323,7 +323,7 @@ namespace DEV_FORM
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCtrImg)).EndInit();
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -332,7 +332,7 @@ namespace DEV_FORM
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtCarID;
+        private System.Windows.Forms.TextBox txtCarCode;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RadioButton rdoTotal;
         private System.Windows.Forms.RadioButton rdoInsur1;
@@ -344,11 +344,11 @@ namespace DEV_FORM
         private System.Windows.Forms.CheckBox chkNreturn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dtpEnd;
-        private System.Windows.Forms.TextBox txtRentCode;
+        private System.Windows.Forms.TextBox txtRentID;
         private System.Windows.Forms.DateTimePicker dtpStart;
-        private System.Windows.Forms.TextBox txtClientName;
+        private System.Windows.Forms.TextBox txtClientID;
         private System.Windows.Forms.PictureBox picCtrImg;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvGrid;
     }
 }

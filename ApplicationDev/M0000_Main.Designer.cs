@@ -33,6 +33,9 @@
             this.M_Standard = new System.Windows.Forms.ToolStripMenuItem();
             this.M_System = new System.Windows.Forms.ToolStripMenuItem();
             this.FM_Chart = new System.Windows.Forms.ToolStripMenuItem();
+            this.FM_Car = new System.Windows.Forms.ToolStripMenuItem();
+            this.FM_RENT = new System.Windows.Forms.ToolStripMenuItem();
+            this.FM_RentClient = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -46,10 +49,7 @@
             this.stslbUserName = new System.Windows.Forms.ToolStripStatusLabel();
             this.stslbNowTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.FM_Car = new System.Windows.Forms.ToolStripMenuItem();
-            this.FM_RENT = new System.Windows.Forms.ToolStripMenuItem();
             this.mdiControl1 = new ApplicationDev.MDIControl();
-            this.FM_RentClient = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -63,15 +63,14 @@
             this.M_System});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1466, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1466, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // M_Standard
             // 
             this.M_Standard.Name = "M_Standard";
-            this.M_Standard.Size = new System.Drawing.Size(83, 26);
+            this.M_Standard.Size = new System.Drawing.Size(83, 24);
             this.M_Standard.Text = "기준정보";
             // 
             // M_System
@@ -82,15 +81,33 @@
             this.FM_RENT,
             this.FM_RentClient});
             this.M_System.Name = "M_System";
-            this.M_System.Size = new System.Drawing.Size(68, 26);
+            this.M_System.Size = new System.Drawing.Size(68, 24);
             this.M_System.Text = "시스템";
             this.M_System.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.M_System_DropDownItemClicked);
             // 
             // FM_Chart
             // 
             this.FM_Chart.Name = "FM_Chart";
-            this.FM_Chart.Size = new System.Drawing.Size(224, 26);
+            this.FM_Chart.Size = new System.Drawing.Size(157, 26);
             this.FM_Chart.Text = "차트 예제";
+            // 
+            // FM_Car
+            // 
+            this.FM_Car.Name = "FM_Car";
+            this.FM_Car.Size = new System.Drawing.Size(157, 26);
+            this.FM_Car.Text = "차정보";
+            // 
+            // FM_RENT
+            // 
+            this.FM_RENT.Name = "FM_RENT";
+            this.FM_RENT.Size = new System.Drawing.Size(157, 26);
+            this.FM_RENT.Text = "렌트내역";
+            // 
+            // FM_RentClient
+            // 
+            this.FM_RentClient.Name = "FM_RentClient";
+            this.FM_RentClient.Size = new System.Drawing.Size(157, 26);
+            this.FM_RentClient.Text = "고객정보";
             // 
             // toolStrip1
             // 
@@ -107,7 +124,7 @@
             this.toolStripSeparator1,
             this.toolStripButton5,
             this.toolStripButton6});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 30);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1466, 96);
             this.toolStrip1.TabIndex = 1;
@@ -201,7 +218,7 @@
             this.toolStripStatusLabel4,
             this.stslbUserName,
             this.stslbNowTime});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 486);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 535);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1466, 42);
             this.statusStrip1.TabIndex = 2;
@@ -236,39 +253,21 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // FM_Car
-            // 
-            this.FM_Car.Name = "FM_Car";
-            this.FM_Car.Size = new System.Drawing.Size(224, 26);
-            this.FM_Car.Text = "차정보";
-            // 
-            // FM_RENT
-            // 
-            this.FM_RENT.Name = "FM_RENT";
-            this.FM_RENT.Size = new System.Drawing.Size(224, 26);
-            this.FM_RENT.Text = "렌트내역";
-            // 
             // mdiControl1
             // 
             this.mdiControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mdiControl1.Location = new System.Drawing.Point(0, 126);
+            this.mdiControl1.Location = new System.Drawing.Point(0, 124);
             this.mdiControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mdiControl1.Name = "mdiControl1";
             this.mdiControl1.SelectedIndex = 0;
-            this.mdiControl1.Size = new System.Drawing.Size(1466, 360);
+            this.mdiControl1.Size = new System.Drawing.Size(1466, 411);
             this.mdiControl1.TabIndex = 6;
-            // 
-            // FM_RentClient
-            // 
-            this.FM_RentClient.Name = "FM_RentClient";
-            this.FM_RentClient.Size = new System.Drawing.Size(224, 26);
-            this.FM_RentClient.Text = "고객정보";
             // 
             // M0000_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1466, 528);
+            this.ClientSize = new System.Drawing.Size(1466, 577);
             this.Controls.Add(this.mdiControl1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);

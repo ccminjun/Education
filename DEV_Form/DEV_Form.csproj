@@ -76,6 +76,18 @@
     <Compile Include="FM_CarAdd.designer.cs">
       <DependentUpon>FM_CarAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="FM_Chart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM_Chart.Designer.cs">
+      <DependentUpon>FM_Chart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FM_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM_Main.Designer.cs">
+      <DependentUpon>FM_Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="FM_RENT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FM_CarAdd.resx">
       <DependentUpon>FM_CarAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FM_Main.resx">
+      <DependentUpon>FM_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FM_RENT.resx">
       <DependentUpon>FM_RENT.cs</DependentUpon>

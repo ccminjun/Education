@@ -67,3 +67,4 @@ C:\Users\admin\workspace\RentcarProject\DEV_FORM\obj\Debug\DEV_FORM.csproj.Gener
 C:\Users\admin\workspace\RentcarProject\DEV_FORM\obj\Debug\DEV_FORM.csproj.CoreCompileInputs.cache
 C:\Users\admin\workspace\RentcarProject\DEV_FORM\obj\Debug\DEV_FORM.dll
 C:\Users\admin\workspace\RentcarProject\DEV_FORM\obj\Debug\DEV_FORM.pdb
+C:\Users\admin\workspace\RentcarProject\DEV_FORM\obj\Debug\DEV_FORM.FM_Main.resources
