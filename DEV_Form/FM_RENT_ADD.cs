@@ -21,6 +21,16 @@ namespace DEV_Form
         {
             FM_SearchCar formCar = new FM_SearchCar();
             formCar.ShowDialog();
+
+            
+        }
+
+        private void btnClient_Click(object sender, EventArgs e)
+        {
+            FM_SearchClient formClient = new FM_SearchClient();
+            formClient.ShowDialog();
+            if (formClient.Tag.ToString() != "") txtClientID.Text = formClient.Tag.ToString();
+
         }
     }
 }

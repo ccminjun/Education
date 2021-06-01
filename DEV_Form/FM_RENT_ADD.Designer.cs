@@ -214,6 +214,7 @@ namespace DEV_Form
             this.btnClient.TabIndex = 4;
             this.btnClient.Text = "고객조회";
             this.btnClient.UseVisualStyleBackColor = true;
+            this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
             // btnSave
             // 

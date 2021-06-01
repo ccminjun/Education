@@ -35,6 +35,14 @@ namespace DEV_Form
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // btnSelect
+            // 
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnSearch);
@@ -57,6 +65,7 @@ namespace DEV_Form
             this.txtClient.Name = "txtClient";
             this.txtClient.Size = new System.Drawing.Size(143, 27);
             this.txtClient.TabIndex = 1;
+            this.txtClient.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtClient_KeyDown);
             // 
             // btnSearch
             // 
@@ -66,12 +75,13 @@ namespace DEV_Form
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "조회";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // FM_SearchClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 690);
+            this.ClientSize = new System.Drawing.Size(614, 690);
             this.Name = "FM_SearchClient";
             this.Text = "회원조회";
             this.groupBox1.ResumeLayout(false);
