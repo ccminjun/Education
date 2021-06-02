@@ -15,6 +15,7 @@ namespace DEV_FORM
         public FM_ClientAdd(string clientCode)
         {
             InitializeComponent();
+            this.Tag = "NONE";
         }
 
         private void FM_ClientAdd_Load(object sender, EventArgs e)
@@ -29,23 +30,38 @@ namespace DEV_FORM
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            if (this.txtName.Text == "") return;
             Car.sCustName = txtName.Text.ToString();
-            
-            if (this.txtAge.Text == "") return;
             Car.sAge = txtAge.Text.ToString();
-
-            if (this.cboGender.Text == "") return;
             Car.sGender = cboGender.Text.ToString();
-
-            if (this.txtAddress.Text == "") return;
             Car.sCAddress = txtAddress.Text.ToString();
-            
-            if (this.txtPhone.Text == "") return;
             Car.sPhoneNum = txtPhone.Text.ToString();
 
+            if (this.txtName.Text == "" || this.txtAge.Text == "" || this.cboGender.Text == "" || this.txtAddress.Text == "" || this.txtPhone.Text == "")
+            {
+                MessageBox.Show("모든 값을 입력해야 추가가 가능합니다.");
+                return;
+            }
+            this.Tag = "OK";
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("해당 화면을 닫으시겠습니까?", "Delete", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                return;
+            }
+            this.Close();
+        }
+        private void FM_ClientAdd_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //if (MessageBox.Show("해당 화면을 닫으시겠습니까?", "Delete", MessageBoxButtons.YesNo) == DialogResult.No)
+            //{ 
+            //    return;
+            //}
+            //txtName.Refresh();
+        }
+
     }
 }
 

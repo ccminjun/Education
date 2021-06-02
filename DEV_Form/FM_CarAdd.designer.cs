@@ -46,12 +46,14 @@ namespace DEV_FORM
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.button1);
             this.groupBox4.Controls.Add(this.dtpDate);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.cboCarSize);
@@ -124,13 +126,14 @@ namespace DEV_FORM
             // 
             // btnInput
             // 
-            this.btnInput.Location = new System.Drawing.Point(505, 56);
+            this.btnInput.Location = new System.Drawing.Point(422, 58);
             this.btnInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInput.Name = "btnInput";
             this.btnInput.Size = new System.Drawing.Size(99, 30);
             this.btnInput.TabIndex = 0;
             this.btnInput.Text = "입력";
             this.btnInput.UseVisualStyleBackColor = true;
+            this.btnInput.Click += new System.EventHandler(this.btnInput_Click);
             // 
             // groupBox3
             // 
@@ -220,6 +223,17 @@ namespace DEV_FORM
             this.label5.TabIndex = 5;
             this.label5.Text = "제조사";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(527, 59);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 30);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "닫기";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FM_CarAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -258,5 +272,6 @@ namespace DEV_FORM
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button1;
     }
 }

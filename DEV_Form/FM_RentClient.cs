@@ -14,61 +14,58 @@ namespace DEV_FORM
         private string strConn = Commoncs.DbPath;
 
         public FM_RentClient()
-        {
-            InitializeComponent();
-        }
- 
-
+        { InitializeComponent(); }
+        #region Search, Plus, Delete, Save
         public override void Inquire()
         {
-                DBHelper helper = new DBHelper(false);
-                try
-                {
-                    String sClientId = txtClientID.Text;//고객ID
-                    String sClientName = txtClientName.Text; //고객이름
-                    String sStartDate = dtpStart.Text; //가입일자Start
-                    String sEndDate = dtpEnd.Text; //끝나는일자
-                    String sClientClass = ""; //고객등급
+            DBHelper helper = new DBHelper(false);
+            try
+            {
+                String sClientId = txtClientID.Text;//고객ID
+                String sClientName = txtClientName.Text; //고객이름
+                String sStartDate = dtpStart.Text; //가입일자Start
+                String sEndDate = dtpEnd.Text; //끝나는일자
+                String sClientClass = ""; //고객등급
 
-                    if (rdoBlacklist.Checked == true) sClientClass = "BLACK";
-                    else if (rdoGeneral.Checked == true) sClientClass = "NORMAL";
-                    else if (rdoVip.Checked == true) sClientClass = "VIP";
-                    else sClientClass = "";
+                if (rdoBlacklist.Checked == true) sClientClass = "BLACK";
+                else if (rdoGeneral.Checked == true) sClientClass = "NORMAL";
+                else if (rdoVip.Checked == true) sClientClass = "VIP";
+                else sClientClass = "";
 
-                    DataTable dtTemp = new DataTable();
-                    dtTemp = helper.FillTable("SP_4_Client_S1", CommandType.StoredProcedure
-                                                , helper.CreateParameter("CLIENTID", sClientId)
-                                                , helper.CreateParameter("CLIENTNAME", sClientName)
-                                                , helper.CreateParameter("STARTDATE", sStartDate)
-                                                , helper.CreateParameter("ENDDATE", sEndDate)
-                                                , helper.CreateParameter("USERCLASS", sClientClass));
+                DataTable dtTemp = new DataTable();
+                dtTemp = helper.FillTable("SP_4_Client_S1", CommandType.StoredProcedure
+                                            , helper.CreateParameter("CLIENTID", sClientId)
+                                            , helper.CreateParameter("CLIENTNAME", sClientName)
+                                            , helper.CreateParameter("STARTDATE", sStartDate)
+                                            , helper.CreateParameter("ENDDATE", sEndDate)
+                                            , helper.CreateParameter("USERCLASS", sClientClass));
 
-                    if (dtTemp.Rows.Count == 0)
-                    {
-                        dgvGrid.DataSource = null;
-                        MessageBox.Show("조회할 데이터가 없습니다");
-                    }
-                    else
-                    {
-                        //그리드 뷰에 데이터 삽입
-                        dgvGrid.DataSource = dtTemp;
-                    }
-                    /*
-                     *    @CLIENTID INTEGER,
-                          @CLIENTNAME VARCHAR(50) ,
-                          @STARTDATE DATETIME ,
-                          @ENDDATE DATETIME,
-                          @USERCLASS VARCHAR(10)
-                     * */
-                }
-                catch (Exception ex)
+                if (dtTemp.Rows.Count == 0)
                 {
-                    MessageBox.Show(ex.ToString());
+                    dgvGrid.DataSource = null;
+                    MessageBox.Show("조회할 데이터가 없습니다");
                 }
-                finally
+                else
                 {
-                    helper.Close();
+                    //그리드 뷰에 데이터 삽입
+                    dgvGrid.DataSource = dtTemp;
                 }
+                /*
+                 *    @CLIENTID INTEGER,
+                      @CLIENTNAME VARCHAR(50) ,
+                      @STARTDATE DATETIME ,
+                      @ENDDATE DATETIME,
+                      @USERCLASS VARCHAR(10)
+                 * */
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                helper.Close();
+            }
         }
         public override void DoNew()
         {
@@ -97,10 +94,8 @@ namespace DEV_FORM
                     dtTemp.Rows[i].Delete();
                     break;
                 }
-
             }
         }
-
         public override void Save()
         {
             base.Save();
@@ -214,14 +209,10 @@ namespace DEV_FORM
                 helper.Close();
             }
 
-        }
+        } 
+        #endregion
 
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            Inquire();
-        }
-
+        #region IMG
         private void picLicenseImg_Click(object sender, EventArgs e)
         {
             if (this.picLicenseImg.Dock == System.Windows.Forms.DockStyle.Fill)
@@ -237,7 +228,6 @@ namespace DEV_FORM
                 picLicenseImg.BringToFront();
             }
         }
-
         private void btnPicUpload_Click(object sender, EventArgs e)
         {
             string sImageFile = string.Empty;
@@ -252,7 +242,6 @@ namespace DEV_FORM
                 picLicenseImg.Image = Bitmap.FromFile(sImageFile);
             }
         }
-
         private void btnPicSave_Click(object sender, EventArgs e)
         {
             // 픽쳐박스 이미지 저장
@@ -302,15 +291,12 @@ namespace DEV_FORM
 
             }
         }
-
         private void dgvGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // 선택 시 해당품목 이미지 가져오기
             string sClientCode = dgvGrid.CurrentRow.Cells["CLIENTID"].Value.ToString();
-
             Connect = new SqlConnection(strConn);
             Connect.Open();
-
             try
             {
                 // 이미지 초기화
@@ -343,7 +329,6 @@ namespace DEV_FORM
                 Connect.Close();
             }
         }
-
         private void btnPictDelete_Click(object sender, EventArgs e)
         {
             // 품목에 저장된 이미지 삭제
@@ -368,15 +353,42 @@ namespace DEV_FORM
             }
             finally
             {
-
+                Connect.Close();
             }
         }
+        #endregion
 
         private void FM_RentClient_Load(object sender, EventArgs e)
         {
             dtpStart.Text = string.Format("{0:yyyy-}{1:MM-dd}", DateTime.Today.AddYears(-1), DateTime.Now);
         }
+        private void dgvGrid_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                string clientCode = dgvGrid.CurrentRow.Cells["CLIENTID"].Value.ToString();
+                FM_ClientAdd bp = new FM_ClientAdd(clientCode);
+                bp.ShowDialog();
 
+                if (bp.Tag.ToString() == "OK")
+                {
+                    if (Car.sCustName != null) { dgvGrid.CurrentRow.Cells[1].Value = Car.sCustName; }
+                    if (Car.sAge != "") { dgvGrid.CurrentRow.Cells[2].Value = Car.sAge; }
+                    if (Car.sGender != "") { dgvGrid.CurrentRow.Cells[3].Value = Car.sGender; }
+                    if (Car.sCAddress != "") { dgvGrid.CurrentRow.Cells[4].Value = Car.sCAddress; }
+                    if (Car.sPhoneNum != "") { dgvGrid.CurrentRow.Cells[5].Value = Car.sPhoneNum; }
+                    dgvGrid.CurrentRow.Cells[6].Value = "NORMAL";
+                    MessageBox.Show(" 정상적으로 입력되었습니다.");
+                }
+
+            }
+            catch (Exception EX)
+            {
+                MessageBox.Show("오류입니다.");
+            }
+            finally {  }
+
+        }
     }
 
 }

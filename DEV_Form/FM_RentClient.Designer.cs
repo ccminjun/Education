@@ -228,6 +228,7 @@ namespace DEV_FORM
             this.dgvGrid.Size = new System.Drawing.Size(946, 295);
             this.dgvGrid.TabIndex = 1;
             this.dgvGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGrid_CellClick);
+            this.dgvGrid.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvGrid_CellMouseDoubleClick);
             // 
             // groupBox4
             // 

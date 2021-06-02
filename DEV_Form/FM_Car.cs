@@ -25,7 +25,7 @@ namespace DEV_FORM
                 string sCarsize = cboRentCost.Text;
 
                 DataTable DataTemp = new DataTable();
-                DataTemp = helper.FillTable("SP_4_CAR_S3", CommandType.StoredProcedure ,helper.CreateParameter("CARSIZE",sCarsize) );
+                DataTemp = helper.FillTable("SP_4_CAR_S3", CommandType.StoredProcedure, helper.CreateParameter("CARSIZE", sCarsize));
 
                 cboRentCost.DataSource = DataTemp;
                 cboRentCost.DisplayMember = "CARSIZE";
@@ -33,8 +33,8 @@ namespace DEV_FORM
                 cboRentCost.Text = "";
                 dtpEnd.Text = string.Format("{0:yyyy-MM-dd}", DateTime.Now);
             }
-            catch (Exception ex) { MessageBox.Show(ex.ToString());}
-            finally { helper.Close();}
+            catch (Exception ex) { MessageBox.Show(ex.ToString()); }
+            finally { helper.Close(); }
         }
 
         private void btnRefresh1_Click(object sender, EventArgs e)
@@ -50,6 +50,7 @@ namespace DEV_FORM
             }
         }
 
+        #region Search, Plus, Delete, Save
         public override void Inquire()
         {
             base.Inquire();
@@ -105,19 +106,19 @@ namespace DEV_FORM
                     //그리드 뷰에 데이터 삽입 
                     dgvGridCar.DataSource = DataTemp;
                 }
-                dgvGridCar.Columns["CARCODE"].HeaderText = "차량 ID";     dgvGridCar.Columns[0].Width = 100;
-                dgvGridCar.Columns["CARTYPE"].HeaderText = "연료";        dgvGridCar.Columns[1].Width = 100;
-                dgvGridCar.Columns["CARNAME"].HeaderText = "차종";        dgvGridCar.Columns[2].Width = 100;
-                dgvGridCar.Columns["CARSIZE"].HeaderText = "사이즈";      dgvGridCar.Columns[3].Width = 100;
-                dgvGridCar.Columns["CARNUM"].HeaderText = "차량 번호";    dgvGridCar.Columns[4].Width = 200;
-                dgvGridCar.Columns["USEFLAG"].HeaderText = "상태";        dgvGridCar.Columns[5].Width = 100;
+                dgvGridCar.Columns["CARCODE"].HeaderText = "차량 ID"; dgvGridCar.Columns[0].Width = 100;
+                dgvGridCar.Columns["CARTYPE"].HeaderText = "연료"; dgvGridCar.Columns[1].Width = 100;
+                dgvGridCar.Columns["CARNAME"].HeaderText = "차종"; dgvGridCar.Columns[2].Width = 100;
+                dgvGridCar.Columns["CARSIZE"].HeaderText = "사이즈"; dgvGridCar.Columns[3].Width = 100;
+                dgvGridCar.Columns["CARNUM"].HeaderText = "차량 번호"; dgvGridCar.Columns[4].Width = 200;
+                dgvGridCar.Columns["USEFLAG"].HeaderText = "상태"; dgvGridCar.Columns[5].Width = 100;
                 dgvGridCar.Columns["CARREGIST"].HeaderText = "구매 일시"; dgvGridCar.Columns[6].Width = 200;
-                dgvGridCar.Columns["CARMAKER"].HeaderText = "제조사";     dgvGridCar.Columns[7].Width = 100;
-                dgvGridCar.Columns["RENTPRICE"].HeaderText = "렌트가격";  dgvGridCar.Columns[8].Width = 200;
-                dgvGridCar.Columns["MAKER"].HeaderText = "등록자";        dgvGridCar.Columns[9].Width = 100;
-                dgvGridCar.Columns["MAKEDATE"].HeaderText = "등록 일시";  dgvGridCar.Columns[10].Width = 200;
-                dgvGridCar.Columns["EDITOR"].HeaderText = "수정자";       dgvGridCar.Columns[11].Width = 100;
-                dgvGridCar.Columns["EDITDATE"].HeaderText = "수정 일시";  dgvGridCar.Columns[12].Width = 200;
+                dgvGridCar.Columns["CARMAKER"].HeaderText = "제조사"; dgvGridCar.Columns[7].Width = 100;
+                dgvGridCar.Columns["RENTPRICE"].HeaderText = "렌트가격"; dgvGridCar.Columns[8].Width = 200;
+                dgvGridCar.Columns["MAKER"].HeaderText = "등록자"; dgvGridCar.Columns[9].Width = 100;
+                dgvGridCar.Columns["MAKEDATE"].HeaderText = "등록 일시"; dgvGridCar.Columns[10].Width = 200;
+                dgvGridCar.Columns["EDITOR"].HeaderText = "수정자"; dgvGridCar.Columns[11].Width = 100;
+                dgvGridCar.Columns["EDITDATE"].HeaderText = "수정 일시"; dgvGridCar.Columns[12].Width = 200;
 
                 dgvGridCar.Columns["CARCODE"].ReadOnly = true;
                 dgvGridCar.Columns["MAKER"].ReadOnly = true;
@@ -126,7 +127,7 @@ namespace DEV_FORM
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString()); 
+                MessageBox.Show(ex.ToString());
 
             }
             finally
@@ -227,7 +228,7 @@ namespace DEV_FORM
                             sCarsize = drRow["CARSIZE"].ToString();
                             sRentPrice = drRow["RENTPRICE"].ToString();
                             sFirstDate = drRow["CARREGIST"].ToString();
-                            sFirstDate=  sFirstDate.Substring(0,10);
+                            sFirstDate = sFirstDate.Substring(0, 10);
                             sCarMaker = drRow["CARMAKER"].ToString();
                             helper.ExecuteNoneQuery("SP_4_CAR_U1", CommandType.StoredProcedure,
                                                     helper.CreateParameter("CARCODE", sCarCode),
@@ -242,7 +243,7 @@ namespace DEV_FORM
                                                     helper.CreateParameter("EDITOR", Commoncs.LoginUserID));
                             break;
 
-                            
+
                     }
                 }
                 //성공 시 DB COMMIT
@@ -266,9 +267,9 @@ namespace DEV_FORM
                 //DB Close
                 helper.Close();
             }
-
-
         }
+
+        #endregion
 
         #region IMG
         private SqlConnection Connect = null; // 접속 정보 객체 명명
@@ -423,9 +424,36 @@ namespace DEV_FORM
 
         private void dgvGridCar_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string carcode = dgvGridCar.CurrentRow.Cells["CARCODE"].Value.ToString();
-            FM_CarAdd bp = new FM_CarAdd(carcode);
-            bp.ShowDialog();
+            try
+            {
+                string carcode = dgvGridCar.CurrentRow.Cells["CARCODE"].Value.ToString();
+                FM_CarAdd bp = new FM_CarAdd(carcode);
+                bp.ShowDialog();
+
+                if (bp.Tag.ToString() == "OKAY")
+                {
+                    if (Car.sType != "") { dgvGridCar.CurrentRow.Cells[1].Value = Car.sType; }
+                    if (Car.sName != "") { dgvGridCar.CurrentRow.Cells[2].Value = Car.sName; }
+                    if (Car.sSize != "") { dgvGridCar.CurrentRow.Cells[3].Value = Car.sSize; }
+                    if (Car.sNum != "") { dgvGridCar.CurrentRow.Cells[4].Value = Car.sNum; }
+                    if (Car.sDate != "") { dgvGridCar.CurrentRow.Cells[6].Value = Car.sDate; }
+                    if (Car.sMaker != "") { dgvGridCar.CurrentRow.Cells[7].Value = Car.sMaker; }
+                    if (Car.sPrice != "") { dgvGridCar.CurrentRow.Cells[8].Value = Car.sPrice; }
+                    dgvGridCar.CurrentRow.Cells[5].Value = "W";
+                    MessageBox.Show(" 정상적으로 입력되었습니다.");
+                }
+                else { return; }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("오류입니다.");
+            }
+            finally
+            {
+            }
         }
+
+
     }
 }
