@@ -68,3 +68,4 @@ C:\Users\admin\workspace\RentcarProject\DEV_FORM\obj\Debug\DEV_FORM.csproj.CoreC
 C:\Users\admin\workspace\RentcarProject\DEV_FORM\obj\Debug\DEV_FORM.dll
 C:\Users\admin\workspace\RentcarProject\DEV_FORM\obj\Debug\DEV_FORM.pdb
 C:\Users\admin\workspace\RentcarProject\DEV_FORM\obj\Debug\DEV_FORM.FM_Main.resources
+C:\Users\admin\workspace\RentcarProject\DEV_FORM\obj\Debug\DEV_FORM.FM_ClientAdd.resources

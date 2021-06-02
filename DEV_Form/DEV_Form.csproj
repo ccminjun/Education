@@ -62,6 +62,7 @@
     <Compile Include="BaseSearchChildForm.designer.cs">
       <DependentUpon>BaseSearchChildForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Car.cs" />
     <Compile Include="Commoncs.cs" />
     <Compile Include="DBHelper.cs" />
     <Compile Include="FM_Car.cs">
@@ -81,6 +82,12 @@
     </Compile>
     <Compile Include="FM_Chart.Designer.cs">
       <DependentUpon>FM_Chart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FM_ClientAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM_ClientAdd.designer.cs">
+      <DependentUpon>FM_ClientAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="FM_Main.cs">
       <SubType>Form</SubType>
@@ -131,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FM_CarAdd.resx">
       <DependentUpon>FM_CarAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FM_ClientAdd.resx">
+      <DependentUpon>FM_ClientAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FM_Main.resx">
       <DependentUpon>FM_Main.cs</DependentUpon>
