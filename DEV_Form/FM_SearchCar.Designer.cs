@@ -32,70 +32,60 @@ namespace DEV_FORM
             this.label1 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.chbElect = new System.Windows.Forms.CheckBox();
-            this.chbGas = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.chbBS = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtFirstPrice = new System.Windows.Forms.TextBox();
             this.txtLastPrice = new System.Windows.Forms.TextBox();
-            this.chbLpg = new System.Windows.Forms.CheckBox();
-            this.chbHybrid = new System.Windows.Forms.CheckBox();
-            this.chbOil = new System.Windows.Forms.CheckBox();
-            this.chbSL = new System.Windows.Forms.CheckBox();
-            this.chbSS = new System.Windows.Forms.CheckBox();
-            this.chbSSUV = new System.Windows.Forms.CheckBox();
-            this.chbMSUV = new System.Windows.Forms.CheckBox();
-            this.chbBSUV = new System.Windows.Forms.CheckBox();
-            this.chbMS = new System.Windows.Forms.CheckBox();
-            this.chbBRV = new System.Windows.Forms.CheckBox();
             this.txtMaker = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rdbLPG = new System.Windows.Forms.RadioButton();
+            this.rdbOil = new System.Windows.Forms.RadioButton();
+            this.rdbHybrid = new System.Windows.Forms.RadioButton();
+            this.rdbGas = new System.Windows.Forms.RadioButton();
+            this.rdbElect = new System.Windows.Forms.RadioButton();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.rdbBRV = new System.Windows.Forms.RadioButton();
+            this.rdbBSUV = new System.Windows.Forms.RadioButton();
+            this.rdbMSUV = new System.Windows.Forms.RadioButton();
+            this.rdbMS = new System.Windows.Forms.RadioButton();
+            this.rdbSSUV = new System.Windows.Forms.RadioButton();
+            this.rdbSS = new System.Windows.Forms.RadioButton();
+            this.rdbSL = new System.Windows.Forms.RadioButton();
+            this.rdbBS = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(45, 242);
-            this.groupBox2.Size = new System.Drawing.Size(439, 205);
+            this.groupBox2.Location = new System.Drawing.Point(48, 306);
             // 
             // btnSelect
             // 
+            this.btnSelect.Location = new System.Drawing.Point(310, 521);
             this.btnSelect.Click += new System.EventHandler(this.BtnSelect_Click);
             // 
             // btnClose
             // 
+            this.btnClose.Location = new System.Drawing.Point(400, 521);
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.txtMaker);
-            this.groupBox1.Controls.Add(this.chbBRV);
-            this.groupBox1.Controls.Add(this.chbMS);
-            this.groupBox1.Controls.Add(this.chbBSUV);
-            this.groupBox1.Controls.Add(this.chbMSUV);
-            this.groupBox1.Controls.Add(this.chbSSUV);
-            this.groupBox1.Controls.Add(this.chbSS);
-            this.groupBox1.Controls.Add(this.chbSL);
-            this.groupBox1.Controls.Add(this.chbOil);
-            this.groupBox1.Controls.Add(this.chbHybrid);
-            this.groupBox1.Controls.Add(this.chbLpg);
             this.groupBox1.Controls.Add(this.txtLastPrice);
             this.groupBox1.Controls.Add(this.txtFirstPrice);
-            this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.chbBS);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.chbGas);
-            this.groupBox1.Controls.Add(this.chbElect);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Size = new System.Drawing.Size(439, 196);
+            this.groupBox1.Size = new System.Drawing.Size(439, 108);
             // 
             // label1
             // 
@@ -123,61 +113,10 @@ namespace DEV_FORM
             this.label2.TabIndex = 2;
             this.label2.Text = "회사명";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 65);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 15);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "차연료";
-            // 
-            // chbElect
-            // 
-            this.chbElect.AutoSize = true;
-            this.chbElect.Location = new System.Drawing.Point(75, 65);
-            this.chbElect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chbElect.Name = "chbElect";
-            this.chbElect.Size = new System.Drawing.Size(59, 19);
-            this.chbElect.TabIndex = 5;
-            this.chbElect.Text = "전기";
-            this.chbElect.UseVisualStyleBackColor = true;
-            // 
-            // chbGas
-            // 
-            this.chbGas.AutoSize = true;
-            this.chbGas.Location = new System.Drawing.Point(137, 66);
-            this.chbGas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chbGas.Name = "chbGas";
-            this.chbGas.Size = new System.Drawing.Size(74, 19);
-            this.chbGas.TabIndex = 6;
-            this.chbGas.Text = "휘발유";
-            this.chbGas.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 99);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 15);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "차사이즈";
-            // 
-            // chbBS
-            // 
-            this.chbBS.AutoSize = true;
-            this.chbBS.Location = new System.Drawing.Point(75, 98);
-            this.chbBS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chbBS.Name = "chbBS";
-            this.chbBS.Size = new System.Drawing.Size(94, 19);
-            this.chbBS.TabIndex = 8;
-            this.chbBS.Text = "대형 승용";
-            this.chbBS.UseVisualStyleBackColor = true;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 153);
+            this.label5.Location = new System.Drawing.Point(6, 71);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 15);
             this.label5.TabIndex = 9;
@@ -186,7 +125,7 @@ namespace DEV_FORM
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(180, 153);
+            this.label6.Location = new System.Drawing.Point(182, 74);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(18, 15);
             this.label6.TabIndex = 11;
@@ -194,7 +133,7 @@ namespace DEV_FORM
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(366, 160);
+            this.btnSearch.Location = new System.Drawing.Point(366, 66);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(62, 30);
@@ -205,7 +144,7 @@ namespace DEV_FORM
             // 
             // txtFirstPrice
             // 
-            this.txtFirstPrice.Location = new System.Drawing.Point(58, 151);
+            this.txtFirstPrice.Location = new System.Drawing.Point(64, 71);
             this.txtFirstPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFirstPrice.Name = "txtFirstPrice";
             this.txtFirstPrice.Size = new System.Drawing.Size(112, 25);
@@ -213,121 +152,11 @@ namespace DEV_FORM
             // 
             // txtLastPrice
             // 
-            this.txtLastPrice.Location = new System.Drawing.Point(205, 151);
+            this.txtLastPrice.Location = new System.Drawing.Point(206, 71);
             this.txtLastPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLastPrice.Name = "txtLastPrice";
             this.txtLastPrice.Size = new System.Drawing.Size(112, 25);
             this.txtLastPrice.TabIndex = 15;
-            // 
-            // chbLpg
-            // 
-            this.chbLpg.AutoSize = true;
-            this.chbLpg.Location = new System.Drawing.Point(210, 66);
-            this.chbLpg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chbLpg.Name = "chbLpg";
-            this.chbLpg.Size = new System.Drawing.Size(58, 19);
-            this.chbLpg.TabIndex = 18;
-            this.chbLpg.Text = "LPG";
-            this.chbLpg.UseVisualStyleBackColor = true;
-            // 
-            // chbHybrid
-            // 
-            this.chbHybrid.AutoSize = true;
-            this.chbHybrid.Location = new System.Drawing.Point(271, 66);
-            this.chbHybrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chbHybrid.Name = "chbHybrid";
-            this.chbHybrid.Size = new System.Drawing.Size(70, 19);
-            this.chbHybrid.TabIndex = 19;
-            this.chbHybrid.Text = "Hybrid";
-            this.chbHybrid.UseVisualStyleBackColor = true;
-            // 
-            // chbOil
-            // 
-            this.chbOil.AutoSize = true;
-            this.chbOil.Location = new System.Drawing.Point(343, 66);
-            this.chbOil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chbOil.Name = "chbOil";
-            this.chbOil.Size = new System.Drawing.Size(47, 19);
-            this.chbOil.TabIndex = 20;
-            this.chbOil.Text = "Oil";
-            this.chbOil.UseVisualStyleBackColor = true;
-            // 
-            // chbSL
-            // 
-            this.chbSL.AutoSize = true;
-            this.chbSL.Location = new System.Drawing.Point(166, 99);
-            this.chbSL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chbSL.Name = "chbSL";
-            this.chbSL.Size = new System.Drawing.Size(94, 19);
-            this.chbSL.TabIndex = 21;
-            this.chbSL.Text = "소형 경차";
-            this.chbSL.UseVisualStyleBackColor = true;
-            // 
-            // chbSS
-            // 
-            this.chbSS.AutoSize = true;
-            this.chbSS.Location = new System.Drawing.Point(258, 98);
-            this.chbSS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chbSS.Name = "chbSS";
-            this.chbSS.Size = new System.Drawing.Size(94, 19);
-            this.chbSS.TabIndex = 22;
-            this.chbSS.Text = "소형 승용";
-            this.chbSS.UseVisualStyleBackColor = true;
-            // 
-            // chbSSUV
-            // 
-            this.chbSSUV.AutoSize = true;
-            this.chbSSUV.Location = new System.Drawing.Point(75, 121);
-            this.chbSSUV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chbSSUV.Name = "chbSSUV";
-            this.chbSSUV.Size = new System.Drawing.Size(92, 19);
-            this.chbSSUV.TabIndex = 23;
-            this.chbSSUV.Text = "소형 SUV";
-            this.chbSSUV.UseVisualStyleBackColor = true;
-            // 
-            // chbMSUV
-            // 
-            this.chbMSUV.AutoSize = true;
-            this.chbMSUV.Location = new System.Drawing.Point(167, 119);
-            this.chbMSUV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chbMSUV.Name = "chbMSUV";
-            this.chbMSUV.Size = new System.Drawing.Size(92, 19);
-            this.chbMSUV.TabIndex = 24;
-            this.chbMSUV.Text = "중형 SUV";
-            this.chbMSUV.UseVisualStyleBackColor = true;
-            // 
-            // chbBSUV
-            // 
-            this.chbBSUV.AutoSize = true;
-            this.chbBSUV.Location = new System.Drawing.Point(258, 119);
-            this.chbBSUV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chbBSUV.Name = "chbBSUV";
-            this.chbBSUV.Size = new System.Drawing.Size(92, 19);
-            this.chbBSUV.TabIndex = 25;
-            this.chbBSUV.Text = "대형 SUV";
-            this.chbBSUV.UseVisualStyleBackColor = true;
-            // 
-            // chbMS
-            // 
-            this.chbMS.AutoSize = true;
-            this.chbMS.Location = new System.Drawing.Point(348, 98);
-            this.chbMS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chbMS.Name = "chbMS";
-            this.chbMS.Size = new System.Drawing.Size(94, 19);
-            this.chbMS.TabIndex = 26;
-            this.chbMS.Text = "중형 승용";
-            this.chbMS.UseVisualStyleBackColor = true;
-            // 
-            // chbBRV
-            // 
-            this.chbBRV.AutoSize = true;
-            this.chbBRV.Location = new System.Drawing.Point(348, 120);
-            this.chbBRV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chbBRV.Name = "chbBRV";
-            this.chbBRV.Size = new System.Drawing.Size(82, 19);
-            this.chbBRV.TabIndex = 27;
-            this.chbBRV.Text = "대형 RV";
-            this.chbBRV.UseVisualStyleBackColor = true;
             // 
             // txtMaker
             // 
@@ -337,44 +166,256 @@ namespace DEV_FORM
             this.txtMaker.Size = new System.Drawing.Size(148, 25);
             this.txtMaker.TabIndex = 28;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.radioButton1);
+            this.groupBox3.Controls.Add(this.rdbLPG);
+            this.groupBox3.Controls.Add(this.rdbOil);
+            this.groupBox3.Controls.Add(this.rdbHybrid);
+            this.groupBox3.Controls.Add(this.rdbGas);
+            this.groupBox3.Controls.Add(this.rdbElect);
+            this.groupBox3.Location = new System.Drawing.Point(48, 146);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(436, 55);
+            this.groupBox3.TabIndex = 29;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "차연료";
+            // 
+            // rdbLPG
+            // 
+            this.rdbLPG.AutoSize = true;
+            this.rdbLPG.Location = new System.Drawing.Point(237, 24);
+            this.rdbLPG.Name = "rdbLPG";
+            this.rdbLPG.Size = new System.Drawing.Size(57, 19);
+            this.rdbLPG.TabIndex = 4;
+            this.rdbLPG.TabStop = true;
+            this.rdbLPG.Text = "LPG";
+            this.rdbLPG.UseVisualStyleBackColor = true;
+            // 
+            // rdbOil
+            // 
+            this.rdbOil.AutoSize = true;
+            this.rdbOil.Location = new System.Drawing.Point(300, 24);
+            this.rdbOil.Name = "rdbOil";
+            this.rdbOil.Size = new System.Drawing.Size(46, 19);
+            this.rdbOil.TabIndex = 3;
+            this.rdbOil.TabStop = true;
+            this.rdbOil.Text = "Oil";
+            this.rdbOil.UseVisualStyleBackColor = true;
+            // 
+            // rdbHybrid
+            // 
+            this.rdbHybrid.AutoSize = true;
+            this.rdbHybrid.Location = new System.Drawing.Point(352, 24);
+            this.rdbHybrid.Name = "rdbHybrid";
+            this.rdbHybrid.Size = new System.Drawing.Size(69, 19);
+            this.rdbHybrid.TabIndex = 2;
+            this.rdbHybrid.TabStop = true;
+            this.rdbHybrid.Text = "Hybrid";
+            this.rdbHybrid.UseVisualStyleBackColor = true;
+            // 
+            // rdbGas
+            // 
+            this.rdbGas.AutoSize = true;
+            this.rdbGas.Location = new System.Drawing.Point(158, 24);
+            this.rdbGas.Name = "rdbGas";
+            this.rdbGas.Size = new System.Drawing.Size(73, 19);
+            this.rdbGas.TabIndex = 1;
+            this.rdbGas.TabStop = true;
+            this.rdbGas.Text = "휘발유";
+            this.rdbGas.UseVisualStyleBackColor = true;
+            // 
+            // rdbElect
+            // 
+            this.rdbElect.AutoSize = true;
+            this.rdbElect.Location = new System.Drawing.Point(94, 24);
+            this.rdbElect.Name = "rdbElect";
+            this.rdbElect.Size = new System.Drawing.Size(58, 19);
+            this.rdbElect.TabIndex = 0;
+            this.rdbElect.TabStop = true;
+            this.rdbElect.Text = "전기";
+            this.rdbElect.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.radioButton2);
+            this.groupBox4.Controls.Add(this.rdbBRV);
+            this.groupBox4.Controls.Add(this.rdbBSUV);
+            this.groupBox4.Controls.Add(this.rdbMSUV);
+            this.groupBox4.Controls.Add(this.rdbMS);
+            this.groupBox4.Controls.Add(this.rdbSSUV);
+            this.groupBox4.Controls.Add(this.rdbSS);
+            this.groupBox4.Controls.Add(this.rdbSL);
+            this.groupBox4.Controls.Add(this.rdbBS);
+            this.groupBox4.Location = new System.Drawing.Point(51, 207);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(436, 94);
+            this.groupBox4.TabIndex = 30;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "차사이즈";
+            // 
+            // rdbBRV
+            // 
+            this.rdbBRV.AutoSize = true;
+            this.rdbBRV.Location = new System.Drawing.Point(329, 56);
+            this.rdbBRV.Name = "rdbBRV";
+            this.rdbBRV.Size = new System.Drawing.Size(81, 19);
+            this.rdbBRV.TabIndex = 7;
+            this.rdbBRV.TabStop = true;
+            this.rdbBRV.Text = "대형 RV";
+            this.rdbBRV.UseVisualStyleBackColor = true;
+            // 
+            // rdbBSUV
+            // 
+            this.rdbBSUV.AutoSize = true;
+            this.rdbBSUV.Location = new System.Drawing.Point(224, 56);
+            this.rdbBSUV.Name = "rdbBSUV";
+            this.rdbBSUV.Size = new System.Drawing.Size(91, 19);
+            this.rdbBSUV.TabIndex = 6;
+            this.rdbBSUV.TabStop = true;
+            this.rdbBSUV.Text = "대형 SUV";
+            this.rdbBSUV.UseVisualStyleBackColor = true;
+            // 
+            // rdbMSUV
+            // 
+            this.rdbMSUV.AutoSize = true;
+            this.rdbMSUV.Location = new System.Drawing.Point(122, 56);
+            this.rdbMSUV.Name = "rdbMSUV";
+            this.rdbMSUV.Size = new System.Drawing.Size(91, 19);
+            this.rdbMSUV.TabIndex = 5;
+            this.rdbMSUV.TabStop = true;
+            this.rdbMSUV.Text = "중형 SUV";
+            this.rdbMSUV.UseVisualStyleBackColor = true;
+            // 
+            // rdbMS
+            // 
+            this.rdbMS.AutoSize = true;
+            this.rdbMS.Location = new System.Drawing.Point(349, 29);
+            this.rdbMS.Name = "rdbMS";
+            this.rdbMS.Size = new System.Drawing.Size(88, 19);
+            this.rdbMS.TabIndex = 4;
+            this.rdbMS.TabStop = true;
+            this.rdbMS.Text = "중형승용";
+            this.rdbMS.UseVisualStyleBackColor = true;
+            // 
+            // rdbSSUV
+            // 
+            this.rdbSSUV.AutoSize = true;
+            this.rdbSSUV.Location = new System.Drawing.Point(19, 56);
+            this.rdbSSUV.Name = "rdbSSUV";
+            this.rdbSSUV.Size = new System.Drawing.Size(91, 19);
+            this.rdbSSUV.TabIndex = 3;
+            this.rdbSSUV.TabStop = true;
+            this.rdbSSUV.Text = "소형 SUV";
+            this.rdbSSUV.UseVisualStyleBackColor = true;
+            // 
+            // rdbSS
+            // 
+            this.rdbSS.AutoSize = true;
+            this.rdbSS.Location = new System.Drawing.Point(259, 29);
+            this.rdbSS.Name = "rdbSS";
+            this.rdbSS.Size = new System.Drawing.Size(88, 19);
+            this.rdbSS.TabIndex = 2;
+            this.rdbSS.TabStop = true;
+            this.rdbSS.Text = "소형승용";
+            this.rdbSS.UseVisualStyleBackColor = true;
+            // 
+            // rdbSL
+            // 
+            this.rdbSL.AutoSize = true;
+            this.rdbSL.Location = new System.Drawing.Point(165, 29);
+            this.rdbSL.Name = "rdbSL";
+            this.rdbSL.Size = new System.Drawing.Size(88, 19);
+            this.rdbSL.TabIndex = 1;
+            this.rdbSL.TabStop = true;
+            this.rdbSL.Text = "소형경차";
+            this.rdbSL.UseVisualStyleBackColor = true;
+            // 
+            // rdbBS
+            // 
+            this.rdbBS.AutoSize = true;
+            this.rdbBS.Location = new System.Drawing.Point(70, 29);
+            this.rdbBS.Name = "rdbBS";
+            this.rdbBS.Size = new System.Drawing.Size(93, 19);
+            this.rdbBS.TabIndex = 0;
+            this.rdbBS.TabStop = true;
+            this.rdbBS.Text = "대형 승용";
+            this.rdbBS.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(18, 24);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(58, 19);
+            this.radioButton1.TabIndex = 5;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "전체";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(6, 29);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(58, 19);
+            this.radioButton2.TabIndex = 6;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "전체";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
             // FM_SearchCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(529, 518);
+            this.ClientSize = new System.Drawing.Size(529, 575);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
             this.Name = "FM_SearchCar";
             this.Text = "자동차조회";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FM_SearchCar_FormClosing);
+            this.Controls.SetChildIndex(this.btnSelect, 0);
+            this.Controls.SetChildIndex(this.btnClose, 0);
+            this.Controls.SetChildIndex(this.groupBox1, 0);
+            this.Controls.SetChildIndex(this.groupBox3, 0);
+            this.Controls.SetChildIndex(this.groupBox2, 0);
+            this.Controls.SetChildIndex(this.groupBox4, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckBox chbBRV;
-        private System.Windows.Forms.CheckBox chbMS;
-        private System.Windows.Forms.CheckBox chbBSUV;
-        private System.Windows.Forms.CheckBox chbMSUV;
-        private System.Windows.Forms.CheckBox chbSSUV;
-        private System.Windows.Forms.CheckBox chbSS;
-        private System.Windows.Forms.CheckBox chbSL;
-        private System.Windows.Forms.CheckBox chbOil;
-        private System.Windows.Forms.CheckBox chbHybrid;
-        private System.Windows.Forms.CheckBox chbLpg;
         private System.Windows.Forms.TextBox txtLastPrice;
         private System.Windows.Forms.TextBox txtFirstPrice;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox chbBS;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox chbGas;
-        private System.Windows.Forms.CheckBox chbElect;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMaker;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton rdbElect;
+        private System.Windows.Forms.RadioButton rdbHybrid;
+        private System.Windows.Forms.RadioButton rdbGas;
+        private System.Windows.Forms.RadioButton rdbLPG;
+        private System.Windows.Forms.RadioButton rdbOil;
+        private System.Windows.Forms.RadioButton rdbBRV;
+        private System.Windows.Forms.RadioButton rdbBSUV;
+        private System.Windows.Forms.RadioButton rdbMSUV;
+        private System.Windows.Forms.RadioButton rdbMS;
+        private System.Windows.Forms.RadioButton rdbSSUV;
+        private System.Windows.Forms.RadioButton rdbSS;
+        private System.Windows.Forms.RadioButton rdbSL;
+        private System.Windows.Forms.RadioButton rdbBS;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
     }
 }

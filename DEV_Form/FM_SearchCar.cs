@@ -38,21 +38,21 @@ namespace DEV_FORM
                 else iEndPrice = Int32.Parse(endPrice);
 
 
-                if (chbOil.Checked == true) sCarType = "Oil";
-                else if (chbElect.Checked == true) sCarType = "Elec";
-                else if (chbLpg.Checked == true) sCarType = "LPG";
-                else if (chbHybrid.Checked == true) sCarType = "Hyb";
-                else if (chbGas.Checked == true) sCarType = "Gas";
+                if (rdbOil.Checked == true) sCarType = "Oil";
+                else if (rdbElect.Checked == true) sCarType = "Elec";
+                else if (rdbLPG.Checked == true) sCarType = "LPG";
+                else if (rdbHybrid.Checked == true) sCarType = "Hyb";
+                else if (rdbGas.Checked == true) sCarType = "Gas";
                 else sCarType = "";
 
-                if (chbBS.Checked == true) sCarSize = "BS";
-                else if (chbSL.Checked == true) sCarSize = "SL";
-                else if (chbSS.Checked == true) sCarSize = "SS";
-                else if (chbMS.Checked == true) sCarSize = "MS";
-                else if (chbSSUV.Checked == true) sCarSize = "SSUV";
-                else if (chbMSUV.Checked == true) sCarSize = "MSUV";
-                else if (chbBSUV.Checked == true) sCarSize = "BSUV";
-                else if (chbBRV.Checked == true) sCarSize = "BRV";
+                if (rdbBS.Checked == true) sCarSize = "BS";
+                else if (rdbSL.Checked == true) sCarSize = "SL";
+                else if (rdbSS.Checked == true) sCarSize = "SS";
+                else if (rdbMS.Checked == true) sCarSize = "MS";
+                else if (rdbSSUV.Checked == true) sCarSize = "SSUV";
+                else if (rdbMSUV.Checked == true) sCarSize = "MSUV";
+                else if (rdbBSUV.Checked == true) sCarSize = "BSUV";
+                else if (rdbBRV.Checked == true) sCarSize = "BRV";
 
                 DataTable dtTemp = new DataTable();
                 dtTemp = helper.FillTable("SP_4_Car_S2", CommandType.StoredProcedure
@@ -97,6 +97,11 @@ namespace DEV_FORM
         {
             this.Tag = "";
             this.Close();
+        }
+
+        private void FM_SearchCar_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Tag = "";
         }
     }
 }

@@ -64,7 +64,7 @@ namespace DEV_FORM
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(439, 165);
+            this.groupBox1.Size = new System.Drawing.Size(439, 199);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "조회항목";
@@ -72,11 +72,11 @@ namespace DEV_FORM
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvGrid);
-            this.groupBox2.Location = new System.Drawing.Point(45, 202);
+            this.groupBox2.Location = new System.Drawing.Point(45, 236);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(439, 245);
+            this.groupBox2.Size = new System.Drawing.Size(439, 211);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "선택항목";
@@ -90,7 +90,7 @@ namespace DEV_FORM
             this.dgvGrid.Name = "dgvGrid";
             this.dgvGrid.RowHeadersWidth = 51;
             this.dgvGrid.RowTemplate.Height = 29;
-            this.dgvGrid.Size = new System.Drawing.Size(433, 223);
+            this.dgvGrid.Size = new System.Drawing.Size(433, 189);
             this.dgvGrid.TabIndex = 0;
             // 
             // BaseSearchChildForm

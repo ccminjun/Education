@@ -86,6 +86,7 @@ namespace DEV_FORM
             this.ClientSize = new System.Drawing.Size(546, 518);
             this.Name = "FM_SearchClient";
             this.Text = "회원조회";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FM_SearchClient_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

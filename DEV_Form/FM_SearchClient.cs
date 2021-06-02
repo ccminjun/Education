@@ -173,5 +173,10 @@ namespace DEV_FORM
             this.Tag = "";
             this.Close();
         }
+
+        private void FM_SearchClient_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Tag = "";
+        }
     }
 }

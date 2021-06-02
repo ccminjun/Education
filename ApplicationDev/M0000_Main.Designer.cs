@@ -37,19 +37,19 @@
             this.FM_RENT = new System.Windows.Forms.ToolStripMenuItem();
             this.FM_RentClient = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.stslbUserName = new System.Windows.Forms.ToolStripStatusLabel();
             this.stslbNowTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.mdiControl1 = new ApplicationDev.MDIControl();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -63,14 +63,14 @@
             this.M_System});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1466, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1466, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // M_Standard
             // 
             this.M_Standard.Name = "M_Standard";
-            this.M_Standard.Size = new System.Drawing.Size(83, 24);
+            this.M_Standard.Size = new System.Drawing.Size(83, 26);
             this.M_Standard.Text = "기준정보";
             // 
             // M_System
@@ -81,7 +81,7 @@
             this.FM_RENT,
             this.FM_RentClient});
             this.M_System.Name = "M_System";
-            this.M_System.Size = new System.Drawing.Size(68, 24);
+            this.M_System.Size = new System.Drawing.Size(68, 26);
             this.M_System.Text = "시스템";
             this.M_System.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.M_System_DropDownItemClicked);
             // 
@@ -124,11 +124,69 @@
             this.toolStripSeparator1,
             this.toolStripButton5,
             this.toolStripButton6});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 30);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1466, 96);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 96);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.AutoSize = false;
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel4,
+            this.stslbUserName,
+            this.stslbNowTime});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 535);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1466, 42);
+            this.statusStrip1.TabIndex = 2;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel4
+            // 
+            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
+            this.toolStripStatusLabel4.Size = new System.Drawing.Size(1101, 36);
+            this.toolStripStatusLabel4.Spring = true;
+            // 
+            // stslbUserName
+            // 
+            this.stslbUserName.AutoSize = false;
+            this.stslbUserName.BorderStyle = System.Windows.Forms.Border3DStyle.Raised;
+            this.stslbUserName.Name = "stslbUserName";
+            this.stslbUserName.Size = new System.Drawing.Size(150, 36);
+            this.stslbUserName.Text = "UserName";
+            // 
+            // stslbNowTime
+            // 
+            this.stslbNowTime.AutoSize = false;
+            this.stslbNowTime.BorderStyle = System.Windows.Forms.Border3DStyle.Raised;
+            this.stslbNowTime.Name = "stslbNowTime";
+            this.stslbNowTime.RightToLeftAutoMirrorImage = true;
+            this.stslbNowTime.Size = new System.Drawing.Size(200, 36);
+            this.stslbNowTime.Text = "NowTime";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // mdiControl1
+            // 
+            this.mdiControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mdiControl1.Location = new System.Drawing.Point(0, 126);
+            this.mdiControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.mdiControl1.Name = "mdiControl1";
+            this.mdiControl1.SelectedIndex = 0;
+            this.mdiControl1.Size = new System.Drawing.Size(1466, 409);
+            this.mdiControl1.TabIndex = 6;
             // 
             // toolStripButton1
             // 
@@ -181,11 +239,6 @@
             this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 96);
-            // 
             // toolStripButton5
             // 
             this.toolStripButton5.Image = global::ApplicationDev.Properties.Resources.BtnClose;
@@ -209,59 +262,6 @@
             this.toolStripButton6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.AutoSize = false;
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel4,
-            this.stslbUserName,
-            this.stslbNowTime});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 535);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1466, 42);
-            this.statusStrip1.TabIndex = 2;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel4
-            // 
-            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-            this.toolStripStatusLabel4.Size = new System.Drawing.Size(1101, 36);
-            this.toolStripStatusLabel4.Spring = true;
-            // 
-            // stslbUserName
-            // 
-            this.stslbUserName.AutoSize = false;
-            this.stslbUserName.BorderStyle = System.Windows.Forms.Border3DStyle.Raised;
-            this.stslbUserName.Name = "stslbUserName";
-            this.stslbUserName.Size = new System.Drawing.Size(150, 36);
-            this.stslbUserName.Text = "UserName";
-            // 
-            // stslbNowTime
-            // 
-            this.stslbNowTime.AutoSize = false;
-            this.stslbNowTime.BorderStyle = System.Windows.Forms.Border3DStyle.Raised;
-            this.stslbNowTime.Name = "stslbNowTime";
-            this.stslbNowTime.RightToLeftAutoMirrorImage = true;
-            this.stslbNowTime.Size = new System.Drawing.Size(200, 36);
-            this.stslbNowTime.Text = "NowTime";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // mdiControl1
-            // 
-            this.mdiControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mdiControl1.Location = new System.Drawing.Point(0, 124);
-            this.mdiControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mdiControl1.Name = "mdiControl1";
-            this.mdiControl1.SelectedIndex = 0;
-            this.mdiControl1.Size = new System.Drawing.Size(1466, 411);
-            this.mdiControl1.TabIndex = 6;
             // 
             // M0000_Main
             // 
