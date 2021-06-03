@@ -160,6 +160,7 @@ namespace DEV_FORM
 
             DBHelper helper = new DBHelper(true);
             String sRentID = dgvGrid.CurrentRow.Cells["RENTID"].Value.ToString();
+            String sCarcode = dgvGrid.CurrentRow.Cells["CARCODE"].Value.ToString();
             String sRealReturnDate = dgvGrid.CurrentRow.Cells["REALRETURNDATE"].Value.ToString();
             String sExtraCost = dgvGrid.CurrentRow.Cells["EXTRACOST"].Value.ToString();
             String sRentFlag = dgvGrid.CurrentRow.Cells["EXTRACOST"].Value.ToString();
@@ -178,6 +179,7 @@ namespace DEV_FORM
             {
                 helper.ExecuteNoneQuery("SP_4_Rent_U1", CommandType.StoredProcedure
                                                        , helper.CreateParameter("RENTID", sRentID)
+                                                       , helper.CreateParameter("CARCODE", sCarcode)
                                                        );
                 helper.Commit();
                 MessageBox.Show("정상적으로 반납 되었습니다.");

@@ -17,8 +17,10 @@ namespace ApplicationDev
                 Application.ExitThread();
                 Environment.Exit(0);
             }
-            stslbUserName.Text          = FrmLogIn.Tag.ToString();
-            menuStrip1.Text    = "";
+            stslbUserName.Text          = FrmLogIn.Tag.ToString(); 
+            menuStrip1.Text = "";
+
+           
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -157,7 +159,15 @@ namespace ApplicationDev
 
             //}
         }
-    } 
+
+        private void M0000_Main_Load(object sender, EventArgs e)
+        {
+            Assembly assembly = Assembly.LoadFrom(Application.StartupPath + @"\" + "DEV_FORM.DLL");
+            Type typeForm = assembly.GetType("DEV_FORM." + "FM_Main", true);
+            Form Test = (Form)Activator.CreateInstance(typeForm);
+            mdiControl1.Add(Test);
+        }
+    }
 
 
     public partial class MDIControl : TabControl

@@ -183,6 +183,13 @@
   <ItemGroup>
     <None Include="Resources\chartexp.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\free-icon-calendar-3366047.png" />
+    <Content Include="Resources\free-icon-car-3366098.png" />
+    <Content Include="Resources\free-icon-car-insurance-3366403.png" />
+    <Content Include="Resources\free-icon-car-repair-3366454.png" />
+    <Content Include="Resources\free-icon-crane-truck-3366263.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
