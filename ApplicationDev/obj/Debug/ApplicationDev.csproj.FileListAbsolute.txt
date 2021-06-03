@@ -84,3 +84,4 @@ C:\Users\admin\workspace\RentcarProject\ApplicationDev\obj\Debug\ApplicationDev.
 C:\Users\admin\workspace\RentcarProject\ApplicationDev\obj\Debug\ApplicationDev.csproj.CopyComplete
 C:\Users\admin\workspace\RentcarProject\ApplicationDev\obj\Debug\ApplicationDev.exe
 C:\Users\admin\workspace\RentcarProject\ApplicationDev\obj\Debug\ApplicationDev.pdb
+C:\Users\admin\workspace\RentcarProject\ApplicationDev\obj\Debug\ApplicationDev.Form1.resources

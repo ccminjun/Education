@@ -63,14 +63,14 @@
             this.M_System});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1466, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1466, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // M_Standard
             // 
             this.M_Standard.Name = "M_Standard";
-            this.M_Standard.Size = new System.Drawing.Size(83, 26);
+            this.M_Standard.Size = new System.Drawing.Size(83, 24);
             this.M_Standard.Text = "기준정보";
             // 
             // M_System
@@ -81,7 +81,7 @@
             this.FM_RENT,
             this.FM_RentClient});
             this.M_System.Name = "M_System";
-            this.M_System.Size = new System.Drawing.Size(68, 26);
+            this.M_System.Size = new System.Drawing.Size(68, 24);
             this.M_System.Text = "시스템";
             this.M_System.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.M_System_DropDownItemClicked);
             // 
@@ -124,7 +124,7 @@
             this.toolStripSeparator1,
             this.toolStripButton5,
             this.toolStripButton6});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 30);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1466, 96);
             this.toolStrip1.TabIndex = 1;
@@ -255,12 +255,11 @@
             // 
             // mdiControl1
             // 
-            this.mdiControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mdiControl1.Location = new System.Drawing.Point(0, 126);
+            this.mdiControl1.Location = new System.Drawing.Point(405, 188);
             this.mdiControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mdiControl1.Name = "mdiControl1";
             this.mdiControl1.SelectedIndex = 0;
-            this.mdiControl1.Size = new System.Drawing.Size(1466, 409);
+            this.mdiControl1.Size = new System.Drawing.Size(771, 245);
             this.mdiControl1.TabIndex = 6;
             // 
             // M0000_Main

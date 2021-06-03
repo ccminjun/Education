@@ -73,6 +73,7 @@ namespace DEV_FORM
             // 
             // groupBox2
             // 
+            this.groupBox2.Location = new System.Drawing.Point(0, 172);
             this.groupBox2.Size = new System.Drawing.Size(1601, 438);
             // 
             // label1
@@ -222,6 +223,7 @@ namespace DEV_FORM
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "FM_Main";
             this.Text = "메인화면";
+            this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             this.Load += new System.EventHandler(this.FM_Main_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
