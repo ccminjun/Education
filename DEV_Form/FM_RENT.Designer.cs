@@ -50,6 +50,8 @@ namespace DEV_FORM
             this.picCtrImg = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgvGrid = new System.Windows.Forms.DataGridView();
+            this.btnLoadPic = new System.Windows.Forms.Button();
+            this.btnPicSave = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -80,6 +82,8 @@ namespace DEV_FORM
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnPicSave);
+            this.groupBox2.Controls.Add(this.btnLoadPic);
             this.groupBox2.Controls.Add(this.picCtrImg);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox2.Location = new System.Drawing.Point(0, 363);
@@ -277,6 +281,7 @@ namespace DEV_FORM
             this.picCtrImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCtrImg.TabIndex = 2;
             this.picCtrImg.TabStop = false;
+            this.picCtrImg.Click += new System.EventHandler(this.picCtrImg_Click);
             // 
             // groupBox4
             // 
@@ -293,6 +298,8 @@ namespace DEV_FORM
             // 
             // dgvGrid
             // 
+            this.dgvGrid.AllowUserToAddRows = false;
+            this.dgvGrid.AllowUserToDeleteRows = false;
             this.dgvGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvGrid.Location = new System.Drawing.Point(3, 20);
@@ -302,6 +309,27 @@ namespace DEV_FORM
             this.dgvGrid.RowTemplate.Height = 29;
             this.dgvGrid.Size = new System.Drawing.Size(1284, 217);
             this.dgvGrid.TabIndex = 0;
+            this.dgvGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGrid_CellDoubleClick);
+            // 
+            // btnLoadPic
+            // 
+            this.btnLoadPic.Location = new System.Drawing.Point(587, 104);
+            this.btnLoadPic.Name = "btnLoadPic";
+            this.btnLoadPic.Size = new System.Drawing.Size(180, 30);
+            this.btnLoadPic.TabIndex = 3;
+            this.btnLoadPic.Text = "이미지 불러오기";
+            this.btnLoadPic.UseVisualStyleBackColor = true;
+            this.btnLoadPic.Click += new System.EventHandler(this.btnLoadPic_Click);
+            // 
+            // btnPicSave
+            // 
+            this.btnPicSave.Location = new System.Drawing.Point(782, 104);
+            this.btnPicSave.Name = "btnPicSave";
+            this.btnPicSave.Size = new System.Drawing.Size(77, 30);
+            this.btnPicSave.TabIndex = 4;
+            this.btnPicSave.Text = "저장";
+            this.btnPicSave.UseVisualStyleBackColor = true;
+            this.btnPicSave.Click += new System.EventHandler(this.btnPicSave_Click);
             // 
             // FM_RENT
             // 
@@ -350,5 +378,7 @@ namespace DEV_FORM
         private System.Windows.Forms.PictureBox picCtrImg;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dgvGrid;
+        private System.Windows.Forms.Button btnPicSave;
+        private System.Windows.Forms.Button btnLoadPic;
     }
 }

@@ -127,6 +127,7 @@
     </Compile>
     <Compile Include="IChildCommands.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rent.cs" />
     <EmbeddedResource Include="BaseMDIChildForm.resx">
       <DependentUpon>BaseMDIChildForm.cs</DependentUpon>
     </EmbeddedResource>
