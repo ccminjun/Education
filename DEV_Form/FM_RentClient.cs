@@ -189,7 +189,7 @@ namespace DEV_FORM
                 helper.Commit();
 
                 //메시지
-                MessageBox.Show("정상적으로 등록하였씁니다.");
+                MessageBox.Show("정상적으로 등록하였습니다.");
 
                 //재조회
                 Inquire();
@@ -378,6 +378,7 @@ namespace DEV_FORM
                     if (Car.sCAddress != "") { dgvGrid.CurrentRow.Cells[4].Value = Car.sCAddress; }
                     if (Car.sPhoneNum != "") { dgvGrid.CurrentRow.Cells[5].Value = Car.sPhoneNum; }
                     dgvGrid.CurrentRow.Cells[6].Value = "NORMAL";
+                    SendKeys.SendWait("{ENTER}");
                     MessageBox.Show(" 정상적으로 입력되었습니다.");
                 }
 

@@ -228,7 +228,6 @@ namespace DEV_FORM
                             sCarsize = drRow["CARSIZE"].ToString();
                             sRentPrice = drRow["RENTPRICE"].ToString();
                             sFirstDate = drRow["CARREGIST"].ToString();
-                            sFirstDate = sFirstDate.Substring(0, 10);
                             sCarMaker = drRow["CARMAKER"].ToString();
                             helper.ExecuteNoneQuery("SP_4_CAR_U1", CommandType.StoredProcedure,
                                                     helper.CreateParameter("CARCODE", sCarCode),
@@ -440,9 +439,10 @@ namespace DEV_FORM
                     if (Car.sMaker != "") { dgvGridCar.CurrentRow.Cells[7].Value = Car.sMaker; }
                     if (Car.sPrice != "") { dgvGridCar.CurrentRow.Cells[8].Value = Car.sPrice; }
                     dgvGridCar.CurrentRow.Cells[5].Value = "W";
+                    SendKeys.SendWait("{ENTER}");
                     MessageBox.Show(" 정상적으로 입력되었습니다.");
                 }
-                else { return; }
+
 
             }
             catch (Exception ex)
@@ -451,6 +451,7 @@ namespace DEV_FORM
             }
             finally
             {
+                
             }
         }
 
