@@ -22,7 +22,7 @@ namespace DEV_FORM
         {
             FM_SearchCar formCar = new FM_SearchCar();
             formCar.ShowDialog();
-            if (formCar.Tag.ToString() != "") txtCarID.Text = formCar.Tag.ToString();
+            if (formCar.Tag.ToString() != "" && formCar.Tag.ToString() != null) txtCarID.Text = formCar.Tag.ToString();
             else txtCarID.Text = "";
 
         }
@@ -31,7 +31,7 @@ namespace DEV_FORM
         {
             FM_SearchClient formClient = new FM_SearchClient();
             formClient.ShowDialog();
-            if (formClient.Tag.ToString() != "") txtClientID.Text = formClient.Tag.ToString();
+            if (formClient.Tag.ToString() != "" && formClient.Tag.ToString() != null) txtClientID.Text = formClient.Tag.ToString();
             else txtClientID.Text = "";
         }
 

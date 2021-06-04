@@ -68,11 +68,13 @@ namespace DEV_FORM
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Size = new System.Drawing.Size(1726, 144);
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox2.Controls.Add(this.groupBox5);
             this.groupBox2.Controls.Add(this.btnRefresh);
             this.groupBox2.Location = new System.Drawing.Point(0, 144);
@@ -80,6 +82,7 @@ namespace DEV_FORM
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox3.Controls.Add(this.btnRefresh1);
             this.groupBox3.Controls.Add(this.txtCarName);
             this.groupBox3.Controls.Add(this.groupBox4);
@@ -307,6 +310,7 @@ namespace DEV_FORM
             // 
             // btnRefresh
             // 
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnRefresh.Controls.Add(this.btnPicDelete);
             this.btnRefresh.Controls.Add(this.btnPicSave);
             this.btnRefresh.Controls.Add(this.btnLoadPic);
@@ -400,6 +404,7 @@ namespace DEV_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1726, 747);
             this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);

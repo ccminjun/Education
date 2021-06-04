@@ -209,7 +209,7 @@ namespace DEV_FORM
                 helper.Close();
             }
 
-        } 
+        }
         #endregion
 
         #region IMG
@@ -331,7 +331,7 @@ namespace DEV_FORM
         }
         private void btnPictDelete_Click(object sender, EventArgs e)
         {
-            // 품목에 저장된 이미지 삭제
+            // 품목에 저장된 이미지 삭제B
             if (dgvGrid.Rows.Count == 0) return;
             if (MessageBox.Show("선택한 이미지를 삭제하시겠습니까?", "이미지 삭제", MessageBoxButtons.YesNo) == DialogResult.No) return;
             SqlCommand cmd = new SqlCommand();
@@ -387,10 +387,29 @@ namespace DEV_FORM
             {
                 MessageBox.Show("오류입니다.");
             }
-            finally {  }
+            finally { }
 
         }
-    }
 
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            DoNew();
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            Save();
+        }
+
+        private void btn_searcch_Click(object sender, EventArgs e)
+        {
+            Inquire();
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            Delete();
+        }
+    }
 }
 

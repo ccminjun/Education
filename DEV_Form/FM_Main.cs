@@ -43,16 +43,16 @@ namespace DEV_FORM
                 }
                 else
                 {
-                    string UsingCar = dtTemp.Rows[2][1].ToString();
+                    string UsingCar = dtTemp.Rows[2]["USEFLAG1"].ToString();
                     Using.Text = UsingCar;
 
-                    string AvailableCar = dtTemp.Rows[3][1].ToString();
+                    string AvailableCar = dtTemp.Rows[3]["USEFLAG1"].ToString();
                     Available.Text = AvailableCar;
 
-                    string FixingCar = dtTemp.Rows[1][1].ToString();
+                    string FixingCar = dtTemp.Rows[1]["USEFLAG1"].ToString();
                     Fixing.Text = FixingCar;
 
-                    string DisposalCar = dtTemp.Rows[0][1].ToString();
+                    string DisposalCar = dtTemp.Rows[0]["USEFLAG1"].ToString();
                     Disposal.Text = DisposalCar;
 
                     string DelayCar = dtTemp2.Rows[0][0].ToString();
@@ -85,12 +85,12 @@ namespace DEV_FORM
             DataTable dtTemp1 = new DataTable();
             DataTable dtTemp2 = new DataTable();
             DataTable dtTemp3 = new DataTable();
-
+            DataTable dtTemp4 = new DataTable();
+            DataTable dtTemp5 = new DataTable();
 
             chart1.Series.Clear();
             chart2.Series.Clear();
             chart3.Series.Clear();
-
 
             dtTemp1 = helper.FillTable("SP_4_CHART_S1", CommandType.StoredProcedure, helper.CreateParameter("NONE", ""));
             if (dtTemp1.Rows.Count == 0)
@@ -101,8 +101,8 @@ namespace DEV_FORM
             chart1.DataBindTable(dtTemp1.DefaultView, "월");
             //바인딩 된 시리즈의 이름을 지정한다.
             chart1.Series[0].Name = "월별 총 비용";
-            chart1.Series[0].Color = Color.Green;//차트의 색상변경
-            chart1.Series[0].IsValueShownAsLabel = true;//차트에 값 표시
+            //chart1.Series[0].Color = Color.Green;//차트의 색상변경
+            //chart1.Series[0].IsValueShownAsLabel = true;//차트에 값 표시
             helper.Close();
 
             string sYear = "2021";//  string.Format("{0:yyyy}", DateTime.Now);
@@ -114,9 +114,9 @@ namespace DEV_FORM
             chart2.DataBindTable(dtTemp2.DefaultView, "년");
             //바인딩 된 시리즈의 이름을 지정한다.
             chart2.Series[0].Name = "연별 총 비용";
-            chart2.Series[0].Color = Color.Green;//차트의 색상변경
-            chart2.Series[0].IsValueShownAsLabel = true;//차트에 값 표시
-            chart2.Series[0].IsValueShownAsLabel = true;//차트에 값 표시
+            //chart2.Series[0].Color = Color.Green;//차트의 색상변경
+            //chart2.Series[0].IsValueShownAsLabel = true;//차트에 값 표시
+           
             helper.Close();
 
             dtTemp3 = helper.FillTable("SP_4_CHART_S3", CommandType.StoredProcedure, helper.CreateParameter("YEAR", sYear));
@@ -127,8 +127,44 @@ namespace DEV_FORM
             chart3.DataBindTable(dtTemp3.DefaultView, "분기");
             //바인딩 된 시리즈의 이름을 지정한다.
             chart3.Series[0].Name = "분기별 총 비용";
-            chart3.Series[0].Color = Color.Green;//차트의 색상변경
-            chart3.Series[0].IsValueShownAsLabel = true;//차트에 값 표시
+           // chart3.Series[0].Color = Color.Green;//차트의 색상변경
+            //chart3.Series[0].IsValueShownAsLabel = true;//차트에 값 표시
+            helper.Close();
+
+            dtTemp4 = helper.FillTable("SP_4_CHART_S4", CommandType.StoredProcedure);
+            if (dtTemp4.Rows.Count == 0)
+            {
+                return;
+            }
+            String name = "";
+            String money = "";
+            for(int i=0; i< dtTemp4.Rows.Count; i++)
+            {
+                name = dtTemp4.Rows[i]["CARTYPE"].ToString();
+                money = dtTemp4.Rows[i]["총비용"].ToString();
+                chart4.Series["Series1"].Points.AddXY(name, money);
+            }
+            //바인딩 된 시리즈의 이름을 지정한다.
+            //chart4.Series[0].Name = "자동차 타입별 매출";
+            //chart4.Series[0].IsValueShownAsLabel = true;//차트에 값 표시
+            helper.Close();
+
+            dtTemp5 = helper.FillTable("SP_4_CHART_S5", CommandType.StoredProcedure);
+            if (dtTemp4.Rows.Count == 0)
+            {
+                return;
+            }
+            name = "";
+            money = "";
+            for (int i = 0; i < dtTemp4.Rows.Count; i++)
+            {
+                name = dtTemp5.Rows[i]["CARSIZE"].ToString();
+                money = dtTemp5.Rows[i]["총비용"].ToString();
+                chart5.Series["Series1"].Points.AddXY(name, money);
+            }
+            //바인딩 된 시리즈의 이름을 지정한다.
+            //chart4.Series[0].Name = "자동차 타입별 매출";
+            //chart4.Series[0].IsValueShownAsLabel = true;//차트에 값 표시
             helper.Close();
 
         }
@@ -137,6 +173,17 @@ namespace DEV_FORM
         {
             MakeColumnChart();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart4_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
     
 }

@@ -281,7 +281,6 @@ namespace DEV_FORM
             this.picCtrImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCtrImg.TabIndex = 2;
             this.picCtrImg.TabStop = false;
-            this.picCtrImg.Click += new System.EventHandler(this.picCtrImg_Click);
             // 
             // groupBox4
             // 
@@ -309,7 +308,6 @@ namespace DEV_FORM
             this.dgvGrid.RowTemplate.Height = 29;
             this.dgvGrid.Size = new System.Drawing.Size(1284, 217);
             this.dgvGrid.TabIndex = 0;
-            this.dgvGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGrid_CellDoubleClick);
             // 
             // btnLoadPic
             // 
@@ -319,7 +317,6 @@ namespace DEV_FORM
             this.btnLoadPic.TabIndex = 3;
             this.btnLoadPic.Text = "이미지 불러오기";
             this.btnLoadPic.UseVisualStyleBackColor = true;
-            this.btnLoadPic.Click += new System.EventHandler(this.btnLoadPic_Click);
             // 
             // btnPicSave
             // 
@@ -335,6 +332,7 @@ namespace DEV_FORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1290, 581);
             this.Controls.Add(this.groupBox4);
             this.Location = new System.Drawing.Point(0, 0);

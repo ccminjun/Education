@@ -176,7 +176,11 @@ namespace DEV_FORM
 
         private void FM_SearchClient_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Tag = "";
+            if(this.Tag == null)
+            {
+                this.Tag = "";
+            }
+            
         }
     }
 }

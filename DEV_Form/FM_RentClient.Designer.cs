@@ -48,6 +48,10 @@ namespace DEV_FORM
             this.btnPicSave = new System.Windows.Forms.Button();
             this.btnPicUpload = new System.Windows.Forms.Button();
             this.picLicenseImg = new System.Windows.Forms.PictureBox();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.btn_searcch = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -59,6 +63,10 @@ namespace DEV_FORM
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.Controls.Add(this.btn_delete);
+            this.groupBox1.Controls.Add(this.btn_searcch);
+            this.groupBox1.Controls.Add(this.btn_save);
+            this.groupBox1.Controls.Add(this.btn_add);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.dtpEnd);
@@ -68,7 +76,7 @@ namespace DEV_FORM
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Size = new System.Drawing.Size(952, 113);
+            this.groupBox1.Size = new System.Drawing.Size(952, 130);
             this.groupBox1.Text = "고객 조회";
             // 
             // groupBox2
@@ -76,7 +84,7 @@ namespace DEV_FORM
             this.groupBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox2.Controls.Add(this.dgvGrid);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox2.Location = new System.Drawing.Point(0, 113);
+            this.groupBox2.Location = new System.Drawing.Point(0, 130);
             this.groupBox2.Size = new System.Drawing.Size(952, 317);
             this.groupBox2.Text = "고객 정보";
             // 
@@ -219,7 +227,7 @@ namespace DEV_FORM
             this.dgvGrid.AllowUserToAddRows = false;
             this.dgvGrid.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvGrid.Location = new System.Drawing.Point(3, 20);
             this.dgvGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvGrid.Name = "dgvGrid";
@@ -237,7 +245,7 @@ namespace DEV_FORM
             this.groupBox4.Controls.Add(this.btnPicSave);
             this.groupBox4.Controls.Add(this.btnPicUpload);
             this.groupBox4.Controls.Add(this.picLicenseImg);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox4.Location = new System.Drawing.Point(0, 430);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
@@ -295,10 +303,51 @@ namespace DEV_FORM
             this.picLicenseImg.TabStop = false;
             this.picLicenseImg.Click += new System.EventHandler(this.picLicenseImg_Click);
             // 
+            // btn_add
+            // 
+            this.btn_add.Location = new System.Drawing.Point(600, 90);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(75, 30);
+            this.btn_add.TabIndex = 13;
+            this.btn_add.Text = "추가";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
+            // btn_save
+            // 
+            this.btn_save.Location = new System.Drawing.Point(681, 90);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(75, 30);
+            this.btn_save.TabIndex = 14;
+            this.btn_save.Text = "저장";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
+            // btn_searcch
+            // 
+            this.btn_searcch.Location = new System.Drawing.Point(762, 90);
+            this.btn_searcch.Name = "btn_searcch";
+            this.btn_searcch.Size = new System.Drawing.Size(75, 30);
+            this.btn_searcch.TabIndex = 15;
+            this.btn_searcch.Text = "조회";
+            this.btn_searcch.UseVisualStyleBackColor = true;
+            this.btn_searcch.Click += new System.EventHandler(this.btn_searcch_Click);
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Location = new System.Drawing.Point(845, 90);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(75, 30);
+            this.btn_delete.TabIndex = 16;
+            this.btn_delete.Text = "삭제";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
             // FM_RentClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(952, 612);
             this.Controls.Add(this.groupBox4);
             this.Location = new System.Drawing.Point(0, 0);
@@ -341,5 +390,9 @@ namespace DEV_FORM
         private System.Windows.Forms.Button btnPicDelete;
         private System.Windows.Forms.Button btnPicSave;
         private System.Windows.Forms.Button btnPicUpload;
+        private System.Windows.Forms.Button btn_searcch;
+        private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.Button btn_delete;
     }
 }
