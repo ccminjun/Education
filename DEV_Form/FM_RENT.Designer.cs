@@ -52,13 +52,25 @@ namespace DEV_FORM
             this.dgvGrid = new System.Windows.Forms.DataGridView();
             this.btnLoadPic = new System.Windows.Forms.Button();
             this.btnPicSave = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCtrImg)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrid)).BeginInit();
             this.SuspendLayout();
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.btnPicSave);
+            this.groupBox2.Controls.Add(this.btnLoadPic);
+            this.groupBox2.Controls.Add(this.picCtrImg);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox2.Location = new System.Drawing.Point(0, 363);
+            this.groupBox2.Size = new System.Drawing.Size(1290, 218);
+            this.groupBox2.Text = "계약서 이미지 관리";
             // 
             // groupBox1
             // 
@@ -79,16 +91,6 @@ namespace DEV_FORM
             this.groupBox1.Controls.Add(this.txtClientID);
             this.groupBox1.Size = new System.Drawing.Size(1290, 124);
             this.groupBox1.Text = "조회";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnPicSave);
-            this.groupBox2.Controls.Add(this.btnLoadPic);
-            this.groupBox2.Controls.Add(this.picCtrImg);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox2.Location = new System.Drawing.Point(0, 363);
-            this.groupBox2.Size = new System.Drawing.Size(1290, 218);
-            this.groupBox2.Text = "계약서 이미지 관리";
             // 
             // btnAdd
             // 
@@ -328,6 +330,14 @@ namespace DEV_FORM
             this.btnPicSave.UseVisualStyleBackColor = true;
             this.btnPicSave.Click += new System.EventHandler(this.btnPicSave_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(868, 37);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 5;
+            // 
             // FM_RENT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -342,9 +352,9 @@ namespace DEV_FORM
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.groupBox2, 0);
             this.Controls.SetChildIndex(this.groupBox4, 0);
+            this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCtrImg)).EndInit();
@@ -378,5 +388,6 @@ namespace DEV_FORM
         private System.Windows.Forms.DataGridView dgvGrid;
         private System.Windows.Forms.Button btnPicSave;
         private System.Windows.Forms.Button btnLoadPic;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
