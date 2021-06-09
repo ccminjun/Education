@@ -38,7 +38,7 @@ namespace KFQS_Form
                 _GridUtill.InitColumnUltraGrid(grid1, "OUTDATE", "퇴사일", true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, true);
                 _GridUtill.InitColumnUltraGrid(grid1, "USEFLAG", "사용 여부", true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, true);
                 _GridUtill.InitColumnUltraGrid(grid1, "MAKEDATE", "등록일시", true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, false);
-                _GridUtill.InitColumnUltraGrid(grid1, "MAKERE", "등록자", true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "MAKER", "등록자", true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, false);
                 _GridUtill.InitColumnUltraGrid(grid1, "EDITDATE", "수정일시", true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, false);
                 _GridUtill.InitColumnUltraGrid(grid1, "EDITTOR", "수정자", true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, false);
 

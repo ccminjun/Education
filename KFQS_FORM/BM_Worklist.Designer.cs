@@ -100,7 +100,6 @@ namespace KFQS_Form
             this.cboPlantCode_H.Name = "cboPlantCode_H";
             this.cboPlantCode_H.Size = new System.Drawing.Size(183, 28);
             this.cboPlantCode_H.TabIndex = 0;
-            this.cboPlantCode_H.Text = "cboPlantCode_H";
             // 
             // ultraLabel1
             // 
@@ -152,7 +151,6 @@ namespace KFQS_Form
             this.cboBanCode_H.Name = "cboBanCode_H";
             this.cboBanCode_H.Size = new System.Drawing.Size(183, 28);
             this.cboBanCode_H.TabIndex = 6;
-            this.cboBanCode_H.Text = "cboBanCode_H";
             // 
             // ultraLabel4
             // 
@@ -179,7 +177,6 @@ namespace KFQS_Form
             this.cboUseFlag_H.Name = "cboUseFlag_H";
             this.cboUseFlag_H.Size = new System.Drawing.Size(183, 28);
             this.cboUseFlag_H.TabIndex = 8;
-            this.cboUseFlag_H.Text = "cboUseFlag_H";
             // 
             // grid1
             // 
