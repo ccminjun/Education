@@ -1,7 +1,7 @@
 ﻿
 namespace KFQS_Form
 {
-    partial class MM_StockMM
+    partial class MM_StockOUT
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -42,21 +42,38 @@ namespace KFQS_Form
             Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton dateButton1 = new Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton();
+            Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton dateButton2 = new Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton();
             this.cboPlantCode_H = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
             this.ultraLabel1 = new Infragistics.Win.Misc.UltraLabel();
-            this.txtItem_H = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
-            this.ultraLabel2 = new Infragistics.Win.Misc.UltraLabel();
-            this.ultraLabel3 = new Infragistics.Win.Misc.UltraLabel();
-            this.txtItemName_H = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
+            this.cboItemName_H = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
+            this.ultraLabel4 = new Infragistics.Win.Misc.UltraLabel();
             this.grid1 = new DC00_Component.Grid(this.components);
+            this.ultraLabel2 = new Infragistics.Win.Misc.UltraLabel();
+            this.dtpEnd = new Infragistics.Win.UltraWinSchedule.UltraCalendarCombo();
+            this.ultraLabel3 = new Infragistics.Win.Misc.UltraLabel();
+            this.dtpStart = new Infragistics.Win.UltraWinSchedule.UltraCalendarCombo();
+            this.ultraLabel5 = new Infragistics.Win.Misc.UltraLabel();
+            this.txtLOTNo_H = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
+            this.ultraGroupBox1 = new Infragistics.Win.Misc.UltraGroupBox();
+            this.ultraLabel7 = new Infragistics.Win.Misc.UltraLabel();
+            this.cboStorageloccode_H = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
+            this.ultraLabel6 = new Infragistics.Win.Misc.UltraLabel();
+            this.cboWHCODE_H = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
             ((System.ComponentModel.ISupportInitialize)(this.gbxHeader)).BeginInit();
             this.gbxHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbxBody)).BeginInit();
             this.gbxBody.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cboPlantCode_H)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItem_H)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItemName_H)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboItemName_H)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpEnd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpStart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLOTNo_H)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ultraGroupBox1)).BeginInit();
+            this.ultraGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cboStorageloccode_H)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboWHCODE_H)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxHeader
@@ -65,13 +82,17 @@ namespace KFQS_Form
             this.gbxHeader.ContentPadding.Left = 2;
             this.gbxHeader.ContentPadding.Right = 2;
             this.gbxHeader.ContentPadding.Top = 4;
-            this.gbxHeader.Controls.Add(this.ultraLabel3);
-            this.gbxHeader.Controls.Add(this.txtItemName_H);
+            this.gbxHeader.Controls.Add(this.ultraLabel5);
+            this.gbxHeader.Controls.Add(this.txtLOTNo_H);
             this.gbxHeader.Controls.Add(this.ultraLabel2);
-            this.gbxHeader.Controls.Add(this.txtItem_H);
+            this.gbxHeader.Controls.Add(this.dtpEnd);
+            this.gbxHeader.Controls.Add(this.ultraLabel3);
+            this.gbxHeader.Controls.Add(this.dtpStart);
+            this.gbxHeader.Controls.Add(this.ultraLabel4);
+            this.gbxHeader.Controls.Add(this.cboItemName_H);
             this.gbxHeader.Controls.Add(this.ultraLabel1);
             this.gbxHeader.Controls.Add(this.cboPlantCode_H);
-            this.gbxHeader.Size = new System.Drawing.Size(1136, 116);
+            this.gbxHeader.Size = new System.Drawing.Size(1136, 148);
             // 
             // gbxBody
             // 
@@ -80,8 +101,9 @@ namespace KFQS_Form
             this.gbxBody.ContentPadding.Right = 4;
             this.gbxBody.ContentPadding.Top = 6;
             this.gbxBody.Controls.Add(this.grid1);
-            this.gbxBody.Location = new System.Drawing.Point(0, 116);
-            this.gbxBody.Size = new System.Drawing.Size(1136, 709);
+            this.gbxBody.Controls.Add(this.ultraGroupBox1);
+            this.gbxBody.Location = new System.Drawing.Point(0, 148);
+            this.gbxBody.Size = new System.Drawing.Size(1136, 677);
             // 
             // cboPlantCode_H
             // 
@@ -100,39 +122,22 @@ namespace KFQS_Form
             this.ultraLabel1.TabIndex = 1;
             this.ultraLabel1.Text = "공장";
             // 
-            // txtItem_H
+            // cboItemName_H
             // 
-            this.txtItem_H.Font = new System.Drawing.Font("MS Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItem_H.Location = new System.Drawing.Point(413, 16);
-            this.txtItem_H.Name = "txtItem_H";
-            this.txtItem_H.Size = new System.Drawing.Size(183, 28);
-            this.txtItem_H.TabIndex = 2;
+            this.cboItemName_H.Font = new System.Drawing.Font("MS Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboItemName_H.Location = new System.Drawing.Point(106, 74);
+            this.cboItemName_H.Name = "cboItemName_H";
+            this.cboItemName_H.Size = new System.Drawing.Size(183, 28);
+            this.cboItemName_H.TabIndex = 6;
             // 
-            // ultraLabel2
+            // ultraLabel4
             // 
-            this.ultraLabel2.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ultraLabel2.Location = new System.Drawing.Point(353, 20);
-            this.ultraLabel2.Name = "ultraLabel2";
-            this.ultraLabel2.Size = new System.Drawing.Size(54, 27);
-            this.ultraLabel2.TabIndex = 3;
-            this.ultraLabel2.Text = "품목";
-            // 
-            // ultraLabel3
-            // 
-            this.ultraLabel3.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ultraLabel3.Location = new System.Drawing.Point(618, 20);
-            this.ultraLabel3.Name = "ultraLabel3";
-            this.ultraLabel3.Size = new System.Drawing.Size(93, 27);
-            this.ultraLabel3.TabIndex = 5;
-            this.ultraLabel3.Text = "품목 명";
-            // 
-            // txtItemName_H
-            // 
-            this.txtItemName_H.Font = new System.Drawing.Font("MS Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemName_H.Location = new System.Drawing.Point(717, 16);
-            this.txtItemName_H.Name = "txtItemName_H";
-            this.txtItemName_H.Size = new System.Drawing.Size(183, 28);
-            this.txtItemName_H.TabIndex = 4;
+            this.ultraLabel4.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ultraLabel4.Location = new System.Drawing.Point(46, 78);
+            this.ultraLabel4.Name = "ultraLabel4";
+            this.ultraLabel4.Size = new System.Drawing.Size(49, 27);
+            this.ultraLabel4.TabIndex = 7;
+            this.ultraLabel4.Text = "품목";
             // 
             // grid1
             // 
@@ -207,42 +212,157 @@ namespace KFQS_Form
             this.grid1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grid1.EnterNextRowEnable = true;
             this.grid1.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.grid1.Location = new System.Drawing.Point(6, 6);
+            this.grid1.Location = new System.Drawing.Point(6, 87);
             this.grid1.Name = "grid1";
-            this.grid1.Size = new System.Drawing.Size(1124, 697);
+            this.grid1.Size = new System.Drawing.Size(1124, 584);
             this.grid1.TabIndex = 0;
-            this.grid1.Text = "grid1";
+            this.grid1.Text = "출고 창고";
             this.grid1.TextRenderingMode = Infragistics.Win.TextRenderingMode.GDI;
             this.grid1.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChange;
             this.grid1.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
             this.grid1.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             // 
-            // MM_StockMM
+            // ultraLabel2
+            // 
+            this.ultraLabel2.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ultraLabel2.Location = new System.Drawing.Point(442, 24);
+            this.ultraLabel2.Name = "ultraLabel2";
+            this.ultraLabel2.Size = new System.Drawing.Size(117, 27);
+            this.ultraLabel2.TabIndex = 15;
+            this.ultraLabel2.Text = "입,출고일자";
+            // 
+            // dtpEnd
+            // 
+            this.dtpEnd.DateButtons.Add(dateButton1);
+            this.dtpEnd.Location = new System.Drawing.Point(743, 21);
+            this.dtpEnd.Name = "dtpEnd";
+            this.dtpEnd.NonAutoSizeHeight = 32;
+            this.dtpEnd.Size = new System.Drawing.Size(147, 32);
+            this.dtpEnd.TabIndex = 14;
+            // 
+            // ultraLabel3
+            // 
+            this.ultraLabel3.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ultraLabel3.Location = new System.Drawing.Point(718, 25);
+            this.ultraLabel3.Name = "ultraLabel3";
+            this.ultraLabel3.Size = new System.Drawing.Size(19, 27);
+            this.ultraLabel3.TabIndex = 13;
+            this.ultraLabel3.Text = "~";
+            // 
+            // dtpStart
+            // 
+            this.dtpStart.DateButtons.Add(dateButton2);
+            this.dtpStart.Location = new System.Drawing.Point(565, 20);
+            this.dtpStart.Name = "dtpStart";
+            this.dtpStart.NonAutoSizeHeight = 32;
+            this.dtpStart.Size = new System.Drawing.Size(147, 32);
+            this.dtpStart.TabIndex = 12;
+            // 
+            // ultraLabel5
+            // 
+            this.ultraLabel5.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ultraLabel5.Location = new System.Drawing.Point(466, 78);
+            this.ultraLabel5.Name = "ultraLabel5";
+            this.ultraLabel5.Size = new System.Drawing.Size(93, 27);
+            this.ultraLabel5.TabIndex = 17;
+            this.ultraLabel5.Text = "LOT NO.";
+            // 
+            // txtLOTNo_H
+            // 
+            this.txtLOTNo_H.Font = new System.Drawing.Font("MS Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLOTNo_H.Location = new System.Drawing.Point(565, 74);
+            this.txtLOTNo_H.Name = "txtLOTNo_H";
+            this.txtLOTNo_H.Size = new System.Drawing.Size(325, 28);
+            this.txtLOTNo_H.TabIndex = 16;
+            // 
+            // ultraGroupBox1
+            // 
+            this.ultraGroupBox1.Controls.Add(this.ultraLabel7);
+            this.ultraGroupBox1.Controls.Add(this.cboStorageloccode_H);
+            this.ultraGroupBox1.Controls.Add(this.ultraLabel6);
+            this.ultraGroupBox1.Controls.Add(this.cboWHCODE_H);
+            this.ultraGroupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ultraGroupBox1.Location = new System.Drawing.Point(6, 6);
+            this.ultraGroupBox1.Name = "ultraGroupBox1";
+            this.ultraGroupBox1.Size = new System.Drawing.Size(1124, 81);
+            this.ultraGroupBox1.TabIndex = 15;
+            // 
+            // ultraLabel7
+            // 
+            this.ultraLabel7.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ultraLabel7.Location = new System.Drawing.Point(400, 37);
+            this.ultraLabel7.Name = "ultraLabel7";
+            this.ultraLabel7.Size = new System.Drawing.Size(136, 27);
+            this.ultraLabel7.TabIndex = 13;
+            this.ultraLabel7.Text = "출고저장위치";
+            // 
+            // cboStorageloccode_H
+            // 
+            this.cboStorageloccode_H.Font = new System.Drawing.Font("MS Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboStorageloccode_H.Location = new System.Drawing.Point(559, 33);
+            this.cboStorageloccode_H.Name = "cboStorageloccode_H";
+            this.cboStorageloccode_H.Size = new System.Drawing.Size(209, 28);
+            this.cboStorageloccode_H.TabIndex = 12;
+            // 
+            // ultraLabel6
+            // 
+            this.ultraLabel6.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ultraLabel6.Location = new System.Drawing.Point(37, 37);
+            this.ultraLabel6.Name = "ultraLabel6";
+            this.ultraLabel6.Size = new System.Drawing.Size(100, 27);
+            this.ultraLabel6.TabIndex = 11;
+            this.ultraLabel6.Text = "출고 창고";
+            // 
+            // cboWHCODE_H
+            // 
+            this.cboWHCODE_H.Font = new System.Drawing.Font("MS Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboWHCODE_H.Location = new System.Drawing.Point(143, 33);
+            this.cboWHCODE_H.Name = "cboWHCODE_H";
+            this.cboWHCODE_H.Size = new System.Drawing.Size(183, 28);
+            this.cboWHCODE_H.TabIndex = 10;
+            // 
+            // MM_StockOUT
             // 
             this.ClientSize = new System.Drawing.Size(1136, 825);
-            this.Name = "MM_StockMM";
-            this.Text = "작업자 마스터";
-            this.Load += new System.EventHandler(this.MM_StockMM_Load);
+            this.Name = "MM_StockOUT";
+            this.Text = "자재 생산 출고 관리";
+            this.Load += new System.EventHandler(this.MM_StockOUT_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gbxHeader)).EndInit();
             this.gbxHeader.ResumeLayout(false);
             this.gbxHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbxBody)).EndInit();
             this.gbxBody.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cboPlantCode_H)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItem_H)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItemName_H)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboItemName_H)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpEnd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpStart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLOTNo_H)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ultraGroupBox1)).EndInit();
+            this.ultraGroupBox1.ResumeLayout(false);
+            this.ultraGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cboStorageloccode_H)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboWHCODE_H)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Infragistics.Win.Misc.UltraLabel ultraLabel3;
-        private Infragistics.Win.UltraWinEditors.UltraTextEditor txtItemName_H;
-        private Infragistics.Win.Misc.UltraLabel ultraLabel2;
-        private Infragistics.Win.UltraWinEditors.UltraTextEditor txtItem_H;
+        private Infragistics.Win.Misc.UltraLabel ultraLabel4;
+        private Infragistics.Win.UltraWinEditors.UltraComboEditor cboItemName_H;
         private Infragistics.Win.Misc.UltraLabel ultraLabel1;
         private Infragistics.Win.UltraWinEditors.UltraComboEditor cboPlantCode_H;
         private DC00_Component.Grid grid1;
+        private Infragistics.Win.Misc.UltraLabel ultraLabel2;
+        private Infragistics.Win.UltraWinSchedule.UltraCalendarCombo dtpEnd;
+        private Infragistics.Win.Misc.UltraLabel ultraLabel3;
+        private Infragistics.Win.UltraWinSchedule.UltraCalendarCombo dtpStart;
+        private Infragistics.Win.Misc.UltraLabel ultraLabel5;
+        private Infragistics.Win.UltraWinEditors.UltraTextEditor txtLOTNo_H;
+        private Infragistics.Win.Misc.UltraGroupBox ultraGroupBox1;
+        private Infragistics.Win.Misc.UltraLabel ultraLabel7;
+        private Infragistics.Win.UltraWinEditors.UltraComboEditor cboStorageloccode_H;
+        private Infragistics.Win.Misc.UltraLabel ultraLabel6;
+        private Infragistics.Win.UltraWinEditors.UltraComboEditor cboWHCODE_H;
     }
 }

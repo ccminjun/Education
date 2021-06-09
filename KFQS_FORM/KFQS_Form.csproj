@@ -46,11 +46,23 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="MM_StockMM.cs">
+    <Compile Include="AP_ProductPlan[생산 계획 및 확정].cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MM_StockMM.Designer.cs">
-      <DependentUpon>MM_StockMM.cs</DependentUpon>
+    <Compile Include="AP_ProductPlan[생산 계획 및 확정].Designer.cs">
+      <DependentUpon>AP_ProductPlan[생산 계획 및 확정].cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM_StockOUT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM_StockOUT.Designer.cs">
+      <DependentUpon>MM_StockOUT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM_StockMM[자재 재고 관리].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM_StockMM[자재 재고 관리].Designer.cs">
+      <DependentUpon>MM_StockMM[자재 재고 관리].cs</DependentUpon>
     </Compile>
     <Compile Include="MM_PoMake[자재 발주 및 입고].cs">
       <SubType>Form</SubType>
@@ -127,8 +139,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MM_StockMM.resx">
-      <DependentUpon>MM_StockMM.cs</DependentUpon>
+    <EmbeddedResource Include="AP_ProductPlan[생산 계획 및 확정].resx">
+      <DependentUpon>AP_ProductPlan[생산 계획 및 확정].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM_StockOUT.resx">
+      <DependentUpon>MM_StockOUT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM_StockMM[자재 재고 관리].resx">
+      <DependentUpon>MM_StockMM[자재 재고 관리].cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MM_PoMake[자재 발주 및 입고].resx">
       <DependentUpon>MM_PoMake[자재 발주 및 입고].cs</DependentUpon>

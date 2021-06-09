@@ -1,4 +1,5 @@
-﻿using DC00_assm;
+﻿using DC_POPUP;
+using DC00_assm;
 using Infragistics.Win.UltraWinGrid;
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,7 @@ namespace KFQS_Form
                 _GridUtill.InitColumnUltraGrid(grid1, "ITEMCODE"   , "품목"      , true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, false);
                 _GridUtill.InitColumnUltraGrid(grid1, "ITEMNAME"   , "품목명"    , true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, false);
                 _GridUtill.InitColumnUltraGrid(grid1, "WHCODE"     , "창고"      , true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, false);
-                _GridUtill.InitColumnUltraGrid(grid1, "STOCKQTY"   , "재고수량"  , true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "STOCKQTY"   , "재고수량"  , true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Right, true, false);
                 _GridUtill.InitColumnUltraGrid(grid1, "UNITCODE"   , "단위"      , true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, false);
                 _GridUtill.InitColumnUltraGrid(grid1, "CUSTCODE"   , "거래처"    , true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, false);
                 _GridUtill.InitColumnUltraGrid(grid1, "CUSTNAME"   , "거래처명"  , true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, false);
@@ -100,6 +101,32 @@ namespace KFQS_Form
                 ShowDialog(ex.Message, DC00_WinForm.DialogForm.DialogType.OK);
             }
             finally { helper.Close(); }
+        }
+
+        private void ultraButton1_Click(object sender, EventArgs e)
+        {
+            //바코드 발행
+            if (grid1.ActiveRow == null) return;
+            DataRow drRow = ((DataTable)this.grid1.DataSource).NewRow();
+            drRow["ITEMCODE"] = Convert.ToString(this.grid1.ActiveRow.Cells["ITEMCODE"].Value);
+            drRow["ITEMNAME"] = Convert.ToString(this.grid1.ActiveRow.Cells["ITEMNAME"].Value);
+            drRow["CUSTNAME"] = Convert.ToString(this.grid1.ActiveRow.Cells["CUSTNAME"].Value);
+            drRow["STOCKQTY"] = Convert.ToString(this.grid1.ActiveRow.Cells["STOCKQTY"].Value);
+            drRow["MATLOTNO"] = Convert.ToString(this.grid1.ActiveRow.Cells["MATLOTNO"].Value);
+            drRow["UNITCODE"] = Convert.ToString(this.grid1.ActiveRow.Cells["UNITCODE"].Value);
+
+            //바코드 디자인 선언
+            Report_LotBacode repBarCode = new Report_LotBacode();
+            //레포트 북 선언
+            Telerik.Reporting.ReportBook repBook = new Telerik.Reporting.ReportBook();
+            //바코드 디자이너에 데이터 등록
+            repBarCode.DataSource = drRow;
+            //레포트 북에 디자이너 등록
+            repBook.Reports.Add(repBarCode);
+
+            //미리보기 창 활성화
+            ReportViewer repViewer = new ReportViewer(repBook, 1);
+            repViewer.ShowDialog();
         }
     }
 }

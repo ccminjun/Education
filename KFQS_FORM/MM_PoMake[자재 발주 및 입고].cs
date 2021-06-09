@@ -126,10 +126,10 @@ namespace KFQS_Form
 
             this.grid1.ActiveRow.Cells["PLANTCODE"].Value = LoginInfo.PlantCode;
 
-            grid1.ActiveRow.Cells["PONO"].Activation   = Activation.NoEdit;
-            grid1.ActiveRow.Cells["CHK"].Activation    = Activation.NoEdit;
-            grid1.ActiveRow.Cells["LOTNO"].Activation  = Activation.NoEdit;
-            grid1.ActiveRow.Cells["INDATE"].Activation = Activation.NoEdit;
+            grid1.ActiveRow.Cells["PONO"].Activation     = Activation.NoEdit;
+            grid1.ActiveRow.Cells["CHK"].Activation      = Activation.NoEdit;
+            grid1.ActiveRow.Cells["LOTNO"].Activation    = Activation.NoEdit;
+            grid1.ActiveRow.Cells["INDATE"].Activation   = Activation.NoEdit;
 
             grid1.ActiveRow.Cells["MAKER"].Activation    = Activation.NoEdit;
             grid1.ActiveRow.Cells["MAKEDATE"].Activation = Activation.NoEdit;
