@@ -47,28 +47,27 @@ namespace KFQS_Form
                 _GridUtill.SetInitUltraGridBind(grid1); //셋팅 내역 그리드와 바인딩
 
                 Common _Common = new Common();
-                DataTable dtTemp = new DataTable();
-                // PLANTCODE 기준정보 가져와서 데이터 테이블에 추가.
+                DataTable dtTemp = new DataTable();     // PLANTCODE 기준정보 가져와서 데이터 테이블에 추가.
+               
+                // #1. PLANTCODE 기준정보 가져와서 데이터 테이블에 추가.
                 dtTemp = _Common.Standard_CODE("PLANTCODE");
                 // 데이터 테이블에 있는 데이터를 해당 콤보박스에 추가.
-                Common.FillComboboxMaster(this.cboPlantCode_H, dtTemp, dtTemp.Columns["CODE_ID"].ColumnName,dtTemp.Columns["CODE_NAME"].ColumnName,"ALL", "");
+                Common.FillComboboxMaster(this.cboPlantCode_H, dtTemp, dtTemp.Columns["CODE_ID"].ColumnName, dtTemp.Columns["CODE_NAME"].ColumnName, "ALL", "");
+                // 그리드에 있는 해당컬럼에 콤보박스 형태로 데이터 등록
                 UltraGridUtil.SetComboUltraGrid(this.grid1, "PLANTCODE", dtTemp, "CODE_ID", "CODE_NAME");
 
+                // #2. UNITCODE(단위)
                 dtTemp = _Common.Standard_CODE("UNITCODE");
                 UltraGridUtil.SetComboUltraGrid(this.grid1, "UNITCODE", dtTemp, "CODE_ID", "CODE_NAME");
 
-                // 데이터 테이블에 표현할 데이터 가져오기
+                // #3. CUSTCODE(거래처)
                 dtTemp = _Common.GET_TB_CUSTMATTER_CODE("");
-                // 조회에 있는 콤보박스 컨트롤에 데이터 등록
-                Common.FillComboboxMaster(this.cboCust_H, dtTemp, dtTemp.Columns["CODE_ID"].ColumnName,dtTemp.Columns["CODE_NAME"].ColumnName,"ALL", "");
-                // 그리드에 있는 해당컬럼에 콤보박스 형태로 데이터 등록
+                Common.FillComboboxMaster(this.cboCust_H, dtTemp, dtTemp.Columns["CODE_ID"].ColumnName, dtTemp.Columns["CODE_NAME"].ColumnName, "ALL", "");
                 UltraGridUtil.SetComboUltraGrid(this.grid1, "CUSTCODE", dtTemp, "CODE_ID", "CODE_NAME");
 
-                dtTemp = _Common.GET_ItemCodeFERT_Code("UNITCODE");
+                // #4. ITEMCODE(발주품목코드)
+                dtTemp = _Common.GET_ItemCodeFERT_Code("ROH");
                 UltraGridUtil.SetComboUltraGrid(this.grid1, "ITEMCODE", dtTemp, "CODE_ID", "CODE_NAME");
-
-                // 데이터 테이블에 있는 데이터를 해당 콤보박스에 추가.
-                UltraGridUtil.SetComboUltraGrid(this.grid1, "CUSTCODE", dtTemp, "CODE_ID", "CODE_NAME");
 
                 cboPlantCode_H.Value = LoginInfo.PlantCode;
                 dtpStart.Value = string.Format("{0:yyyy-MM-01}", DateTime.Now);
