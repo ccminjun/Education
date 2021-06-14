@@ -42,8 +42,8 @@ namespace KFQS_Form
             Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton dateButton3 = new Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton();
-            Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton dateButton4 = new Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton();
+            Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton dateButton1 = new Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton();
+            Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton dateButton2 = new Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton();
             Infragistics.Win.Appearance appearance14 = new Infragistics.Win.Appearance();
             this.grid1 = new DC00_Component.Grid(this.components);
             this.ultraLabel1 = new Infragistics.Win.Misc.UltraLabel();
@@ -251,7 +251,7 @@ namespace KFQS_Form
             // 
             // dtpEnd
             // 
-            this.dtpEnd.DateButtons.Add(dateButton3);
+            this.dtpEnd.DateButtons.Add(dateButton1);
             this.dtpEnd.Location = new System.Drawing.Point(827, 12);
             this.dtpEnd.Name = "dtpEnd";
             this.dtpEnd.NonAutoSizeHeight = 32;
@@ -269,7 +269,7 @@ namespace KFQS_Form
             // 
             // dtpStart
             // 
-            this.dtpStart.DateButtons.Add(dateButton4);
+            this.dtpStart.DateButtons.Add(dateButton2);
             this.dtpStart.Location = new System.Drawing.Point(649, 11);
             this.dtpStart.Name = "dtpStart";
             this.dtpStart.NonAutoSizeHeight = 32;
@@ -335,6 +335,7 @@ namespace KFQS_Form
             this.btnOrderClose.Size = new System.Drawing.Size(151, 31);
             this.btnOrderClose.TabIndex = 24;
             this.btnOrderClose.Text = "작업 지시 종료";
+            this.btnOrderClose.Click += new System.EventHandler(this.btnOrderClose_Click);
             // 
             // btnProduct
             // 
@@ -343,6 +344,7 @@ namespace KFQS_Form
             this.btnProduct.Size = new System.Drawing.Size(151, 31);
             this.btnProduct.TabIndex = 23;
             this.btnProduct.Text = "생산 실적 등록";
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
             // ultraLabel9
             // 
