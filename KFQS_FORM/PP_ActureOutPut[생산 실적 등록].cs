@@ -210,13 +210,13 @@ namespace KFQS_Form
                 {
                     helper.Commit();
                     ShowDialog(helper.RSMSG, DC00_WinForm.DialogForm.DialogType.OK);
+                    DoInquire();
                 }
                 else
                 {
                     helper.Rollback();
                     ShowDialog(helper.RSMSG, DC00_WinForm.DialogForm.DialogType.OK);
                 }
-                DoInquire();
             }
             catch (Exception ex)
             {
@@ -272,6 +272,7 @@ namespace KFQS_Form
                 {
                     helper.Commit();
                     ShowDialog("정상적으로 등록 되었습니다.", DC00_WinForm.DialogForm.DialogType.OK);
+                    DoInquire();
                 }
                 else
                 { 
@@ -369,7 +370,7 @@ namespace KFQS_Form
                 helper.Commit();
                 ShowDialog("생산 실적 등록을 완료 하였습니다.", DC00_WinForm.DialogForm.DialogType.OK);
                 DoInquire();
-                txtInLotNo.Text = "";
+                //txtInLotNo.Text = "";
                 txtProduct.Text = "";
                 txtBad.Text = "";
             }
