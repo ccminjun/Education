@@ -53,9 +53,9 @@ namespace KFQS_Form
             _GridUtil.InitColumnUltraGrid(grid1, "WORKCENTERCODE", "작업장",    true, GridColDataType_emu.VarChar, 150, 130, Infragistics.Win.HAlign.Left, true, false);
             _GridUtil.InitColumnUltraGrid(grid1, "WORKCENTERNAME", "작업장명",  true, GridColDataType_emu.VarChar, 150, 130, Infragistics.Win.HAlign.Left, true, false);
             _GridUtil.InitColumnUltraGrid(grid1, "MAKER",          "등록자",    true, GridColDataType_emu.VarChar, 150, 130, Infragistics.Win.HAlign.Left, true, false);
-            _GridUtil.InitColumnUltraGrid(grid1, "MAKEDATE",       "클릭 시간", true, GridColDataType_emu.VarChar, 150, 130, Infragistics.Win.HAlign.Left, true, false);
+            _GridUtil.InitColumnUltraGrid(grid1, "MAKEDATE",       "클릭 시간", true, GridColDataType_emu.DateTime, 150, 130, Infragistics.Win.HAlign.Left, true, false);
             _GridUtil.InitColumnUltraGrid(grid1, "REMARK",         "수리내역",  true, GridColDataType_emu.VarChar, 200, 130, Infragistics.Win.HAlign.Left, true, true);
-            _GridUtil.InitColumnUltraGrid(grid1, "REPAIRDATE",     "수리시간",  true, GridColDataType_emu.VarChar, 150, 130, Infragistics.Win.HAlign.Left, true, false);
+            _GridUtil.InitColumnUltraGrid(grid1, "REPAIRDATE",     "수리시간",  true, GridColDataType_emu.DateTime, 150, 130, Infragistics.Win.HAlign.Left, true, false);
             _GridUtil.InitColumnUltraGrid(grid1, "REPAIRMAN",      "수리자",    true, GridColDataType_emu.VarChar, 150, 130, Infragistics.Win.HAlign.Left, true, true);
             _GridUtil.InitColumnUltraGrid(grid1, "REPAIRMAKER",    "수리 등록자",    true, GridColDataType_emu.VarChar, 150, 130, Infragistics.Win.HAlign.Left, true, true);
             _GridUtil.SetInitUltraGridBind(grid1);
