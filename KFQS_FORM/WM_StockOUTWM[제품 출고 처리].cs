@@ -142,17 +142,28 @@ namespace KFQS_Form
         {
             this.grid1.UpdateData();
             DataTable dt = grid1.chkChange();
+            #region VALIDATION CHK 
+            // CARNO가 일치하는지 체크, 체크를 눌렀다가 취소하는 경우도 체크
             if (dt == null)
                 return;
             string sCarNo = Convert.ToString(dt.Rows[0]["CARNO"]);
+            int ChkCount = 0;
             for (int i = 0; i < dt.Rows.Count; i++)
             {
+                if (Convert.ToString(dt.Rows[i]["CHK"]) != "1") continue;
                 if (sCarNo != Convert.ToString(dt.Rows[i]["CARNO"]))
                 {
                     ShowDialog("차량 번호가 동일하지 않은 출고 등록 및 거래명세서는 발행 할 수 없습니다.", DialogForm.DialogType.OK);
                     return;
                 }
+                ChkCount += 1;
             }
+            if (ChkCount == 0)
+            {
+                ShowDialog("선택된 출고 내역이 없습니다.", DialogForm.DialogType.OK);
+                return;
+            }  
+            #endregion
             DBHelper helper = new DBHelper("", true);
             try
             {
@@ -176,7 +187,8 @@ namespace KFQS_Form
                             break;
                         case DataRowState.Modified:
                             #region 수정 
-                            helper.ExecuteNoneQuery("WM_StockOutWM_U1", CommandType.StoredProcedure
+                            if (Convert.ToString(drRow["CHK"]) != "1") continue;
+                            helper.ExecuteNoneQuery("19WM_StockOutWM_U1", CommandType.StoredProcedure
                                                   , helper.CreateParameter("PLANTCODE" , Convert.ToString(drRow["PLANTCODE"]) , DbType.String, ParameterDirection.Input)
                                                   , helper.CreateParameter("SHIPNO"    , Convert.ToString(drRow["SHIPNO"])    , DbType.String, ParameterDirection.Input)
                                                   , helper.CreateParameter("TRADINGNO" , sTradingNo                           , DbType.String, ParameterDirection.Input)
