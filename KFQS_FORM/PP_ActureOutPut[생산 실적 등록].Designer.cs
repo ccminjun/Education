@@ -58,6 +58,7 @@ namespace KFQS_Form
             this.txtOrderNO = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.ultraGroupBox1 = new Infragistics.Win.Misc.UltraGroupBox();
             this.ultraGroupBox2 = new Infragistics.Win.Misc.UltraGroupBox();
+            this.Errorbtn = new Infragistics.Win.Misc.UltraButton();
             this.btnOrderClose = new Infragistics.Win.Misc.UltraButton();
             this.btnProduct = new Infragistics.Win.Misc.UltraButton();
             this.ultraLabel9 = new Infragistics.Win.Misc.UltraLabel();
@@ -257,6 +258,7 @@ namespace KFQS_Form
             this.dtpEnd.NonAutoSizeHeight = 32;
             this.dtpEnd.Size = new System.Drawing.Size(147, 32);
             this.dtpEnd.TabIndex = 14;
+            this.dtpEnd.Value = new System.DateTime(2021, 6, 18, 15, 40, 10, 0);
             // 
             // ultraLabel3
             // 
@@ -311,6 +313,7 @@ namespace KFQS_Form
             // 
             // ultraGroupBox2
             // 
+            this.ultraGroupBox2.Controls.Add(this.Errorbtn);
             this.ultraGroupBox2.Controls.Add(this.btnOrderClose);
             this.ultraGroupBox2.Controls.Add(this.btnProduct);
             this.ultraGroupBox2.Controls.Add(this.ultraLabel9);
@@ -327,6 +330,15 @@ namespace KFQS_Form
             this.ultraGroupBox2.Size = new System.Drawing.Size(1299, 156);
             this.ultraGroupBox2.TabIndex = 18;
             this.ultraGroupBox2.Text = "LOT 투입";
+            // 
+            // Errorbtn
+            // 
+            this.Errorbtn.Location = new System.Drawing.Point(1100, 46);
+            this.Errorbtn.Name = "Errorbtn";
+            this.Errorbtn.Size = new System.Drawing.Size(131, 96);
+            this.Errorbtn.TabIndex = 25;
+            this.Errorbtn.Text = "고장";
+            this.Errorbtn.Click += new System.EventHandler(this.btnError_Click);
             // 
             // btnOrderClose
             // 
@@ -526,5 +538,6 @@ namespace KFQS_Form
         private Infragistics.Win.Misc.UltraLabel ultraLabel6;
         private Infragistics.Win.UltraWinEditors.UltraTextEditor txtWorkerName;
         private DC00_Component.SBtnTextEditor txtWorkerID;
+        private Infragistics.Win.Misc.UltraButton Errorbtn;
     }
 }

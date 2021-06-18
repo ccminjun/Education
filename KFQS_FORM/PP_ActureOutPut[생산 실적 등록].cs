@@ -42,6 +42,7 @@ namespace KFQS_Form
                 _GridUtill.InitColumnUltraGrid(grid1, "WORKCENTERCODE" , "작업장"              , true, GridColDataType_emu.VarChar    , 130, 130, Infragistics.Win.HAlign.Left, true, false);
                 _GridUtill.InitColumnUltraGrid(grid1, "WORKSTATUSCODE" , "가동/비가동 상태"    , true, GridColDataType_emu.VarChar    , 130, 130, Infragistics.Win.HAlign.Left, true, false);
                 _GridUtill.InitColumnUltraGrid(grid1, "WORKSTATUS"     , "가동/비가동 상태"    , true, GridColDataType_emu.VarChar    , 130, 130, Infragistics.Win.HAlign.Left, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "ERRORFLAG"      , "고장/정상 상태"      , true, GridColDataType_emu.VarChar    , 130, 130, Infragistics.Win.HAlign.Left, true, false);
                 _GridUtill.InitColumnUltraGrid(grid1, "WORKER"         , "작업자"              , true, GridColDataType_emu.VarChar    , 130, 130, Infragistics.Win.HAlign.Left, true, false);
                 _GridUtill.InitColumnUltraGrid(grid1, "WORKERNAME"     , "작업자명"            , true, GridColDataType_emu.VarChar    , 130, 130, Infragistics.Win.HAlign.Left, true, false);
                 _GridUtill.InitColumnUltraGrid(grid1, "ORDSTARTDATE"   , "최초 가동 시작 시간" , true, GridColDataType_emu.DateTime24 , 160, 130, Infragistics.Win.HAlign.Left, true, false);
@@ -176,6 +177,7 @@ namespace KFQS_Form
 
         private void btnLotIn_Click(object sender, EventArgs e)
         {
+           
             // LOT 투입
             DBHelper helper = new DBHelper("", true);
             try
@@ -254,6 +256,11 @@ namespace KFQS_Form
         //가동 비가동 등록
         private void btnRunStop_Click(object sender, EventArgs e)
         {
+            if (Convert.ToString(grid1.ActiveRow.Cells["ERRORFLAG"].Value) == "Y")
+            {
+                ShowDialog("해당 작업장은 고장 상태입니다.", DC00_WinForm.DialogForm.DialogType.OK);
+                return;
+            }
             DBHelper helper = new DBHelper("", true);
             try
             {
@@ -435,6 +442,41 @@ namespace KFQS_Form
             {
                 helper.Rollback();
                 ShowDialog(ex.ToString(), DC00_WinForm.DialogForm.DialogType.OK);
+            }
+            finally
+            {
+                helper.Close();
+            }
+        }
+        private void btnError_Click(object sender, EventArgs e)
+        {
+
+            DBHelper helper = new DBHelper("", true);
+            try
+            {
+       
+                helper.ExecuteNoneQuery("03PP_ActureOutput_U33", CommandType.StoredProcedure
+                                                                    , helper.CreateParameter("PLANTCODE"      , "1000"                                                               , DbType.String, ParameterDirection.Input)
+                                                                    , helper.CreateParameter("WORKCENTERCODE" , Convert.ToString(this.grid1.ActiveRow.Cells["WORKCENTERCODE"].Value) , DbType.String, ParameterDirection.Input)
+                                                                    , helper.CreateParameter("ORDERNO"        , Convert.ToString(this.grid1.ActiveRow.Cells["ORDERNO"].Value)        , DbType.String, ParameterDirection.Input)
+                                                                    , helper.CreateParameter("ITEMCODE"       , Convert.ToString(this.grid1.ActiveRow.Cells["ITEMCODE"].Value)       , DbType.String, ParameterDirection.Input)
+                                                                    , helper.CreateParameter("WORKER"         , Convert.ToString(this.grid1.ActiveRow.Cells["WORKER"].Value)         , DbType.String, ParameterDirection.Input)
+                                                                    , helper.CreateParameter("MAKER"          , LoginInfo.UserID                                                     , DbType.String, ParameterDirection.Input)
+                                                                    );
+                if (helper.RSCODE == "S")
+                {
+                    helper.Commit();
+                    ShowDialog("정상적으로 등록되었습니다.", DC00_WinForm.DialogForm.DialogType.OK);
+                }
+                else
+                {
+                    helper.Rollback();
+                    ShowDialog("데이터 등록 중 오류가 발생했습니다.", DC00_WinForm.DialogForm.DialogType.OK);
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowDialog(ex.ToString());
             }
             finally
             {
