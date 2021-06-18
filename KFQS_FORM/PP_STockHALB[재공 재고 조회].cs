@@ -26,7 +26,7 @@ namespace KFQS_Form
             {
                 _GridUtill.InitializeGrid(this.grid1, false, true, false, "", false); 
                 _GridUtill.InitColumnUltraGrid(grid1, "PLANTCODE"      , "공장"     , false, GridColDataType_emu.VarChar, 170, 100, Infragistics.Win.HAlign.Left, true, false, null, null, null, null, null);
-                _GridUtill.InitColumnUltraGrid(grid1, "ITEMTYPE"       , "품목"     , false, GridColDataType_emu.VarChar, 170, 100, Infragistics.Win.HAlign.Left, true, false, null, null, null, null, null);
+                _GridUtill.InitColumnUltraGrid(grid1, "ITEMCODE"       , "품목"     , false, GridColDataType_emu.VarChar, 170, 100, Infragistics.Win.HAlign.Left, true, false, null, null, null, null, null);
                 _GridUtill.InitColumnUltraGrid(grid1, "ITEMNAME"       , "품목명"   , false, GridColDataType_emu.VarChar, 170, 100, Infragistics.Win.HAlign.Left, true, false, null, null, null, null, null);
                 _GridUtill.InitColumnUltraGrid(grid1, "ITEMTYPE"       , "품목구분" , false, GridColDataType_emu.VarChar, 170, 100, Infragistics.Win.HAlign.Left, true, false, null, null, null, null, null);
                 _GridUtill.InitColumnUltraGrid(grid1, "LOTNO"          , "LOTNO"    , false, GridColDataType_emu.VarChar, 170, 100, Infragistics.Win.HAlign.Left, true, false, null, null, null, null, null);
@@ -34,6 +34,7 @@ namespace KFQS_Form
                 _GridUtill.InitColumnUltraGrid(grid1, "WORKCENTERNAME" , "작업장명" , false, GridColDataType_emu.VarChar, 170, 100, Infragistics.Win.HAlign.Left, true, false, null, null, null, null, null);
                 _GridUtill.InitColumnUltraGrid(grid1, "STOCKQTY"       , "재고수량" , false, GridColDataType_emu.VarChar, 170, 100, Infragistics.Win.HAlign.Right, false, false, null, null, null, null, null);
                 _GridUtill.InitColumnUltraGrid(grid1, "UNITCODE"       , "단위"     , false, GridColDataType_emu.VarChar, 170, 100, Infragistics.Win.HAlign.Left, true, false, null, null, null, null, null);
+                
                 //셋팅 내역을 바인딩
                 _GridUtill.SetInitUltraGridBind(grid1);
 
@@ -42,7 +43,7 @@ namespace KFQS_Form
                 DataTable rtnDtTemp = _Common.Standard_CODE("PLANTCODE");  //사업장
                 Common.FillComboboxMaster(this.cboPlantCode_H, rtnDtTemp, rtnDtTemp.Columns["CODE_ID"].ColumnName, rtnDtTemp.Columns["CODE_NAME"].ColumnName, "ALL", "");
                 UltraGridUtil.SetComboUltraGrid(this.grid1, "PlantCode", rtnDtTemp, "CODE_ID", "CODE_NAME");
-              
+
                 DataTable dtTemp = _Common.Standard_CODE("ITEMTYPE");  //품목 구분
                 Common.FillComboboxMaster(this.cboItemName_H, dtTemp, dtTemp.Columns["CODE_ID"].ColumnName, dtTemp.Columns["CODE_NAME"].ColumnName, "ALL", "");
                 UltraGridUtil.SetComboUltraGrid(this.grid1, "ITEMTYPE", dtTemp, "CODE_ID", "CODE_NAME");

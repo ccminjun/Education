@@ -1,4 +1,5 @@
-﻿using DC00_assm;
+﻿using DC_POPUP;
+using DC00_assm;
 using Infragistics.Win.UltraWinGrid;
 using System;
 using System.Collections.Generic;
@@ -27,14 +28,14 @@ namespace KFQS_Form
                 _GridUtill.InitializeGrid(this.grid1, false, true, false, "", false); //그리드1 의 기본 설정 내용
                 // PLANTCODE값을 보여줄때는 공장으로, null값 허용, varchar형식, 130,130, 문자열은 왼쪽 정렬, 보여주고 수정은X)
                 _GridUtill.InitColumnUltraGrid(grid1, "CHK"       , "원자재출고취소" , true, GridColDataType_emu.CheckBox, 130, 130, Infragistics.Win.HAlign.Left, true, true);
-                _GridUtill.InitColumnUltraGrid(grid1, "PLANTCODE" , "공장"           , true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, true);
-                _GridUtill.InitColumnUltraGrid(grid1, "ITEMCODE"  , "품목코드"       , true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, true);
-                _GridUtill.InitColumnUltraGrid(grid1, "ITEMNAME"  , "품목명"         , true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, true);
-                _GridUtill.InitColumnUltraGrid(grid1, "ITEMTYPE"  , "품목구분"       , true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, true);
-                _GridUtill.InitColumnUltraGrid(grid1, "LOTNO"     , "LOTNO"          , true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, true);
-                _GridUtill.InitColumnUltraGrid(grid1, "STOCKQTY"  , "재고수량"       , true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Right, true, true);
-                _GridUtill.InitColumnUltraGrid(grid1, "UNITCODE"  , "단위"           , true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, true);
-                _GridUtill.InitColumnUltraGrid(grid1, "WHCODE"    , "입고창고"       , true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, true);
+                _GridUtill.InitColumnUltraGrid(grid1, "PLANTCODE" , "공장"           , true, GridColDataType_emu.VarChar, 170, 130, Infragistics.Win.HAlign.Left, true, true);
+                _GridUtill.InitColumnUltraGrid(grid1, "ITEMCODE"  , "품목코드"       , true, GridColDataType_emu.VarChar, 170, 130, Infragistics.Win.HAlign.Left, true, true);
+                _GridUtill.InitColumnUltraGrid(grid1, "ITEMNAME"  , "품목명"         , true, GridColDataType_emu.VarChar, 170, 130, Infragistics.Win.HAlign.Left, true, true);
+                _GridUtill.InitColumnUltraGrid(grid1, "ITEMTYPE"  , "품목구분"       , true, GridColDataType_emu.VarChar, 170, 130, Infragistics.Win.HAlign.Left, true, true);
+                _GridUtill.InitColumnUltraGrid(grid1, "LOTNO"     , "LOTNO"          , true, GridColDataType_emu.VarChar, 170, 130, Infragistics.Win.HAlign.Left, true, true);
+                _GridUtill.InitColumnUltraGrid(grid1, "STOCKQTY"  , "재고수량"       , true, GridColDataType_emu.VarChar, 170, 130, Infragistics.Win.HAlign.Right, true, true);
+                _GridUtill.InitColumnUltraGrid(grid1, "UNITCODE"  , "단위"           , true, GridColDataType_emu.VarChar, 170, 130, Infragistics.Win.HAlign.Left, true, true);
+                _GridUtill.InitColumnUltraGrid(grid1, "WHCODE"    , "입고창고"       , true, GridColDataType_emu.VarChar, 170, 130, Infragistics.Win.HAlign.Left, true, true);
                 
                 //셋팅 내역을 바인딩
                 _GridUtill.SetInitUltraGridBind(grid1);
@@ -164,6 +165,52 @@ namespace KFQS_Form
             finally
             {
                 helper.Close();
+            }
+
+        }
+        // 생산한 제품에 lot번호 발행
+        private void ultraButton1_Click(object sender, EventArgs e)
+        {
+            if (grid1.ActiveRow == null) return;
+            if (Convert.ToString(this.grid1.ActiveRow.Cells["ITEMTYPE"].Value)=="FERT")
+            {
+                DBHelper helper = new DBHelper(false);
+                try
+                {
+                    string sPlantCode = Convert.ToString(grid1.ActiveRow.Cells["PLANTCODE"].Value);
+                    string sLotno     = Convert.ToString(grid1.ActiveRow.Cells["LOTNO"].Value);
+
+                    DataTable dtTemp = helper.FillTable("19PP_StockPP_S2", CommandType.StoredProcedure
+                                                                         , helper.CreateParameter("PLANTCODE", sPlantCode, DbType.String, ParameterDirection.Input)
+                                                                         , helper.CreateParameter("LOTNO"    , sLotno, DbType.String, ParameterDirection.Input)
+                                                                         );
+                    if (dtTemp.Rows.Count==0)
+                    {
+                        ShowDialog("바코드 정보를 조회 할 내용이 없습니다.", DC00_WinForm.DialogForm.DialogType.OK);
+                        return;
+                    }
+                    // 조회할 내역이 있다면 바코드 발행
+                    Report_LotBacodeFERT sReportFert = new Report_LotBacodeFERT();
+                    // 바코드 디자인이 첨부될 레포트 북 클래스 선언
+                    Telerik.Reporting.ReportBook repBook = new Telerik.Reporting.ReportBook();
+                    // 바코드 디자인에 데이터 바인딩
+                    sReportFert.DataSource = dtTemp;
+                    // 레포트 북에 디자인 추가
+                    repBook.Reports.Add(sReportFert);
+
+                    // 레포트 미리보기 창에 레포트 북 등록 및 출력 장수 입력
+                    ReportViewer BarcodeViewer = new ReportViewer(repBook,1);
+                    // 미리보기 창 호출
+                    BarcodeViewer.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    ShowDialog(ex.ToString());
+                }
+                finally 
+                {
+                    helper.Close();
+                }
             }
 
         }
