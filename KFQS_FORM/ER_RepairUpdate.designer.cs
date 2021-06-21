@@ -231,7 +231,6 @@
             this.dtEnd_H.NonAutoSizeHeight = 26;
             this.dtEnd_H.Size = new System.Drawing.Size(144, 32);
             this.dtEnd_H.TabIndex = 609;
-            this.dtEnd_H.Value = new System.DateTime(2021, 6, 18, 15, 59, 49, 0);
             // 
             // dtStart_H
             // 
@@ -241,7 +240,7 @@
             this.dtStart_H.NonAutoSizeHeight = 26;
             this.dtStart_H.Size = new System.Drawing.Size(139, 32);
             this.dtStart_H.TabIndex = 608;
-            this.dtStart_H.Value = new System.DateTime(2020, 8, 13, 0, 0, 0, 0);
+            this.dtStart_H.Value = "2021-06-01";
             // 
             // sLabel4
             // 
