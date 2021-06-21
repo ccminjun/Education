@@ -33,7 +33,6 @@ namespace KFQS_Form
 
         #endregion
 
-
         #region < CONSTRUCTOR >
         public ER_RepairUpdate()
         {
@@ -45,25 +44,22 @@ namespace KFQS_Form
         private void ER_RepairUpdate_Load(object sender, EventArgs e)
         {
             #region ▶ GRID ◀
-            _GridUtil.InitializeGrid(this.grid1, true, true, false, "", false);
-
             _GridUtil.InitializeGrid(this.grid1, false, true, false, "", false);
-            _GridUtil.InitColumnUltraGrid(grid1, "CHK",            "수리여부",  true, GridColDataType_emu.CheckBox, 80, 130, Infragistics.Win.HAlign.Center, true, true);
-            _GridUtil.InitColumnUltraGrid(grid1, "PLANTCODE",      "공장",      true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, false);
-            _GridUtil.InitColumnUltraGrid(grid1, "WORKCENTERCODE", "작업장",    true, GridColDataType_emu.VarChar, 150, 130, Infragistics.Win.HAlign.Left, true, false);
-            _GridUtil.InitColumnUltraGrid(grid1, "WORKCENTERNAME", "작업장명",  true, GridColDataType_emu.VarChar, 150, 130, Infragistics.Win.HAlign.Left, true, false);
-            _GridUtil.InitColumnUltraGrid(grid1, "MAKER",          "등록자",    true, GridColDataType_emu.VarChar, 150, 130, Infragistics.Win.HAlign.Left, true, false);
-            _GridUtil.InitColumnUltraGrid(grid1, "MAKEDATE",       "클릭 시간", true, GridColDataType_emu.DateTime, 150, 130, Infragistics.Win.HAlign.Left, true, false);
-            _GridUtil.InitColumnUltraGrid(grid1, "REMARK",         "수리내역",  true, GridColDataType_emu.VarChar, 200, 130, Infragistics.Win.HAlign.Left, true, true);
-            _GridUtil.InitColumnUltraGrid(grid1, "REPAIRDATE",     "수리시간",  true, GridColDataType_emu.DateTime, 150, 130, Infragistics.Win.HAlign.Left, true, false);
-            _GridUtil.InitColumnUltraGrid(grid1, "REPAIRMAN",      "수리자",    true, GridColDataType_emu.VarChar, 150, 130, Infragistics.Win.HAlign.Left, true, true);
-            _GridUtil.InitColumnUltraGrid(grid1, "REPAIRMAKER",    "수리 등록자",    true, GridColDataType_emu.VarChar, 150, 130, Infragistics.Win.HAlign.Left, true, true);
+            _GridUtil.InitColumnUltraGrid(grid1, "CHK",            "수리여부",          true, GridColDataType_emu.CheckBox ,  80, 130, Infragistics.Win.HAlign.Center, true, true);
+            _GridUtil.InitColumnUltraGrid(grid1, "PLANTCODE",      "공장",              true, GridColDataType_emu.VarChar  , 130, 130, Infragistics.Win.HAlign.Left, true, false);
+            _GridUtil.InitColumnUltraGrid(grid1, "WORKCENTERCODE", "작업장",            true, GridColDataType_emu.VarChar  , 150, 130, Infragistics.Win.HAlign.Left, true, false);
+            _GridUtil.InitColumnUltraGrid(grid1, "WORKCENTERNAME", "작업장명",          true, GridColDataType_emu.VarChar  , 150, 130, Infragistics.Win.HAlign.Left, true, false);
+            _GridUtil.InitColumnUltraGrid(grid1, "MAKER",          "등록자",            true, GridColDataType_emu.VarChar  , 150, 130, Infragistics.Win.HAlign.Left, true, false);
+            _GridUtil.InitColumnUltraGrid(grid1, "MAKEDATE",       "고장 시간",         true, GridColDataType_emu.DateTime , 150, 130, Infragistics.Win.HAlign.Left, true, false);
+            _GridUtil.InitColumnUltraGrid(grid1, "REMARK",         "수리내역",          true, GridColDataType_emu.VarChar  , 200, 130, Infragistics.Win.HAlign.Left, true, true);
+            _GridUtil.InitColumnUltraGrid(grid1, "REPAIRDATE",     "수리 완료 시간",    true, GridColDataType_emu.DateTime , 150, 130, Infragistics.Win.HAlign.Left, true, false);
+            _GridUtil.InitColumnUltraGrid(grid1, "REPAIRMAN",      "수리자",            true, GridColDataType_emu.VarChar  , 150, 130, Infragistics.Win.HAlign.Left, true, true);
+            _GridUtil.InitColumnUltraGrid(grid1, "REPAIRMAKER",    "수리 등록자",       true, GridColDataType_emu.VarChar  , 150, 130, Infragistics.Win.HAlign.Left, true, true);
+            _GridUtil.InitColumnUltraGrid(grid1, "ERRORSEQ",       "고장순번",          true, GridColDataType_emu.VarChar  , 150, 130, Infragistics.Win.HAlign.Left, false, true);
             _GridUtil.SetInitUltraGridBind(grid1);
 
 
             #endregion
-
-
 
             #region ▶ COMBOBOX ◀
             rtnDtTemp = _Common.Standard_CODE("PLANTCODE");  // 사업장
@@ -80,16 +76,9 @@ namespace KFQS_Form
 
             #region ▶ ENTER-MOVE ◀
             cboPlantCode.Value = plantCode;
-            dtStart_H.Value    = string.Format("{0:yyyy-MM-01}", DateTime.Now);
             #endregion
         }
         #endregion
-
- /*       private void grid1_InitializeLayout(object sender, InitializeLayoutEventArgs e)
-        {
-            CustomMergedCellEvalutor CM1 = new CustomMergedCellEvalutor("ORDERNO", "ITEMCODE"); 
-            e.Layout.Bands[0].Columns["PLANTCODE"].MergedCellEvaluator = CM1;
-        }*/
 
         #region < TOOL BAR AREA >
         public override void DoInquire()
@@ -121,13 +110,6 @@ namespace KFQS_Form
                 if (rtnDtTemp.Rows.Count != 0)
                 {
                     this.grid1.DataSource = rtnDtTemp;
-                    //for (int i = 0; i < this.grid1.Rows.Count; i++)
-                    //{
-                    //    if (Convert.ToString(grid1.Rows[i].Cells["STATUS"].Value) == "S")
-                    //    {
-                    //        grid1.Rows[i].Appearance.BackColor = System.Drawing.Color.Orange;
-                    //    }
-                    //}
                 }
             }
             catch (Exception ex)
@@ -139,23 +121,17 @@ namespace KFQS_Form
                 helper.Close();
             }
         }
-        /// <summary>
-        /// ToolBar의 신규 버튼 클릭
-        /// </summary>
+
         public override void DoNew()
         {
             
         }
-        /// <summary>
-        /// ToolBar의 삭제 버튼 Click
-        /// </summary>
+
         public override void DoDelete()
         {   
            
         }
-        /// <summary>
-        /// ToolBar의 저장 버튼 Click
-        /// </summary>
+
         public override void DoSave()
         {
             this.grid1.UpdateData();
@@ -170,9 +146,6 @@ namespace KFQS_Form
                     CancelProcess = true;
                     return;
                 }
-
-
-
 
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
@@ -194,14 +167,15 @@ namespace KFQS_Form
 
                     helper.ExecuteNoneQuery("03ER_RepairUpdate_U33"
                                             , CommandType.StoredProcedure
-                                            , helper.CreateParameter("PLANTCODE",      Convert.ToString(dt.Rows[i]["PLANTCODE"]), DbType.String, ParameterDirection.Input)
-                                            , helper.CreateParameter("WORKCENTERCODE", Convert.ToString(dt.Rows[i]["WORKCENTERCODE"]),  DbType.String, ParameterDirection.Input)
-                                            , helper.CreateParameter("MAKER",          Convert.ToString(dt.Rows[i]["MAKER"]), DbType.String, ParameterDirection.Input)
-                                            , helper.CreateParameter("MAKEDATE",       Convert.ToString(dt.Rows[i]["MAKEDATE"]), DbType.String, ParameterDirection.Input)
-                                            , helper.CreateParameter("REMARK",         Convert.ToString(dt.Rows[i]["REMARK"]),  DbType.String, ParameterDirection.Input)
-                                            , helper.CreateParameter("REPAIRDATE",     Convert.ToString(dt.Rows[i]["REPAIRDATE"]), DbType.String, ParameterDirection.Input)
-                                            , helper.CreateParameter("REPAIRMAN",      Convert.ToString(dt.Rows[i]["REPAIRMAN"]), DbType.String, ParameterDirection.Input)
-                                            , helper.CreateParameter("REPAIRMAKER",     this.WorkerID, DbType.String, ParameterDirection.Input)
+                                            , helper.CreateParameter("PLANTCODE",      Convert.ToString(dt.Rows[i]["PLANTCODE"])      , DbType.String, ParameterDirection.Input)
+                                            , helper.CreateParameter("WORKCENTERCODE", Convert.ToString(dt.Rows[i]["WORKCENTERCODE"]) , DbType.String, ParameterDirection.Input)
+                                            , helper.CreateParameter("MAKER",          Convert.ToString(dt.Rows[i]["MAKER"])          , DbType.String, ParameterDirection.Input)
+                                            , helper.CreateParameter("MAKEDATE",       Convert.ToString(dt.Rows[i]["MAKEDATE"])       , DbType.String, ParameterDirection.Input)
+                                            , helper.CreateParameter("REMARK",         Convert.ToString(dt.Rows[i]["REMARK"])         , DbType.String, ParameterDirection.Input)
+                                            , helper.CreateParameter("REPAIRDATE",     Convert.ToString(dt.Rows[i]["REPAIRDATE"])     , DbType.String, ParameterDirection.Input)
+                                            , helper.CreateParameter("REPAIRMAN",      Convert.ToString(dt.Rows[i]["REPAIRMAN"])      , DbType.String, ParameterDirection.Input)
+                                            , helper.CreateParameter("ERRORSEQ",       Convert.ToString(dt.Rows[i]["ERRORSEQ"])       , DbType.String, ParameterDirection.Input)
+                                            , helper.CreateParameter("REPAIRMAKER",    this.WorkerID                                  , DbType.String, ParameterDirection.Input)
 
                                             );
         

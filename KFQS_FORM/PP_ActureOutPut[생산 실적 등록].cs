@@ -45,8 +45,8 @@ namespace KFQS_Form
                 _GridUtill.InitColumnUltraGrid(grid1, "ERRORFLAG"      , "고장/정상 상태"      , true, GridColDataType_emu.VarChar    , 130, 130, Infragistics.Win.HAlign.Left, true, false);
                 _GridUtill.InitColumnUltraGrid(grid1, "WORKER"         , "작업자"              , true, GridColDataType_emu.VarChar    , 130, 130, Infragistics.Win.HAlign.Left, true, false);
                 _GridUtill.InitColumnUltraGrid(grid1, "WORKERNAME"     , "작업자명"            , true, GridColDataType_emu.VarChar    , 130, 130, Infragistics.Win.HAlign.Left, true, false);
-                _GridUtill.InitColumnUltraGrid(grid1, "ORDSTARTDATE"   , "최초 가동 시작 시간" , true, GridColDataType_emu.DateTime24 , 160, 130, Infragistics.Win.HAlign.Left, true, false);
-                _GridUtill.InitColumnUltraGrid(grid1, "ORDENDDATE"     , "작업 지시 종료 시간" , true, GridColDataType_emu.DateTime24 , 160, 130, Infragistics.Win.HAlign.Left, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "ORDSTARTDATE"   , "최초 가동 시작 시간" , true, GridColDataType_emu.DateTime   , 160, 130, Infragistics.Win.HAlign.Left, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "ORDENDDATE"     , "작업 지시 종료 시간" , true, GridColDataType_emu.DateTime   , 160, 130, Infragistics.Win.HAlign.Left, true, false);
 
 
                 //셋팅 내역을 바인딩
@@ -450,6 +450,11 @@ namespace KFQS_Form
         }
         private void btnError_Click(object sender, EventArgs e)
         {
+            if (Convert.ToString(this.grid1.ActiveRow.Cells["ERRORFLAG"].Value) == "Y")
+            {
+                ShowDialog("해당 작업장은 이미 고장상태입니다.", DC00_WinForm.DialogForm.DialogType.OK);
+                return;
+            }
 
             DBHelper helper = new DBHelper("", true);
             try
@@ -468,10 +473,13 @@ namespace KFQS_Form
                     helper.Commit();
                     ShowDialog("정상적으로 등록되었습니다.", DC00_WinForm.DialogForm.DialogType.OK);
                 }
-                else
+                else 
                 {
+                    ShowDialog(helper.RSCODE, DC00_WinForm.DialogForm.DialogType.OK);
+                    ShowDialog(helper.RSMSG, DC00_WinForm.DialogForm.DialogType.OK);
+
                     helper.Rollback();
-                    ShowDialog("데이터 등록 중 오류가 발생했습니다.", DC00_WinForm.DialogForm.DialogType.OK);
+                    
                 }
             }
             catch (Exception ex)

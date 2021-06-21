@@ -42,8 +42,8 @@
             Infragistics.Win.Appearance appearance59 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance61 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance98 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton dateButton1 = new Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton();
-            Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton dateButton2 = new Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton();
+            Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton dateButton3 = new Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton();
+            Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton dateButton4 = new Infragistics.Win.UltraWinSchedule.CalendarCombo.DateButton();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance51 = new Infragistics.Win.Appearance();
             this.lblPlantCode = new DC00_Component.SLabel();
@@ -225,7 +225,7 @@
             // 
             // dtEnd_H
             // 
-            this.dtEnd_H.DateButtons.Add(dateButton1);
+            this.dtEnd_H.DateButtons.Add(dateButton3);
             this.dtEnd_H.Location = new System.Drawing.Point(1008, 18);
             this.dtEnd_H.Name = "dtEnd_H";
             this.dtEnd_H.NonAutoSizeHeight = 26;
@@ -234,7 +234,7 @@
             // 
             // dtStart_H
             // 
-            this.dtStart_H.DateButtons.Add(dateButton2);
+            this.dtStart_H.DateButtons.Add(dateButton4);
             this.dtStart_H.Location = new System.Drawing.Point(845, 18);
             this.dtStart_H.Name = "dtStart_H";
             this.dtStart_H.NonAutoSizeHeight = 26;
@@ -290,7 +290,7 @@
             this.ClientSize = new System.Drawing.Size(1298, 778);
             this.Name = "ER_RepairUpdate";
             this.Padding = new System.Windows.Forms.Padding(3);
-            this.Text = "작업장 별 가동/비가동 현황 및 사유 관리";
+            this.Text = "고장,수리 등록화면";
             this.Load += new System.EventHandler(this.ER_RepairUpdate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gbxHeader)).EndInit();
             this.gbxHeader.ResumeLayout(false);
