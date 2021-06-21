@@ -35,13 +35,13 @@
 
 
 ## 📫&nbsp; 화면구성
-**- 로그인화면**    
+**✔ 로그인화면**    
 ![login](https://user-images.githubusercontent.com/60223013/121476576-cc855400-ca01-11eb-8f9a-6b27c6801c74.jpg)
 - 아이디와 패스워드를 통해 로그인을 할 수 있다.
 - 관리자 프로그램이므로, 회원가입 없이 주어진 아이디로만 로그인 가능.  
 <br>
 
-**- 렌트카메인화면(Dashboard)**    
+**◾ 렌트카메인화면(Dashboard)**    
 ![rentcar_main](https://user-images.githubusercontent.com/60223013/121275676-315c8380-c908-11eb-9580-62ed6d71ff17.png)
 - 프로그램에서 유용한 정보들을 Dashboard를 통해 제공한다.
 - 소유중인 차량을 사용가능, 사용중, 정비중, 폐기차량, 연체차량등의 현재 현황 조회가능
