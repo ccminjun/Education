@@ -126,10 +126,11 @@ namespace KFQS_Form
                     {
                         if (sWorkerRow == Convert.ToString(dtTemp.Rows[i]["WORKER"]))
                         {
-                            sProdQty = sProdQty + Convert.ToDouble(dtTemp.Rows[i]["PRODQTY"]);
-                            sBadQty = sBadQty + Convert.ToDouble(dtTemp.Rows[i]["BADQTY"]);
+                            sProdQty  = sProdQty  + Convert.ToDouble(dtTemp.Rows[i]["PRODQTY"]);
+                            sBadQty   = sBadQty   + Convert.ToDouble(dtTemp.Rows[i]["BADQTY"]);
                             sTotalQty = sTotalQty + Convert.ToDouble(dtTemp.Rows[i]["TOTALQTY"]);
-                            dtSubTotal.Rows.Add(new object[] { Convert.ToString(dtTemp.Rows[0]["PLANTCODE"]),
+                            dtSubTotal.Rows.Add(new object[] { 
+                                                       Convert.ToString(dtTemp.Rows[0]["PLANTCODE"]),
                                                        Convert.ToString(dtTemp.Rows[i]["WORKER"]),
                                                        Convert.ToString(dtTemp.Rows[i]["PRODDATE"]),
                                                        Convert.ToString(dtTemp.Rows[i]["WORKCENTERCODE"]),
