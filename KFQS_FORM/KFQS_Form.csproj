@@ -52,6 +52,12 @@
     <Compile Include="AP_ProductPlan[생산 계획 및 확정].Designer.cs">
       <DependentUpon>AP_ProductPlan[생산 계획 및 확정].cs</DependentUpon>
     </Compile>
+    <Compile Include="BM_Inspection[수입 검사 항목 마스터].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BM_Inspection[수입 검사 항목 마스터].designer.cs">
+      <DependentUpon>BM_Inspection[수입 검사 항목 마스터].cs</DependentUpon>
+    </Compile>
     <Compile Include="ER_RepairRec[고장 수리 이력 조회화면].cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AP_ProductPlan[생산 계획 및 확정].resx">
       <DependentUpon>AP_ProductPlan[생산 계획 및 확정].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BM_Inspection[수입 검사 항목 마스터].resx">
+      <DependentUpon>BM_Inspection[수입 검사 항목 마스터].cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ER_RepairUpdate[고장,수리 등록화면].resx">
       <DependentUpon>ER_RepairUpdate[고장,수리 등록화면].cs</DependentUpon>
