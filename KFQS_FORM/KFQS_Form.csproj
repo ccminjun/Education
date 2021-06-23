@@ -82,11 +82,29 @@
     <Compile Include="MM_StockCheckRec[검사이력조회].designer.cs">
       <DependentUpon>MM_StockCheckRec[검사이력조회].cs</DependentUpon>
     </Compile>
+    <Compile Include="PP_BadCheckList%28조건별 불량 조회%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PP_BadCheckList%28조건별 불량 조회%29.designer.cs">
+      <DependentUpon>PP_BadCheckList%28조건별 불량 조회%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PP_BadList%28불량 이력 조회%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PP_BadList%28불량 이력 조회%29.designer.cs">
+      <DependentUpon>PP_BadList%28불량 이력 조회%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="PP_BadListCNT[불량 판정 정보 조회].cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PP_BadListCNT[불량 판정 정보 조회].designer.cs">
       <DependentUpon>PP_BadListCNT[불량 판정 정보 조회].cs</DependentUpon>
+    </Compile>
+    <Compile Include="PP_BadStock%28불량 내역 조회%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PP_BadStock%28불량 내역 조회%29.designer.cs">
+      <DependentUpon>PP_BadStock%28불량 내역 조회%29.cs</DependentUpon>
     </Compile>
     <Compile Include="PP_InspecRec[수입검사 이력 조회].cs">
       <SubType>Form</SubType>
@@ -268,8 +286,17 @@
     <EmbeddedResource Include="MM_StockCheckRec[검사이력조회].resx">
       <DependentUpon>MM_StockCheckRec[검사이력조회].cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PP_BadCheckList%28조건별 불량 조회%29.resx">
+      <DependentUpon>PP_BadCheckList%28조건별 불량 조회%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PP_BadList%28불량 이력 조회%29.resx">
+      <DependentUpon>PP_BadList%28불량 이력 조회%29.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PP_BadListCNT[불량 판정 정보 조회].resx">
       <DependentUpon>PP_BadListCNT[불량 판정 정보 조회].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PP_BadStock%28불량 내역 조회%29.resx">
+      <DependentUpon>PP_BadStock%28불량 내역 조회%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PP_InspecRec[수입검사 이력 조회].resx">
       <DependentUpon>PP_InspecRec[수입검사 이력 조회].cs</DependentUpon>
