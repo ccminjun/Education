@@ -28,25 +28,25 @@ namespace KFQS_Form
             try
             {
                 _GridUtill.InitializeGrid(this.grid1, false, true, false, "", false);
-                _GridUtill.InitColumnUltraGrid(grid1, "PLANTCODE"      , "공장"                , true, GridColDataType_emu.VarChar    , 130, 130, Infragistics.Win.HAlign.Left, true, false);
-                _GridUtill.InitColumnUltraGrid(grid1, "ORDERNO"        , "작업 지시 번호"      , true, GridColDataType_emu.VarChar    , 130, 130, Infragistics.Win.HAlign.Left, true, false);
-                _GridUtill.InitColumnUltraGrid(grid1, "ITEMCODE"       , "품목 코드"           , true, GridColDataType_emu.VarChar    , 130, 130, Infragistics.Win.HAlign.Left, true, false);
-                _GridUtill.InitColumnUltraGrid(grid1, "PLANQTY"        , "계획 수량"           , true, GridColDataType_emu.Double     , 130, 130, Infragistics.Win.HAlign.Right, true, false);
-                _GridUtill.InitColumnUltraGrid(grid1, "PRODQTY"        , "양품 수량"           , true, GridColDataType_emu.Double     , 130, 130, Infragistics.Win.HAlign.Right, true, false);
-                _GridUtill.InitColumnUltraGrid(grid1, "BADQTY"         , "불량 수량"           , true, GridColDataType_emu.Double     , 130, 130, Infragistics.Win.HAlign.Right, true, false);
-                _GridUtill.InitColumnUltraGrid(grid1, "UNITCODE"       , "단위"                , true, GridColDataType_emu.VarChar    , 130, 130, Infragistics.Win.HAlign.Left, true, false);
-                _GridUtill.InitColumnUltraGrid(grid1, "MATLOTNO"       , "투입LOT"             , true, GridColDataType_emu.VarChar    , 130, 130, Infragistics.Win.HAlign.Left, true, false);
-                _GridUtill.InitColumnUltraGrid(grid1, "COMPONENT"      , "투입 품목"           , true, GridColDataType_emu.VarChar    , 130, 130, Infragistics.Win.HAlign.Left, true, false);
-                _GridUtill.InitColumnUltraGrid(grid1, "COMPONENTQTY"   , "투입 수량"           , true, GridColDataType_emu.Double     , 130, 130, Infragistics.Win.HAlign.Right, true, false);
-                _GridUtill.InitColumnUltraGrid(grid1, "CUNITCODE"      , "투입 단위"           , true, GridColDataType_emu.VarChar    , 130, 130, Infragistics.Win.HAlign.Left, true, false);
-                _GridUtill.InitColumnUltraGrid(grid1, "WORKCENTERCODE" , "작업장"              , true, GridColDataType_emu.VarChar    , 130, 130, Infragistics.Win.HAlign.Left, true, false);
-                _GridUtill.InitColumnUltraGrid(grid1, "WORKSTATUSCODE" , "가동/비가동 상태"    , true, GridColDataType_emu.VarChar    , 130, 130, Infragistics.Win.HAlign.Left, true, false);
-                _GridUtill.InitColumnUltraGrid(grid1, "WORKSTATUS"     , "가동/비가동 상태"    , true, GridColDataType_emu.VarChar    , 130, 130, Infragistics.Win.HAlign.Left, true, false);
-                _GridUtill.InitColumnUltraGrid(grid1, "ERRORFLAG"      , "고장/정상 상태"      , true, GridColDataType_emu.VarChar    , 130, 130, Infragistics.Win.HAlign.Left, true, false);
-                _GridUtill.InitColumnUltraGrid(grid1, "WORKER"         , "작업자"              , true, GridColDataType_emu.VarChar    , 130, 130, Infragistics.Win.HAlign.Left, true, false);
-                _GridUtill.InitColumnUltraGrid(grid1, "WORKERNAME"     , "작업자명"            , true, GridColDataType_emu.VarChar    , 130, 130, Infragistics.Win.HAlign.Left, true, false);
-                _GridUtill.InitColumnUltraGrid(grid1, "ORDSTARTDATE"   , "최초 가동 시작 시간" , true, GridColDataType_emu.DateTime   , 160, 130, Infragistics.Win.HAlign.Left, true, false);
-                _GridUtill.InitColumnUltraGrid(grid1, "ORDENDDATE"     , "작업 지시 종료 시간" , true, GridColDataType_emu.DateTime   , 160, 130, Infragistics.Win.HAlign.Left, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "PLANTCODE"      , "공장"                , true, GridColDataType_emu.VarChar    , 120, 130, Infragistics.Win.HAlign.Left, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "ORDERNO"        , "작업 지시 번호"      , true, GridColDataType_emu.VarChar    , 120, 130, Infragistics.Win.HAlign.Left, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "ITEMCODE"       , "품목 코드"           , true, GridColDataType_emu.VarChar    , 120, 130, Infragistics.Win.HAlign.Left, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "PLANQTY"        , "계획 수량"           , true, GridColDataType_emu.Double     , 120, 130, Infragistics.Win.HAlign.Right, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "PRODQTY"        , "양품 수량"           , true, GridColDataType_emu.Double     , 120, 130, Infragistics.Win.HAlign.Right, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "BADQTY"         , "불량 수량"           , true, GridColDataType_emu.Double     , 120, 130, Infragistics.Win.HAlign.Right, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "UNITCODE"       , "단위"                , true, GridColDataType_emu.VarChar    , 120, 130, Infragistics.Win.HAlign.Left, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "MATLOTNO"       , "투입LOT"             , true, GridColDataType_emu.VarChar    , 120, 130, Infragistics.Win.HAlign.Left, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "COMPONENT"      , "투입 품목"           , true, GridColDataType_emu.VarChar    , 120, 130, Infragistics.Win.HAlign.Left, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "COMPONENTQTY"   , "투입 수량"           , true, GridColDataType_emu.Double     , 120, 130, Infragistics.Win.HAlign.Right, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "CUNITCODE"      , "투입 단위"           , true, GridColDataType_emu.VarChar    , 120, 130, Infragistics.Win.HAlign.Left, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "WORKCENTERCODE" , "작업장"              , true, GridColDataType_emu.VarChar    , 120, 130, Infragistics.Win.HAlign.Left, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "WORKSTATUSCODE" , "가동/비가동 상태"    , true, GridColDataType_emu.VarChar    , 120, 130, Infragistics.Win.HAlign.Left, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "WORKSTATUS"     , "가동/비가동 상태"    , true, GridColDataType_emu.VarChar    , 120, 130, Infragistics.Win.HAlign.Left, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "ERRORFLAG"      , "고장/정상 상태"      , true, GridColDataType_emu.VarChar    , 120, 130, Infragistics.Win.HAlign.Left, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "WORKER"         , "작업자"              , true, GridColDataType_emu.VarChar    , 120, 130, Infragistics.Win.HAlign.Left, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "WORKERNAME"     , "작업자명"            , true, GridColDataType_emu.VarChar    , 120, 130, Infragistics.Win.HAlign.Left, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "ORDSTARTDATE"   , "최초 가동 시작 시간" , true, GridColDataType_emu.DateTime24 , 160, 130, Infragistics.Win.HAlign.Left, true, false);
+                _GridUtill.InitColumnUltraGrid(grid1, "ORDENDDATE"     , "작업 지시 종료 시간" , true, GridColDataType_emu.DateTime24 , 160, 130, Infragistics.Win.HAlign.Left, true, false);
 
 
                 //셋팅 내역을 바인딩
@@ -138,7 +138,7 @@ namespace KFQS_Form
             #endregion
 
             //작업자 등록 변수 지정
-            string sOrderNo = grid1.ActiveRow.Cells["ORDERNO"].Value.ToString();
+            string sOrderNo        = grid1.ActiveRow.Cells["ORDERNO"].Value.ToString();
             string sWorkcentercode = grid1.ActiveRow.Cells["WORKCENTERCODE"].Value.ToString();
 
             DBHelper helper = new DBHelper("", true);
@@ -189,9 +189,7 @@ namespace KFQS_Form
                 string sUnitCode       = Convert.ToString(grid1.ActiveRow.Cells["UNITCODE"].Value);
                 string sInFlag         = Convert.ToString(btnLotIn.Text);
                 string sWorker         = Convert.ToString(grid1.ActiveRow.Cells["WORKER"].Value); 
-                // 그리드에서 워커 값을 가져온다.
-                /*                string sWorker = Convert.ToString(txtWorkerName.Text);
-                */
+
                 if (sInFlag == "투입")
                 {
                     sInFlag = "IN";

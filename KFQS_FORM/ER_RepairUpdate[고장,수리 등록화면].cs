@@ -24,7 +24,6 @@ namespace KFQS_Form
 {
     public partial class ER_RepairUpdate : DC00_WinForm.BaseMDIChildForm
     {
-
         #region < MEMBER AREA >
         DataTable rtnDtTemp        = new DataTable(); // 
         UltraGridUtil _GridUtil    = new UltraGridUtil();  //그리드 객체 생성
@@ -100,10 +99,10 @@ namespace KFQS_Form
                 string sSendDate       = string.Format("{0:yyyy-MM-dd}", dtEnd_H.Value);
 
                 rtnDtTemp = helper.FillTable("03ER_REPAIRUPDATE_S33", CommandType.StoredProcedure
-                                    , helper.CreateParameter("PLANTCODE",      sPlantCode,      DbType.String, ParameterDirection.Input)
-                                    , helper.CreateParameter("WORKCENTERCODE", sWorkcenterCode, DbType.String, ParameterDirection.Input)
-                                    , helper.CreateParameter("STARTDATE",    sStartDate,        DbType.String, ParameterDirection.Input)
-                                    , helper.CreateParameter("ENDDATE",      sSendDate,         DbType.String, ParameterDirection.Input)
+                                    , helper.CreateParameter("PLANTCODE"     , sPlantCode      , DbType.String, ParameterDirection.Input)
+                                    , helper.CreateParameter("WORKCENTERCODE", sWorkcenterCode , DbType.String, ParameterDirection.Input)
+                                    , helper.CreateParameter("STARTDATE"     , sStartDate      , DbType.String, ParameterDirection.Input)
+                                    , helper.CreateParameter("ENDDATE"       , sSendDate       , DbType.String, ParameterDirection.Input)
                                     );
 
                this.ClosePrgForm();
@@ -136,8 +135,10 @@ namespace KFQS_Form
         {
             this.grid1.UpdateData();
             DataTable dt = grid1.chkChange();
-            if (dt == null)
-                return; 
+            if (dt== null)
+            {
+                return;
+            }
             DBHelper helper = new DBHelper("", true);
             try
             {  
@@ -157,13 +158,18 @@ namespace KFQS_Form
                     }
 
                     if (Convert.ToString(dt.Rows[i]["REPAIRMAN"]) == "")
+
                     {
                         ShowDialog("수리자를 등록해주세요.");
                         helper.Rollback();
                         return;
                     }
-
-                  
+                    if (Convert.ToString(dt.Rows[i]["CHK"]) == "0")
+                    {
+                        ShowDialog("수리 내역을 선택해주세요.");
+                        helper.Rollback();
+                        return;
+                    }
 
                     helper.ExecuteNoneQuery("03ER_RepairUpdate_U33"
                                             , CommandType.StoredProcedure
@@ -179,10 +185,6 @@ namespace KFQS_Form
 
                                             );
         
-
-               
-
-
                     if (helper.RSCODE == "E")
                     {
                         this.ShowDialog(helper.RSMSG, DialogForm.DialogType.OK);

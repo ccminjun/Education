@@ -268,7 +268,7 @@ namespace KFQS_Form
             // 
             this.ClientSize = new System.Drawing.Size(1313, 825);
             this.Name = "PP_WorkerPerProd";
-            this.Text = "생산 실적 등록";
+            this.Text = "작업자 일별 생산 실적";
             this.Load += new System.EventHandler(this.PP_WorkerPerProd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gbxHeader)).EndInit();
             this.gbxHeader.ResumeLayout(false);
