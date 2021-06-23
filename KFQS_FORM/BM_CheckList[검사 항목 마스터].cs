@@ -25,6 +25,8 @@ namespace KFQS_Form
             // 그리드를 셋팅한다.
             try
             {
+                #region GRID SETTING
+
                 _GridUtil.InitializeGrid(this.grid1, false, true, false, "", false);
                 _GridUtil.InitColumnUltraGrid(grid1, "PLANTCODE", "공장", true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, false);
                 _GridUtil.InitColumnUltraGrid(grid1, "CHECKCODE", "검사항목 코드", true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, false);
@@ -37,6 +39,8 @@ namespace KFQS_Form
                 _GridUtil.InitColumnUltraGrid(grid1, "EDITDATE", "수정일시", true, GridColDataType_emu.VarChar, 130, 130, Infragistics.Win.HAlign.Left, true, false);
                 //셋팅 내역 그리드와 바인딩                              
                 _GridUtil.SetInitUltraGridBind(grid1); //셋팅 내역 그리드와 바인딩
+
+                #endregion
 
                 Common _Common = new Common();
                 DataTable dtTemp = new DataTable();
@@ -52,7 +56,7 @@ namespace KFQS_Form
                 ShowDialog(ex.Message, DC00_WinForm.DialogForm.DialogType.OK);
             }
         }
-
+        #region < TOOL BAR AREA >
         public override void DoInquire()
         {
             base.DoInquire();
@@ -101,10 +105,10 @@ namespace KFQS_Form
         }
         public override void DoDelete()
         {
-            if(ShowDialog("삭제하시겠습니까?", DC00_WinForm.DialogForm.DialogType.YESNO) == System.Windows.Forms.DialogResult.Cancel) return ;
+            if (ShowDialog("삭제하시겠습니까?", DC00_WinForm.DialogForm.DialogType.YESNO) == System.Windows.Forms.DialogResult.Cancel) return;
             base.DoDelete();
             this.grid1.DeleteRow(); // db에서 삭제하는 것이 아닌 사람 눈에 보이는걸 삭제하는 것.
-           
+
         }
         public override void DoSave()
         {
@@ -143,7 +147,7 @@ namespace KFQS_Form
                                                     , helper.CreateParameter("CHECKNAME", Convert.ToString(drrow["CHECKNAME"]), DbType.String, ParameterDirection.Input)
                                                     , helper.CreateParameter("CHECKSPEC", Convert.ToString(drrow["CHECKSPEC"]), DbType.String, ParameterDirection.Input)
                                                     , helper.CreateParameter("MEASURETYPE", Convert.ToString(drrow["MEASURETYPE"]), DbType.String, ParameterDirection.Input)
-                                                    , helper.CreateParameter("MAKER",    LoginInfo.UserID,  DbType.String, ParameterDirection.Input)
+                                                    , helper.CreateParameter("MAKER", LoginInfo.UserID, DbType.String, ParameterDirection.Input)
                                                     , helper.CreateParameter("MAKEDATE", Convert.ToString(drrow["MAKEDATE"]), DbType.String, ParameterDirection.Input)
                                                     );
                             break;
@@ -178,5 +182,7 @@ namespace KFQS_Form
                 helper.Close();
             }
         }
+
+        #endregion
     }
 }
