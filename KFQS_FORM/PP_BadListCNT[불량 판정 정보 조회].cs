@@ -110,6 +110,7 @@ namespace KFQS_Form
         }
         #endregion
 
+        #region GRID2 SETTING
         private void grid2_AfterRowActivate(object sender, EventArgs e)
         {
             DBHelper helper = new DBHelper(false);
@@ -119,7 +120,7 @@ namespace KFQS_Form
                 this._GridUtil.Grid_Clear(grid3);
                 this._GridUtil.Grid_Clear(grid4);
                 string sPlantCode = Convert.ToString(grid2.ActiveRow.Cells["PLANTCODE"].Value);
-                string sItemcode  = Convert.ToString(grid2.ActiveRow.Cells["ITEMCODE"].Value);
+                string sItemcode = Convert.ToString(grid2.ActiveRow.Cells["ITEMCODE"].Value);
 
                 DataTable dtTemp = new DataTable();
                 dtTemp = helper.FillTable("02PP_BadListCNT_S2", CommandType.StoredProcedure
@@ -139,9 +140,10 @@ namespace KFQS_Form
             {
                 helper.Close();
             }
-        }
+        } 
+        #endregion
 
-
+        #region GRID3 SETTING
 
         private void grid3_AfterRowActivate(object sender, EventArgs e)
         {
@@ -155,7 +157,7 @@ namespace KFQS_Form
                 DataTable dtTemp = new DataTable();
                 dtTemp = helper.FillTable("02PP_BadListCNT_S3", CommandType.StoredProcedure
                                               , helper.CreateParameter("ITEMCODE", sItemcode, DbType.String, ParameterDirection.Input)
-                                              , helper.CreateParameter("INSP",     sINSP,     DbType.String, ParameterDirection.Input)
+                                              , helper.CreateParameter("INSP", sINSP, DbType.String, ParameterDirection.Input)
                                               );
                 this.ClosePrgForm();
                 grid4.DataSource = dtTemp;
@@ -169,7 +171,8 @@ namespace KFQS_Form
             {
                 helper.Close();
             }
-        }
+        } 
+        #endregion
     }
 }
 
