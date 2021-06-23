@@ -63,7 +63,6 @@ namespace KFQS_Form
                 UltraGridUtil.SetComboUltraGrid(this.grid1, "PLANTCODE", dtTemp, "CODE_ID", "CODE_NAME");
 
 
-
             }
             catch (Exception ex)
             {

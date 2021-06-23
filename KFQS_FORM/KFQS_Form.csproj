@@ -70,6 +70,12 @@
     <Compile Include="ER_RepairUpdate[고장,수리 등록화면].designer.cs">
       <DependentUpon>ER_RepairUpdate[고장,수리 등록화면].cs</DependentUpon>
     </Compile>
+    <Compile Include="MM_StockCheckRec[검사이력조회].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM_StockCheckRec[검사이력조회].designer.cs">
+      <DependentUpon>MM_StockCheckRec[검사이력조회].cs</DependentUpon>
+    </Compile>
     <Compile Include="PP_BadListCNT[불량 판정 정보 조회].cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ER_RepairUpdate[고장,수리 등록화면].resx">
       <DependentUpon>ER_RepairUpdate[고장,수리 등록화면].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM_StockCheckRec[검사이력조회].resx">
+      <DependentUpon>MM_StockCheckRec[검사이력조회].cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PP_BadListCNT[불량 판정 정보 조회].resx">
       <DependentUpon>PP_BadListCNT[불량 판정 정보 조회].cs</DependentUpon>

@@ -221,6 +221,7 @@ namespace KFQS_Form
             this.dtpStart.NonAutoSizeHeight = 32;
             this.dtpStart.Size = new System.Drawing.Size(151, 32);
             this.dtpStart.TabIndex = 12;
+            this.dtpStart.Value = "2021-06-01";
             // 
             // ultraLabel9
             // 
