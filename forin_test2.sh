@@ -1,4 +1,5 @@
 #!/bin/sh
-for VAL IN $*
+for VAL in $*
 do
-	echo
+	echo "Arg = [$VAL]"
+done
