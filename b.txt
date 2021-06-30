@@ -1,5 +1,5 @@
-합계 276
-drwxrwxr-x 3 apple apple 4096  6월 30 11:49 .
+합계 284
+drwxrwxr-x 3 apple apple 4096  6월 30 11:50 .
 drwxrwxr-x 4 apple apple 4096  6월 29 17:36 ..
 drwxrwxr-x 8 apple apple 4096  6월 30 09:22 .git
 -rwxrwxr-x 1 apple apple  176  6월 24 16:05 BNK.sh
@@ -20,7 +20,7 @@ drwxrwxr-x 8 apple apple 4096  6월 30 09:22 .git
 -rw-rw-r-- 1 apple apple    0  6월 25 09:27 BNKb4.txt
 -rwxrwxr-x 1 apple apple   99  6월 24 15:46 Hellokitty2.sh
 -rw-rw-r-- 1 apple apple    7  6월 25 16:08 README.md
--rw-rw-r-- 1 apple apple    0  6월 30 11:49 a.txt
+-rw-rw-r-- 1 apple apple 4704  6월 30 11:50 a.txt
 -rwxrwxr-x 1 apple apple  510  6월 25 12:40 andor.sh
 -rwxrwxr-x 1 apple apple  469  6월 29 14:02 array1.sh
 -rwxrwxr-x 1 apple apple  288  6월 29 14:37 array2.sh
@@ -31,6 +31,7 @@ drwxrwxr-x 8 apple apple 4096  6월 30 09:22 .git
 -rwxrwxr-x 1 apple apple  273  6월 29 14:07 array5.sh
 -rwxrwxr-x 1 apple apple  211  6월 29 14:16 array6.sh
 -rwxrwxr-x 1 apple apple  329  6월 29 14:22 array7.sh
+-rw-rw-r-- 1 apple apple    0  6월 30 11:50 b.txt
 -rwxrwxr-x 1 apple apple  211  6월 29 15:13 bang.sh
 -rwxrwxr-x 1 apple apple  127  6월 25 12:08 bc.sh
 -rwxrwxr-x 1 apple apple  172  6월 25 11:35 case.test2.sh
