@@ -1,20 +1,48 @@
- #!/bin/bash
+#!/bin/bash
+array1=(0 0 0 0 0)
+array2=(0 0 0 0 0)
+array3=(0 0 0 0 0)
+array4=(0 0 0 0 0)
+array5=(0 0 0 0 0)
+array=(array1 array2 array3 array4 array5)
 
- array1=(01 02 03 04 05)
- array2=(16 17 18 19 06)
- array3=(15 24 25 20 07)
- array4=(14 23 22 21 08)
- array5=(13 12 11 10 09)
+n=5
+i=0
+j=-1
+k=1
+num=1
+while [ $num -lt 26 ]  #26보다 작을 때
+do
+	for l in $(seq 1 $n)
+	do
+		j=`expr $j + $k`
+		record=${array[$i]}
+		let $record[$j]=$num
+		num=`expr $num + 1`
+	done
+	n=`expr $n - 1`
+	if [ ${n} -eq 0 ];
+	then
+		break;
+	fi
+	for l in $(seq 1 $n)
+	do
+		i=`expr $i + $k`
+		record=${array[$i]}
+		let $record[$j]=$num
+		num=`expr $num + 1`
+	done		
+	k=`expr $k*-1|bc`
+done
 
- array=(array1 array2 array3 array4 array5)
- for Temp in ${array[*]}
- do
-     Line="$Temp[*]"
-     Line=(${!Line})
-     for Temp2 in ${Line[*]}
-     do
-         printf "${Temp2} "
-     done
-     echo
+for((i=0; i<${#array[*]}; ++i))
+do
+        Line=${array[i]}[*]
+        Line=(${!Line})
+        for((j=0; j<${#Line[*]}; ++j))
+        do
+                printf "${Line[j]} "
+        done
+        echo
 
- done
+done
