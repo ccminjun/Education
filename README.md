@@ -41,43 +41,75 @@
 - 관리자 프로그램이므로, 회원가입 없이 주어진 아이디로만 로그인 가능.  
 <br>
 
-**◾ 렌트카메인화면(Dashboard)**    
+**✔ 렌트카메인화면(Dashboard)**    
 ![rentcar_main](https://user-images.githubusercontent.com/60223013/121275676-315c8380-c908-11eb-9580-62ed6d71ff17.png)
 - 프로그램에서 유용한 정보들을 Dashboard를 통해 제공한다.
 - 소유중인 차량을 사용가능, 사용중, 정비중, 폐기차량, 연체차량등의 현재 현황 조회가능
 - 이달의 매출액이 top3인 고객 표시.
 - 연료별,사이즈별 차량 매출 분포도 확인
 - 월별, 분기별, 년도별 매출 분포도 확인  
+<br>
 
-**- 고객정보 현황 조회 화면**  
+**✔ 고객정보 현황 조회 화면**  
 ![client](https://user-images.githubusercontent.com/60223013/121477044-503f4080-ca02-11eb-9391-cabbffd2e077.PNG)
 - 고객추가, 조회, 삭제, 업데이트가 가능한 화면
 - 고객의 등급에 따른 조회
 - 고객ID, 고객이름을 검색하여 조회가능
 - 이달의 매출이 TOP3에 포함된 고객은 VIP, 3번이상 연체를 한 고객은 블랙리스트로 분류한다.  
+<br>
 
-
-**- 고객추가 화면**  
+**✔ 고객추가 화면**  
 ![client_add](https://user-images.githubusercontent.com/60223013/121476822-15d5a380-ca02-11eb-885b-f8cd09182c52.jpg)  
-이름, 나이, 주소, 전화번호, 성별에 따른 고객 정보 입력 가능
-- 차량 정보 현황 조회
+ - 이름, 나이, 주소, 전화번호, 성별에 따른 고객 정보 추가
+<br>
+
+**✔ 차량정보 현황조회 화면**   
 ![car](https://user-images.githubusercontent.com/60223013/121477710-26d2e480-ca03-11eb-8920-455423e1b247.jpg)
+ - 차량 코드, 차량명, 차종별에 따른 검색
+ - 현재 이용가능한 차량만 검색 가능
+ - 연료에 따른 차량 검색 가능
+ - 차량에 이미지를 확인하고 저장, 수정   
+<br>
+
+**✔ 차량정보 추가 화면** 
+<br>
 ![car_add](https://user-images.githubusercontent.com/60223013/121477709-263a4e00-ca03-11eb-843f-fa184677bc9d.jpg)
+ - 차량정보 추가 화면  
+<br>
+
+**✔ 렌트내역확인 화면** 
 ![rent](https://user-images.githubusercontent.com/60223013/121477708-25092100-ca03-11eb-8f00-c931cac453eb.jpg)
+ - 렌트내역정보 확인
+ - 조회시 보험종류에 따른 실제 보험비 자동계산
+ - 조회시 연체에 해당하는 추가비용 자동계산
+ - 계약서 이미지 관리
+<br>
+
+**✔ 렌트내역추가 화면** 
+<br>
 ![rent_add](https://user-images.githubusercontent.com/60223013/121477712-26d2e480-ca03-11eb-89ca-40613d928c39.jpg)
+ - 렌트내역추가하는 화면
+ - 보험선택시 예상비용 자동계산  
+<br>
+
+**✔ 렌트내역추가시 회원조회 화면**
+<br>
 ![client_search](https://user-images.githubusercontent.com/60223013/121477713-276b7b00-ca03-11eb-89a3-33b70d3a5569.jpg)
+ - 렌트 이용하는 고객 조회 화면    
+<br>
+
+
+**✔ 렌트내역추가시 자동차조회 화면**
+<br>
 ![car_search](https://user-images.githubusercontent.com/60223013/121477714-276b7b00-ca03-11eb-8f76-b30d36217380.jpg)
+ - 렌트 가능한 차량 조회 화면
+ - 차사이즈, 차연료, 가격에 따른 조회 가능     
+<br>
 
-We are happy to welcome you in our official [Slack channel](https://sulu.io/services-and-support) or answer your questions via [GitHub Discussions](https://github.com/sulu/sulu/discussions)! Obviously you can always **reach out to us directly** via the [Sulu twitter account](https://twitter.com/sulu) or post your question on [StackOverflow](https://stackoverflow.com/questions/tagged/sulu) with the official `sulu` tag.
-
-
-## ✅&nbsp; Requirements
-
-Sulu requires a **PHP version higher or equal to 7.2** and is compatible with every **Symfony version starting from 4.3**. Have a look at the `require` section in the [composer.json](composer.json) of the [sulu/sulu](https://github.com/sulu/sulu) core framework to find an **up-to-date list of the requirements** of Sulu content management system.
 
 
 ## 📘&nbsp; Contributors
-
+ - [@boomini](https://github.com/boomini)
  - [@ccminjun](https://github.com/ccminjun)
  - [@Jang-Jungi](https://github.com/Jang-Jungi)
  - [@sangw](https://github.com/masangwoo)
